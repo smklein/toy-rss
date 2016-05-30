@@ -8,16 +8,16 @@ import (
 	"net/http"
 )
 
-var flagUrl string
+var flagURL string
 
 // Init is a special function, which is called before main.
 func init() {
 	const (
-		defaultUrl = "https://www.reddit.com/.rss"
+		defaultURL = "https://www.reddit.com/.rss"
 		usage      = "URL to be accessed"
 	)
-	flag.StringVar(&flagUrl, "url", defaultUrl, usage)
-	flag.StringVar(&flagUrl, "u", defaultUrl, usage+" (shorthand)")
+	flag.StringVar(&flagURL, "URL", defaultURL, usage)
+	flag.StringVar(&flagURL, "u", defaultURL, usage+" (shorthand)")
 }
 
 func redirectPolicyFunc(req *http.Request, via []*http.Request) error {
@@ -35,13 +35,13 @@ func check(err error) {
 func main() {
 	flag.Parse()
 	fmt.Println(">>> BROWSER START")
-	fmt.Println("URL: " + flagUrl)
+	fmt.Println("URL: " + flagURL)
 
 	client := &http.Client{
 		CheckRedirect: redirectPolicyFunc,
 	}
 
-	req, err := http.NewRequest("GET", flagUrl, nil)
+	req, err := http.NewRequest("GET", flagURL, nil)
 	check(err)
 
 	req.Header.Set("user-Agent", "smklein's Golang RSS Reader")
