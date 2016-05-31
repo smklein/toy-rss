@@ -11,6 +11,8 @@ type keyValuePair struct {
 	value string
 }
 
+const threadSafe = false
+
 // AgingMap implements the AgingMap interface.
 // This is my first go at an implementation.
 type AgingMap struct {
@@ -30,8 +32,10 @@ func (am *AgingMap) init(max int) {
 }
 
 func (am *AgingMap) add(key string, value string) {
-	am.rwLock.Lock()
-	defer am.rwLock.Unlock()
+	if threadSafe {
+		am.rwLock.Lock()
+		defer am.rwLock.Unlock()
+	}
 	if element, ok := am.internalMap[key]; ok {
 		// Refresh the age.
 		am.internalList.MoveToFront(element)
@@ -48,8 +52,10 @@ func (am *AgingMap) add(key string, value string) {
 }
 
 func (am *AgingMap) get(key string) string {
-	am.rwLock.RLock()
-	defer am.rwLock.RUnlock()
+	if threadSafe {
+		am.rwLock.RLock()
+		defer am.rwLock.RUnlock()
+	}
 	element := am.internalMap[key]
 	if element == nil {
 		return ""
@@ -60,8 +66,10 @@ func (am *AgingMap) get(key string) string {
 }
 
 func (am *AgingMap) remove(key string) string {
-	am.rwLock.Lock()
-	defer am.rwLock.Unlock()
+	if threadSafe {
+		am.rwLock.Lock()
+		defer am.rwLock.Unlock()
+	}
 	element := am.internalMap[key]
 	if element == nil {
 		return ""
