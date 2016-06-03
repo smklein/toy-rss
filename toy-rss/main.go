@@ -6,7 +6,6 @@ import (
 	"os"
 	"sync"
 
-	"github.com/SlyMarbo/rss"
 	util "github.com/smklein/toy-rss/rssUtilities"
 )
 
@@ -30,26 +29,30 @@ func init() {
 	flag.StringVar(&flagURL, "u", defaultURL, usage+" (shorthand)")
 }
 
-func handleFeed(feed *util.Feed, itemPipe chan rss.Item) {
+func handleFeed(feed *util.Feed, itemPipe chan *util.RssEntry, newItemRequest chan *util.RssEntry) {
 	log.Println("HANDLE FEED: ", feed.GetTitle())
 	numReceived := 0
 	for {
-		item := <-itemPipe
+		item, ok := <-itemPipe
+		if !ok {
+			// TODO(smklein): handle removing feed here
+			return
+		}
 		numReceived++
-		log.Println("   ", numReceived, item.Title)
+		log.Println("   ", numReceived, item.ItemTitle)
+		newItemRequest <- item
 	}
 }
 
-func addFeed(URL string) util.FeedInterface {
+func addFeed(URL string, newItemRequest chan *util.RssEntry) (util.FeedInterface, error) {
 	// TODO store the feed somewhere, so we can disable it...
 	feed := &util.Feed{}
-	itemPipe := feed.Start(URL)
-
-	if itemPipe == nil {
-		return nil
+	itemPipe, err := feed.Start(URL)
+	if err != nil {
+		return nil, err
 	}
-	go handleFeed(feed, itemPipe)
-	return feed
+	go handleFeed(feed, itemPipe, newItemRequest)
+	return feed, nil
 }
 
 // Set up logging info.
@@ -72,10 +75,9 @@ func main() {
 	flag.Parse()
 	log.Println("URL: " + flagURL)
 
-	//	am := &util.AgingMap{}
-	//	am.Init(100)
-
 	feedMap := make(map[string]util.FeedInterface)
+	// Serialize new items
+	newItemRequest := make(chan *util.RssEntry, 100)
 
 	// DeathCountWg can be used by main.
 	// Add one if you need to run something before you die.
@@ -85,16 +87,18 @@ func main() {
 	deathWg.Add(1)
 
 	v := &util.View{}
-	v.Start(&deathWg)
+	v.Start(newItemRequest, &deathWg)
 
 	for {
 		select {
 		case newURL := <-v.NewFeedRequest:
-			if f := addFeed(newURL); f != nil {
+			f, err := addFeed(newURL, newItemRequest)
+			if err != nil {
+				v.SetStatusMsg(err.Error(), util.StatusError)
+				v.RedrawRequest <- true
+			} else {
 				feedMap[newURL] = f
 				log.Println("SUCCESS, Feed started: ", f.GetTitle())
-			} else {
-				log.Println("!!! ERROR, could not add: ", newURL)
 			}
 		case <-v.ExitRequest:
 			deathWg.Wait()

@@ -1,15 +1,27 @@
 package rssUtilities
 
 import (
+	"errors"
 	"log"
 	"time"
 
 	"github.com/SlyMarbo/rss"
 )
 
+// TODO these structs are fairly public, they should prolly move to the
+// interface file
+
+// RssEntry represents OUR version of an entry.
+// It's in a form that can be easily dumped to the view.
+type RssEntry struct {
+	ItemTitle string
+	URL       string
+	FeedTitle string
+}
+
 // Feed implements the FeedInterface
 type Feed struct {
-	itemPipe    chan rss.Item
+	itemPipe    chan *RssEntry
 	Title       string
 	URL         string
 	initialized bool
@@ -25,7 +37,7 @@ func (f *Feed) GetTitle() string {
 	return f.Title
 }
 
-func (f *Feed) doFeed(initPipe chan bool) {
+func (f *Feed) doFeed(initPipe chan error) {
 	defer close(f.itemPipe)
 	defer close(initPipe)
 
@@ -43,7 +55,8 @@ func (f *Feed) doFeed(initPipe chan bool) {
 
 		rssFeed, err := rss.Fetch(f.URL)
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
+			initPipe <- errors.New("Fetching RSS feed failed: " + err.Error())
 			f.disabled = true
 			return
 		}
@@ -51,7 +64,7 @@ func (f *Feed) doFeed(initPipe chan bool) {
 		f.Title = rssFeed.Title
 
 		if !f.initialized {
-			initPipe <- true
+			initPipe <- nil
 			f.initialized = true
 		}
 		for _, item := range rssFeed.Items {
@@ -59,7 +72,11 @@ func (f *Feed) doFeed(initPipe chan bool) {
 				duplicatesMap.Add(item.ID, item.ID)
 				// Only place items in the itemPipe if they are not visible in
 				// the duplicatesMap.
-				f.itemPipe <- *item
+				newItem := &RssEntry{}
+				newItem.FeedTitle = f.Title
+				newItem.ItemTitle = item.Title
+				newItem.URL = item.Link
+				f.itemPipe <- newItem
 			}
 		}
 
@@ -72,19 +89,19 @@ func (f *Feed) doFeed(initPipe chan bool) {
 // interval. Although no formal guarantees are made regarding duplicates,
 // generally, it can be assumed that duplicates will not be sent on the pipe
 // for a while.
-func (f *Feed) Start(URL string) chan rss.Item {
+func (f *Feed) Start(URL string) (chan *RssEntry, error) {
 	log.Println("Start: ", URL)
 	f.URL = URL
-	f.itemPipe = make(chan rss.Item, 20)
+	f.itemPipe = make(chan *RssEntry, 20)
 
-	initPipe := make(chan bool)
+	initPipe := make(chan error)
 	go f.doFeed(initPipe)
-	<-initPipe
-	// TODO better error handling?
-	if f.disabled {
-		return nil
+	err := <-initPipe
+	if err != nil {
+		f.disabled = true
+		return nil, err
 	}
-	return f.itemPipe
+	return f.itemPipe, nil
 }
 
 // End terminates the feed.
