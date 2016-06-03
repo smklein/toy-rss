@@ -3,7 +3,7 @@ package rssUtilities
 import "testing"
 
 func verifyKVPair(t *testing.T, am AgingMapInterface, key, eVal string) {
-	val := am.get(key)
+	val := am.Get(key)
 	if val != eVal {
 		t.Error("Unexpected KV pair: ", key, val, ", expected ", eVal)
 	}
@@ -14,37 +14,37 @@ func TestAgingMapBasic(t *testing.T) {
 	var _ AgingMapInterface = (*AgingMap)(nil)
 
 	am := &AgingMap{}
-	am.init(2)
+	am.Init(2)
 
 	var key, eVal string
 	key = "foo"
 	eVal = "bar"
-	am.add(key, eVal)
+	am.Add(key, eVal)
 	verifyKVPair(t, am, key, eVal)
 
 	key = "baz"
 	eVal = "blat"
-	am.add(key, eVal)
+	am.Add(key, eVal)
 	verifyKVPair(t, am, key, eVal)
 
-	am.remove("foo")
+	am.Remove("foo")
 	verifyKVPair(t, am, "foo", "")
 	verifyKVPair(t, am, "baz", "blat")
 
-	am.remove("baz")
+	am.Remove("baz")
 	verifyKVPair(t, am, "foo", "")
 	verifyKVPair(t, am, "baz", "")
 }
 
 func TestAgingMapSize(t *testing.T) {
 	am := &AgingMap{}
-	am.init(2)
-	am.add("foo", "bar")
-	am.add("foos", "ball")
+	am.Init(2)
+	am.Add("foo", "bar")
+	am.Add("foos", "ball")
 	verifyKVPair(t, am, "foo", "bar")
 	verifyKVPair(t, am, "foos", "ball")
 
-	am.add("baz", "blat")
+	am.Add("baz", "blat")
 	verifyKVPair(t, am, "foo", "")
 	verifyKVPair(t, am, "foos", "ball")
 	verifyKVPair(t, am, "baz", "blat")

@@ -4,11 +4,11 @@ package rssUtilities
 // As more elements are added, old elements can be removed.
 type AgingMapInterface interface {
 	// Must be called before anything else. Set the max element size.
-	init(int)
+	Init(int)
 
 	// Adding the same key multiple times "refreshes" the age and updates the
 	// value.
-	add(key string, value string)
-	get(key string) string
-	remove(key string) string
+	Add(key string, value string)
+	Get(key string) string
+	Remove(key string) string
 }

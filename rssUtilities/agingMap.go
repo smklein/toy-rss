@@ -22,7 +22,8 @@ type AgingMap struct {
 	rwLock       sync.RWMutex
 }
 
-func (am *AgingMap) init(max int) {
+// Init initializes the map with a maximum size.
+func (am *AgingMap) Init(max int) {
 	am.internalMap = make(map[string]*list.Element)
 	am.internalList.Init()
 	am.maxElements = max
@@ -31,7 +32,10 @@ func (am *AgingMap) init(max int) {
 	}
 }
 
-func (am *AgingMap) add(key string, value string) {
+// Add places the key/value pair inside the map.
+// It refreshes the lifetime of key if it already exists
+// in the map.
+func (am *AgingMap) Add(key string, value string) {
 	if threadSafe {
 		am.rwLock.Lock()
 		defer am.rwLock.Unlock()
@@ -51,7 +55,9 @@ func (am *AgingMap) add(key string, value string) {
 	am.internalMap[key] = am.internalList.PushFront(keyValuePair{key, value})
 }
 
-func (am *AgingMap) get(key string) string {
+// Get retrieves the value for the key in the map (or returns "" if it doesn't
+// exist).
+func (am *AgingMap) Get(key string) string {
 	if threadSafe {
 		am.rwLock.RLock()
 		defer am.rwLock.RUnlock()
@@ -65,7 +71,8 @@ func (am *AgingMap) get(key string) string {
 	return kvp.value
 }
 
-func (am *AgingMap) remove(key string) string {
+// Remove deletes the key/value pair from the map, and returns the value.
+func (am *AgingMap) Remove(key string) string {
 	if threadSafe {
 		am.rwLock.Lock()
 		defer am.rwLock.Unlock()

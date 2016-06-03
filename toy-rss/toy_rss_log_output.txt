@@ -1,0 +1,2786 @@
+2016/06/02 19:33:22 URL: https://www.reddit.com/.rss
+2016/06/02 19:39:51 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 19:39:51 view.go:30: View started
+2016/06/02 19:39:51 view.go:80: Width:  126 , Height:  31
+2016/06/02 19:39:51 view.go:86: New fgcolor:  1
+2016/06/02 19:39:53 view.go:80: Width:  126 , Height:  31
+2016/06/02 19:39:53 view.go:86: New fgcolor:  2
+2016/06/02 19:39:55 view.go:80: Width:  126 , Height:  31
+2016/06/02 19:39:55 view.go:86: New fgcolor:  3
+2016/06/02 19:39:57 view.go:80: Width:  126 , Height:  29
+2016/06/02 19:39:57 view.go:86: New fgcolor:  4
+2016/06/02 19:39:59 view.go:80: Width:  126 , Height:  24
+2016/06/02 19:39:59 view.go:86: New fgcolor:  5
+2016/06/02 19:40:01 view.go:80: Width:  126 , Height:  30
+2016/06/02 19:40:01 view.go:86: New fgcolor:  6
+2016/06/02 19:40:03 view.go:80: Width:  126 , Height:  30
+2016/06/02 19:40:03 view.go:86: New fgcolor:  7
+2016/06/02 19:40:05 view.go:80: Width:  126 , Height:  30
+2016/06/02 19:40:05 view.go:86: New fgcolor:  8
+2016/06/02 19:40:07 view.go:80: Width:  126 , Height:  30
+2016/06/02 19:40:07 view.go:86: New fgcolor:  0
+2016/06/02 19:40:09 view.go:80: Width:  126 , Height:  30
+2016/06/02 19:40:09 view.go:86: New fgcolor:  1
+2016/06/02 19:45:25 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 19:45:25 view.go:36: View started
+2016/06/02 19:45:25 view.go:45: Requesting Input
+2016/06/02 19:45:25 view.go:85: Width:  126 , Height:  30
+2016/06/02 19:45:25 view.go:91: New fgcolor:  1
+2016/06/02 19:45:27 view.go:85: Width:  126 , Height:  30
+2016/06/02 19:45:27 view.go:91: New fgcolor:  2
+2016/06/02 20:00:15 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:00:15 view.go:37: View started
+2016/06/02 20:00:15 view.go:66: Requesting Input
+2016/06/02 20:00:15 view.go:111: Width:  126 , Height:  30
+2016/06/02 20:00:15 view.go:117: New fgcolor:  1
+2016/06/02 20:00:18 view.go:111: Width:  126 , Height:  30
+2016/06/02 20:00:18 view.go:117: New fgcolor:  2
+2016/06/02 20:00:21 view.go:111: Width:  126 , Height:  30
+2016/06/02 20:00:21 view.go:117: New fgcolor:  3
+2016/06/02 20:00:24 view.go:111: Width:  126 , Height:  30
+2016/06/02 20:00:24 view.go:117: New fgcolor:  4
+2016/06/02 20:19:09 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:19:09 view.go:39: View started
+2016/06/02 20:19:09 view.go:106: Requesting Input
+2016/06/02 20:19:09 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:19:09 view.go:157: New fgcolor:  1
+2016/06/02 20:19:12 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:19:12 view.go:157: New fgcolor:  2
+2016/06/02 20:19:35 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:19:35 view.go:39: View started
+2016/06/02 20:19:35 view.go:106: Requesting Input
+2016/06/02 20:19:35 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:19:35 view.go:157: New fgcolor:  1
+2016/06/02 20:19:38 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:19:38 view.go:157: New fgcolor:  2
+2016/06/02 20:20:41 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:20:41 view.go:39: View started
+2016/06/02 20:20:41 view.go:106: Requesting Input
+2016/06/02 20:20:41 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:20:41 view.go:157: New fgcolor:  1
+2016/06/02 20:20:44 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:20:44 view.go:157: New fgcolor:  2
+2016/06/02 20:20:47 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:20:47 view.go:157: New fgcolor:  3
+2016/06/02 20:21:07 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:21:07 view.go:39: View started
+2016/06/02 20:21:07 view.go:106: Requesting Input
+2016/06/02 20:21:07 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:21:07 view.go:157: New fgcolor:  1
+2016/06/02 20:21:10 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:21:10 view.go:157: New fgcolor:  2
+2016/06/02 20:21:13 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:21:13 view.go:157: New fgcolor:  3
+2016/06/02 20:38:18 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:38:18 view.go:39: View started
+2016/06/02 20:38:18 view.go:106: Requesting Input
+2016/06/02 20:38:18 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:38:18 view.go:164: New fgcolor:  1
+2016/06/02 20:38:21 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:38:21 view.go:164: New fgcolor:  2
+2016/06/02 20:38:24 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:38:24 view.go:164: New fgcolor:  3
+2016/06/02 20:38:27 view.go:151: Width:  134 , Height:  30
+2016/06/02 20:38:27 view.go:164: New fgcolor:  4
+2016/06/02 20:43:53 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:43:53 view.go:37: View started
+2016/06/02 20:43:53 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:53 view.go:138: New fgcolor:  1
+2016/06/02 20:43:54 view.go:87: You pressed:  0
+2016/06/02 20:43:54 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:54 view.go:138: New fgcolor:  2
+2016/06/02 20:43:54 view.go:87: You pressed:  0
+2016/06/02 20:43:54 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:54 view.go:138: New fgcolor:  3
+2016/06/02 20:43:54 view.go:87: You pressed:  0
+2016/06/02 20:43:54 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:54 view.go:138: New fgcolor:  4
+2016/06/02 20:43:54 view.go:87: You pressed:  0
+2016/06/02 20:43:54 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:54 view.go:138: New fgcolor:  5
+2016/06/02 20:43:55 view.go:87: You pressed:  0
+2016/06/02 20:43:55 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:55 view.go:138: New fgcolor:  6
+2016/06/02 20:43:55 view.go:87: You pressed:  0
+2016/06/02 20:43:55 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:55 view.go:138: New fgcolor:  7
+2016/06/02 20:43:55 view.go:87: You pressed:  0
+2016/06/02 20:43:55 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:55 view.go:138: New fgcolor:  8
+2016/06/02 20:43:55 view.go:87: You pressed:  0
+2016/06/02 20:43:55 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:55 view.go:138: New fgcolor:  0
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  1
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  2
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  3
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  4
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  5
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  6
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  7
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  8
+2016/06/02 20:43:56 view.go:87: You pressed:  0
+2016/06/02 20:43:56 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:56 view.go:138: New fgcolor:  0
+2016/06/02 20:43:57 view.go:87: You pressed:  0
+2016/06/02 20:43:57 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:57 view.go:138: New fgcolor:  1
+2016/06/02 20:43:57 view.go:87: You pressed:  0
+2016/06/02 20:43:57 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:43:57 view.go:138: New fgcolor:  2
+2016/06/02 20:44:00 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:00 view.go:138: New fgcolor:  3
+2016/06/02 20:44:00 view.go:87: You pressed:  0
+2016/06/02 20:44:00 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:00 view.go:138: New fgcolor:  4
+2016/06/02 20:44:00 view.go:87: You pressed:  0
+2016/06/02 20:44:00 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:00 view.go:138: New fgcolor:  5
+2016/06/02 20:44:01 view.go:87: You pressed:  0
+2016/06/02 20:44:01 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:01 view.go:138: New fgcolor:  6
+2016/06/02 20:44:01 view.go:87: You pressed:  0
+2016/06/02 20:44:01 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:01 view.go:138: New fgcolor:  7
+2016/06/02 20:44:01 view.go:87: You pressed:  0
+2016/06/02 20:44:01 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:01 view.go:138: New fgcolor:  8
+2016/06/02 20:44:06 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:44:06 view.go:37: View started
+2016/06/02 20:44:06 view.go:125: Width:  134 , Height:  30
+2016/06/02 20:44:06 view.go:138: New fgcolor:  1
+2016/06/02 20:44:34 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 20:44:34 view.go:37: View started
+2016/06/02 20:44:34 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:34 view.go:138: New fgcolor:  1
+2016/06/02 20:44:37 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:37 view.go:138: New fgcolor:  2
+2016/06/02 20:44:37 view.go:87: You pressed:  0
+2016/06/02 20:44:37 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:37 view.go:138: New fgcolor:  3
+2016/06/02 20:44:37 view.go:87: You pressed:  0
+2016/06/02 20:44:37 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:37 view.go:138: New fgcolor:  4
+2016/06/02 20:44:38 view.go:87: You pressed:  0
+2016/06/02 20:44:38 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:38 view.go:138: New fgcolor:  5
+2016/06/02 20:44:43 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 20:44:43 view.go:37: View started
+2016/06/02 20:44:43 view.go:125: Width:  134 , Height:  28
+2016/06/02 20:44:43 view.go:138: New fgcolor:  1
+2016/06/02 20:46:31 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:46:31 view.go:37: View started
+2016/06/02 20:46:31 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:31 view.go:139: New fgcolor:  1
+2016/06/02 20:46:32 view.go:87: You pressed:  0
+2016/06/02 20:46:32 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:32 view.go:139: New fgcolor:  2
+2016/06/02 20:46:32 view.go:87: You pressed:  0
+2016/06/02 20:46:32 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:32 view.go:139: New fgcolor:  3
+2016/06/02 20:46:32 view.go:87: You pressed:  0
+2016/06/02 20:46:32 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:32 view.go:139: New fgcolor:  4
+2016/06/02 20:46:32 view.go:87: You pressed:  0
+2016/06/02 20:46:32 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:32 view.go:139: New fgcolor:  5
+2016/06/02 20:46:35 view.go:87: You pressed:  0
+2016/06/02 20:46:35 view.go:126: Width:  134 , Height:  22
+2016/06/02 20:46:35 view.go:139: New fgcolor:  6
+2016/06/02 20:47:09 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 20:47:09 view.go:37: View started
+2016/06/02 20:47:09 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:09 view.go:140: New fgcolor:  1
+2016/06/02 20:47:10 view.go:87: You pressed:  0
+2016/06/02 20:47:10 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:10 view.go:140: New fgcolor:  2
+2016/06/02 20:47:11 view.go:87: You pressed:  0
+2016/06/02 20:47:11 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:11 view.go:140: New fgcolor:  3
+2016/06/02 20:47:11 view.go:87: You pressed:  0
+2016/06/02 20:47:11 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:11 view.go:140: New fgcolor:  4
+2016/06/02 20:47:11 view.go:87: You pressed:  0
+2016/06/02 20:47:11 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:11 view.go:140: New fgcolor:  5
+2016/06/02 20:47:11 view.go:87: You pressed:  0
+2016/06/02 20:47:11 view.go:127: Width:  134 , Height:  22
+2016/06/02 20:47:11 view.go:140: New fgcolor:  6
+2016/06/02 20:53:08 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 20:53:08 view.go:37: View started
+2016/06/02 20:53:08 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:08 view.go:140: New fgcolor:  1
+2016/06/02 20:53:09 view.go:87: You pressed:  0
+2016/06/02 20:53:09 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:09 view.go:140: New fgcolor:  2
+2016/06/02 20:53:10 view.go:87: You pressed:  0
+2016/06/02 20:53:10 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:10 view.go:140: New fgcolor:  3
+2016/06/02 20:53:11 view.go:87: You pressed:  0
+2016/06/02 20:53:11 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:11 view.go:140: New fgcolor:  4
+2016/06/02 20:53:11 view.go:87: You pressed:  0
+2016/06/02 20:53:11 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:11 view.go:140: New fgcolor:  5
+2016/06/02 20:53:12 view.go:87: You pressed:  0
+2016/06/02 20:53:12 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:12 view.go:140: New fgcolor:  6
+2016/06/02 20:53:12 view.go:87: You pressed:  0
+2016/06/02 20:53:12 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:12 view.go:140: New fgcolor:  7
+2016/06/02 20:53:12 view.go:87: You pressed:  0
+2016/06/02 20:53:12 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:12 view.go:140: New fgcolor:  8
+2016/06/02 20:53:13 view.go:87: You pressed:  0
+2016/06/02 20:53:13 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:13 view.go:140: New fgcolor:  0
+2016/06/02 20:53:13 view.go:87: You pressed:  0
+2016/06/02 20:53:13 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:13 view.go:140: New fgcolor:  1
+2016/06/02 20:53:13 view.go:87: You pressed:  0
+2016/06/02 20:53:13 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:13 view.go:140: New fgcolor:  2
+2016/06/02 20:53:13 view.go:87: You pressed:  0
+2016/06/02 20:53:13 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:13 view.go:140: New fgcolor:  3
+2016/06/02 20:53:58 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 20:53:58 view.go:37: View started
+2016/06/02 20:53:58 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:53:58 view.go:140: New fgcolor:  1
+2016/06/02 20:54:00 view.go:87: You pressed:  97
+2016/06/02 20:54:00 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:00 view.go:140: New fgcolor:  2
+2016/06/02 20:54:01 view.go:87: You pressed:  98
+2016/06/02 20:54:01 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:01 view.go:140: New fgcolor:  3
+2016/06/02 20:54:01 view.go:87: You pressed:  99
+2016/06/02 20:54:01 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:01 view.go:140: New fgcolor:  4
+2016/06/02 20:54:02 view.go:87: You pressed:  100
+2016/06/02 20:54:02 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:02 view.go:140: New fgcolor:  5
+2016/06/02 20:54:03 view.go:87: You pressed:  101
+2016/06/02 20:54:03 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:03 view.go:140: New fgcolor:  6
+2016/06/02 20:54:03 view.go:87: You pressed:  102
+2016/06/02 20:54:03 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:03 view.go:140: New fgcolor:  7
+2016/06/02 20:54:04 view.go:87: You pressed:  103
+2016/06/02 20:54:04 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:04 view.go:140: New fgcolor:  8
+2016/06/02 20:54:04 view.go:87: You pressed:  104
+2016/06/02 20:54:04 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:04 view.go:140: New fgcolor:  0
+2016/06/02 20:54:04 view.go:87: You pressed:  105
+2016/06/02 20:54:04 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:04 view.go:140: New fgcolor:  1
+2016/06/02 20:54:04 view.go:87: You pressed:  106
+2016/06/02 20:54:04 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:04 view.go:140: New fgcolor:  2
+2016/06/02 20:54:04 view.go:87: You pressed:  107
+2016/06/02 20:54:04 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:04 view.go:140: New fgcolor:  3
+2016/06/02 20:54:05 view.go:87: You pressed:  109
+2016/06/02 20:54:05 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:05 view.go:140: New fgcolor:  4
+2016/06/02 20:54:05 view.go:87: You pressed:  110
+2016/06/02 20:54:05 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:05 view.go:140: New fgcolor:  5
+2016/06/02 20:54:05 view.go:87: You pressed:  111
+2016/06/02 20:54:05 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:05 view.go:140: New fgcolor:  6
+2016/06/02 20:54:05 view.go:87: You pressed:  112
+2016/06/02 20:54:05 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:05 view.go:140: New fgcolor:  7
+2016/06/02 20:54:05 view.go:87: You pressed:  47
+2016/06/02 20:54:05 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:05 view.go:140: New fgcolor:  8
+2016/06/02 20:54:07 view.go:87: You pressed:  0
+2016/06/02 20:54:07 view.go:127: Width:  134 , Height:  27
+2016/06/02 20:54:07 view.go:140: New fgcolor:  0
+2016/06/02 21:01:56 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:01:56 view.go:37: View started
+2016/06/02 21:01:56 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:56 view.go:141: New fgcolor:  1
+2016/06/02 21:01:57 view.go:87: You pressed:  97
+2016/06/02 21:01:57 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:57 view.go:141: New fgcolor:  2
+2016/06/02 21:01:57 view.go:87: You pressed:  98
+2016/06/02 21:01:57 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:57 view.go:141: New fgcolor:  3
+2016/06/02 21:01:58 view.go:87: You pressed:  99
+2016/06/02 21:01:58 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:58 view.go:141: New fgcolor:  4
+2016/06/02 21:01:58 view.go:87: You pressed:  100
+2016/06/02 21:01:58 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:58 view.go:141: New fgcolor:  5
+2016/06/02 21:01:58 view.go:87: You pressed:  101
+2016/06/02 21:01:58 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:58 view.go:141: New fgcolor:  6
+2016/06/02 21:01:59 view.go:87: You pressed:  102
+2016/06/02 21:01:59 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:01:59 view.go:141: New fgcolor:  7
+2016/06/02 21:02:00 view.go:87: You pressed:  103
+2016/06/02 21:02:00 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:00 view.go:141: New fgcolor:  8
+2016/06/02 21:02:01 view.go:87: You pressed:  104
+2016/06/02 21:02:01 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:01 view.go:141: New fgcolor:  0
+2016/06/02 21:02:01 view.go:87: You pressed:  105
+2016/06/02 21:02:01 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:01 view.go:141: New fgcolor:  1
+2016/06/02 21:02:04 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:04 view.go:141: New fgcolor:  2
+2016/06/02 21:02:52 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:02:52 view.go:37: View started
+2016/06/02 21:02:52 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:52 view.go:140: Input string:  
+2016/06/02 21:02:52 view.go:142: New fgcolor:  1
+2016/06/02 21:02:52 view.go:87: You pressed:  97
+2016/06/02 21:02:52 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:52 view.go:140: Input string:  
+2016/06/02 21:02:52 view.go:142: New fgcolor:  2
+2016/06/02 21:02:53 view.go:87: You pressed:  98
+2016/06/02 21:02:53 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:53 view.go:140: Input string:  
+2016/06/02 21:02:53 view.go:142: New fgcolor:  3
+2016/06/02 21:02:53 view.go:87: You pressed:  99
+2016/06/02 21:02:53 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:53 view.go:140: Input string:  
+2016/06/02 21:02:53 view.go:142: New fgcolor:  4
+2016/06/02 21:02:54 view.go:87: You pressed:  100
+2016/06/02 21:02:54 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:54 view.go:140: Input string:  
+2016/06/02 21:02:54 view.go:142: New fgcolor:  5
+2016/06/02 21:02:54 view.go:87: You pressed:  101
+2016/06/02 21:02:54 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:54 view.go:140: Input string:  
+2016/06/02 21:02:54 view.go:142: New fgcolor:  6
+2016/06/02 21:02:54 view.go:87: You pressed:  102
+2016/06/02 21:02:54 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:54 view.go:140: Input string:  
+2016/06/02 21:02:54 view.go:142: New fgcolor:  7
+2016/06/02 21:02:57 view.go:127: Width:  134 , Height:  40
+2016/06/02 21:02:57 view.go:140: Input string:  
+2016/06/02 21:02:57 view.go:142: New fgcolor:  8
+2016/06/02 21:05:03 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:05:03 view.go:37: View started
+2016/06/02 21:05:03 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:03 view.go:127: Input string:  
+2016/06/02 21:05:03 view.go:129: New fgcolor:  1
+2016/06/02 21:05:04 view.go:74: You pressed:  97
+2016/06/02 21:05:04 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:04 view.go:127: Input string:  
+2016/06/02 21:05:04 view.go:129: New fgcolor:  2
+2016/06/02 21:05:04 view.go:74: You pressed:  98
+2016/06/02 21:05:04 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:04 view.go:127: Input string:  
+2016/06/02 21:05:04 view.go:129: New fgcolor:  3
+2016/06/02 21:05:05 view.go:74: You pressed:  99
+2016/06/02 21:05:05 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:05 view.go:127: Input string:  
+2016/06/02 21:05:05 view.go:129: New fgcolor:  4
+2016/06/02 21:05:05 view.go:74: You pressed:  100
+2016/06/02 21:05:05 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:05 view.go:127: Input string:  
+2016/06/02 21:05:05 view.go:129: New fgcolor:  5
+2016/06/02 21:05:05 view.go:74: You pressed:  101
+2016/06/02 21:05:05 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:05 view.go:127: Input string:  
+2016/06/02 21:05:05 view.go:129: New fgcolor:  6
+2016/06/02 21:05:05 view.go:74: You pressed:  102
+2016/06/02 21:05:05 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:05 view.go:127: Input string:  
+2016/06/02 21:05:05 view.go:129: New fgcolor:  7
+2016/06/02 21:05:08 view.go:114: Width:  134 , Height:  40
+2016/06/02 21:05:08 view.go:127: Input string:  
+2016/06/02 21:05:08 view.go:129: New fgcolor:  8
+2016/06/02 21:05:54 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:05:54 view.go:37: View started
+2016/06/02 21:05:54 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:54 view.go:128: Input string:  
+2016/06/02 21:05:54 view.go:130: New fgcolor:  1
+2016/06/02 21:05:55 view.go:75: You pressed:  97
+2016/06/02 21:05:55 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:05:55 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:55 view.go:128: Input string:  
+2016/06/02 21:05:55 view.go:130: New fgcolor:  2
+2016/06/02 21:05:56 view.go:75: You pressed:  98
+2016/06/02 21:05:56 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:05:56 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:56 view.go:128: Input string:  
+2016/06/02 21:05:56 view.go:130: New fgcolor:  3
+2016/06/02 21:05:57 view.go:75: You pressed:  99
+2016/06/02 21:05:57 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:05:57 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:57 view.go:128: Input string:  
+2016/06/02 21:05:57 view.go:130: New fgcolor:  4
+2016/06/02 21:05:59 view.go:75: You pressed:  97
+2016/06/02 21:05:59 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:05:59 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:59 view.go:128: Input string:  
+2016/06/02 21:05:59 view.go:130: New fgcolor:  5
+2016/06/02 21:05:59 view.go:75: You pressed:  115
+2016/06/02 21:05:59 view.go:49: Encoded rune:  115 , size:  1
+2016/06/02 21:05:59 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:05:59 view.go:128: Input string:  
+2016/06/02 21:05:59 view.go:130: New fgcolor:  6
+2016/06/02 21:06:00 view.go:75: You pressed:  100
+2016/06/02 21:06:00 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:06:00 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:00 view.go:128: Input string:  
+2016/06/02 21:06:00 view.go:130: New fgcolor:  7
+2016/06/02 21:06:00 view.go:75: You pressed:  102
+2016/06/02 21:06:00 view.go:49: Encoded rune:  102 , size:  1
+2016/06/02 21:06:00 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:00 view.go:128: Input string:  
+2016/06/02 21:06:00 view.go:130: New fgcolor:  8
+2016/06/02 21:06:00 view.go:75: You pressed:  57
+2016/06/02 21:06:00 view.go:49: Encoded rune:  57 , size:  1
+2016/06/02 21:06:00 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:00 view.go:128: Input string:  
+2016/06/02 21:06:00 view.go:130: New fgcolor:  0
+2016/06/02 21:06:00 view.go:75: You pressed:  48
+2016/06/02 21:06:00 view.go:49: Encoded rune:  48 , size:  1
+2016/06/02 21:06:00 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:00 view.go:128: Input string:  
+2016/06/02 21:06:00 view.go:130: New fgcolor:  1
+2016/06/02 21:06:01 view.go:75: You pressed:  47
+2016/06/02 21:06:01 view.go:49: Encoded rune:  47 , size:  1
+2016/06/02 21:06:01 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:01 view.go:128: Input string:  
+2016/06/02 21:06:01 view.go:130: New fgcolor:  2
+2016/06/02 21:06:01 view.go:72: DELETE DELETE DELETE
+2016/06/02 21:06:01 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:01 view.go:128: Input string:  
+2016/06/02 21:06:01 view.go:130: New fgcolor:  3
+2016/06/02 21:06:04 view.go:115: Width:  134 , Height:  40
+2016/06/02 21:06:04 view.go:128: Input string:  
+2016/06/02 21:06:04 view.go:130: New fgcolor:  4
+2016/06/02 21:07:29 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:07:29 view.go:37: View started
+2016/06/02 21:07:29 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:07:29 view.go:131: Input string:  
+2016/06/02 21:07:29 view.go:133: New fgcolor:  1
+2016/06/02 21:07:29 view.go:78: You pressed:  97
+2016/06/02 21:07:29 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:07:29 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:07:29 view.go:131: Input string:  
+2016/06/02 21:07:29 view.go:133: New fgcolor:  2
+2016/06/02 21:07:30 view.go:78: You pressed:  98
+2016/06/02 21:07:30 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:07:30 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:07:30 view.go:131: Input string:  
+2016/06/02 21:07:30 view.go:133: New fgcolor:  3
+2016/06/02 21:07:31 view.go:78: You pressed:  99
+2016/06/02 21:07:31 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:07:31 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:07:31 view.go:131: Input string:  
+2016/06/02 21:07:31 view.go:133: New fgcolor:  4
+2016/06/02 21:07:31 view.go:78: You pressed:  100
+2016/06/02 21:07:31 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:07:31 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:07:31 view.go:131: Input string:  
+2016/06/02 21:07:31 view.go:133: New fgcolor:  5
+2016/06/02 21:08:23 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:08:23 view.go:37: View started
+2016/06/02 21:08:23 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:23 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:23 view.go:132: Input string:  
+2016/06/02 21:08:23 view.go:134: New fgcolor:  1
+2016/06/02 21:08:24 view.go:78: You pressed:  97
+2016/06/02 21:08:24 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:08:24 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:24 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:24 view.go:132: Input string:  
+2016/06/02 21:08:24 view.go:134: New fgcolor:  2
+2016/06/02 21:08:25 view.go:78: You pressed:  98
+2016/06/02 21:08:25 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:08:25 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:25 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:25 view.go:132: Input string:  
+2016/06/02 21:08:25 view.go:134: New fgcolor:  3
+2016/06/02 21:08:25 view.go:78: You pressed:  99
+2016/06/02 21:08:25 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:08:25 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:25 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:25 view.go:132: Input string:  
+2016/06/02 21:08:25 view.go:134: New fgcolor:  4
+2016/06/02 21:08:27 view.go:78: You pressed:  100
+2016/06/02 21:08:27 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:08:27 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:27 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:27 view.go:132: Input string:  
+2016/06/02 21:08:27 view.go:134: New fgcolor:  5
+2016/06/02 21:08:27 view.go:78: You pressed:  101
+2016/06/02 21:08:27 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:08:27 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:27 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:27 view.go:132: Input string:  
+2016/06/02 21:08:27 view.go:134: New fgcolor:  6
+2016/06/02 21:08:27 view.go:78: You pressed:  102
+2016/06/02 21:08:27 view.go:49: Encoded rune:  102 , size:  1
+2016/06/02 21:08:27 view.go:118: Width:  134 , Height:  40
+2016/06/02 21:08:27 view.go:127: Copied # bytes:  0
+2016/06/02 21:08:27 view.go:132: Input string:  
+2016/06/02 21:08:27 view.go:134: New fgcolor:  7
+2016/06/02 21:09:42 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:09:42 view.go:37: View started
+2016/06/02 21:09:42 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:42 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:42 view.go:133: Input string:  
+2016/06/02 21:09:42 view.go:135: New fgcolor:  1
+2016/06/02 21:09:44 view.go:79: You pressed:  97
+2016/06/02 21:09:44 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:09:44 view.go:54: Len of input:  1
+2016/06/02 21:09:44 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:44 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:44 view.go:133: Input string:  
+2016/06/02 21:09:44 view.go:135: New fgcolor:  2
+2016/06/02 21:09:45 view.go:79: You pressed:  98
+2016/06/02 21:09:45 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:09:45 view.go:54: Len of input:  2
+2016/06/02 21:09:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:45 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:45 view.go:133: Input string:  
+2016/06/02 21:09:45 view.go:135: New fgcolor:  3
+2016/06/02 21:09:45 view.go:79: You pressed:  99
+2016/06/02 21:09:45 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:09:45 view.go:54: Len of input:  3
+2016/06/02 21:09:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:45 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:45 view.go:133: Input string:  
+2016/06/02 21:09:45 view.go:135: New fgcolor:  4
+2016/06/02 21:09:45 view.go:79: You pressed:  100
+2016/06/02 21:09:45 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:09:45 view.go:54: Len of input:  4
+2016/06/02 21:09:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:45 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:45 view.go:133: Input string:  
+2016/06/02 21:09:45 view.go:135: New fgcolor:  5
+2016/06/02 21:09:46 view.go:79: You pressed:  101
+2016/06/02 21:09:46 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:09:46 view.go:54: Len of input:  5
+2016/06/02 21:09:46 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:46 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:46 view.go:133: Input string:  
+2016/06/02 21:09:46 view.go:135: New fgcolor:  6
+2016/06/02 21:09:46 view.go:79: You pressed:  102
+2016/06/02 21:09:46 view.go:49: Encoded rune:  102 , size:  1
+2016/06/02 21:09:46 view.go:54: Len of input:  6
+2016/06/02 21:09:46 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:09:46 view.go:128: Copied # bytes:  0
+2016/06/02 21:09:46 view.go:133: Input string:  
+2016/06/02 21:09:46 view.go:135: New fgcolor:  7
+2016/06/02 21:10:12 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:10:12 view.go:37: View started
+2016/06/02 21:10:12 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:12 view.go:127: Len of input:  []
+2016/06/02 21:10:12 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:12 view.go:134: Input string:  
+2016/06/02 21:10:12 view.go:136: New fgcolor:  1
+2016/06/02 21:10:12 view.go:79: You pressed:  97
+2016/06/02 21:10:12 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:10:12 view.go:54: Len of input:  1
+2016/06/02 21:10:12 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:12 view.go:127: Len of input:  [97]
+2016/06/02 21:10:12 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:12 view.go:134: Input string:  
+2016/06/02 21:10:12 view.go:136: New fgcolor:  2
+2016/06/02 21:10:13 view.go:79: You pressed:  98
+2016/06/02 21:10:13 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:10:13 view.go:54: Len of input:  2
+2016/06/02 21:10:13 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:13 view.go:127: Len of input:  [97 98]
+2016/06/02 21:10:13 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:13 view.go:134: Input string:  
+2016/06/02 21:10:13 view.go:136: New fgcolor:  3
+2016/06/02 21:10:13 view.go:79: You pressed:  99
+2016/06/02 21:10:13 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:10:13 view.go:54: Len of input:  3
+2016/06/02 21:10:13 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:13 view.go:127: Len of input:  [97 98 99]
+2016/06/02 21:10:13 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:13 view.go:134: Input string:  
+2016/06/02 21:10:13 view.go:136: New fgcolor:  4
+2016/06/02 21:10:14 view.go:79: You pressed:  100
+2016/06/02 21:10:14 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:10:14 view.go:54: Len of input:  4
+2016/06/02 21:10:14 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:14 view.go:127: Len of input:  [97 98 99 100]
+2016/06/02 21:10:14 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:14 view.go:134: Input string:  
+2016/06/02 21:10:14 view.go:136: New fgcolor:  5
+2016/06/02 21:10:17 view.go:79: You pressed:  107
+2016/06/02 21:10:17 view.go:49: Encoded rune:  107 , size:  1
+2016/06/02 21:10:17 view.go:54: Len of input:  5
+2016/06/02 21:10:17 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:17 view.go:127: Len of input:  [97 98 99 100 107]
+2016/06/02 21:10:17 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:17 view.go:134: Input string:  
+2016/06/02 21:10:17 view.go:136: New fgcolor:  6
+2016/06/02 21:10:17 view.go:79: You pressed:  106
+2016/06/02 21:10:17 view.go:49: Encoded rune:  106 , size:  1
+2016/06/02 21:10:17 view.go:54: Len of input:  6
+2016/06/02 21:10:17 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:17 view.go:127: Len of input:  [97 98 99 100 107 106]
+2016/06/02 21:10:17 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:17 view.go:134: Input string:  
+2016/06/02 21:10:17 view.go:136: New fgcolor:  7
+2016/06/02 21:10:18 view.go:79: You pressed:  104
+2016/06/02 21:10:18 view.go:49: Encoded rune:  104 , size:  1
+2016/06/02 21:10:18 view.go:54: Len of input:  7
+2016/06/02 21:10:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:18 view.go:127: Len of input:  [97 98 99 100 107 106 104]
+2016/06/02 21:10:18 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:18 view.go:134: Input string:  
+2016/06/02 21:10:18 view.go:136: New fgcolor:  8
+2016/06/02 21:10:18 view.go:79: You pressed:  111
+2016/06/02 21:10:18 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:10:18 view.go:54: Len of input:  8
+2016/06/02 21:10:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:18 view.go:127: Len of input:  [97 98 99 100 107 106 104 111]
+2016/06/02 21:10:18 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:18 view.go:134: Input string:  
+2016/06/02 21:10:18 view.go:136: New fgcolor:  0
+2016/06/02 21:10:18 view.go:76: DELETE DELETE DELETE
+2016/06/02 21:10:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:18 view.go:127: Len of input:  [97 98 99 100 107 106 104 111]
+2016/06/02 21:10:18 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:18 view.go:134: Input string:  
+2016/06/02 21:10:18 view.go:136: New fgcolor:  1
+2016/06/02 21:10:19 view.go:79: You pressed:  97
+2016/06/02 21:10:19 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:10:19 view.go:54: Len of input:  9
+2016/06/02 21:10:19 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:10:19 view.go:127: Len of input:  [97 98 99 100 107 106 104 111 97]
+2016/06/02 21:10:19 view.go:129: Copied # bytes:  0
+2016/06/02 21:10:19 view.go:134: Input string:  
+2016/06/02 21:10:19 view.go:136: New fgcolor:  2
+2016/06/02 21:11:10 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:11:10 view.go:37: View started
+2016/06/02 21:11:10 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:10 view.go:127: Input string:  
+2016/06/02 21:11:10 view.go:129: New fgcolor:  1
+2016/06/02 21:11:11 view.go:79: You pressed:  97
+2016/06/02 21:11:11 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:11 view.go:54: Len of input:  1
+2016/06/02 21:11:11 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:11 view.go:127: Input string:  a
+2016/06/02 21:11:11 view.go:129: New fgcolor:  2
+2016/06/02 21:11:11 view.go:79: You pressed:  98
+2016/06/02 21:11:11 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:11:11 view.go:54: Len of input:  2
+2016/06/02 21:11:11 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:11 view.go:127: Input string:  ab
+2016/06/02 21:11:11 view.go:129: New fgcolor:  3
+2016/06/02 21:11:12 view.go:79: You pressed:  99
+2016/06/02 21:11:12 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:11:12 view.go:54: Len of input:  3
+2016/06/02 21:11:12 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:12 view.go:127: Input string:  abc
+2016/06/02 21:11:12 view.go:129: New fgcolor:  4
+2016/06/02 21:11:12 view.go:79: You pressed:  100
+2016/06/02 21:11:12 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:11:12 view.go:54: Len of input:  4
+2016/06/02 21:11:12 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:12 view.go:127: Input string:  abcd
+2016/06/02 21:11:12 view.go:129: New fgcolor:  5
+2016/06/02 21:11:13 view.go:79: You pressed:  101
+2016/06/02 21:11:13 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:11:13 view.go:54: Len of input:  5
+2016/06/02 21:11:13 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:13 view.go:127: Input string:  abcde
+2016/06/02 21:11:13 view.go:129: New fgcolor:  6
+2016/06/02 21:11:13 view.go:79: You pressed:  102
+2016/06/02 21:11:13 view.go:49: Encoded rune:  102 , size:  1
+2016/06/02 21:11:13 view.go:54: Len of input:  6
+2016/06/02 21:11:13 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:13 view.go:127: Input string:  abcdef
+2016/06/02 21:11:13 view.go:129: New fgcolor:  7
+2016/06/02 21:11:18 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:11:18 view.go:37: View started
+2016/06/02 21:11:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:18 view.go:127: Input string:  
+2016/06/02 21:11:18 view.go:129: New fgcolor:  1
+2016/06/02 21:11:21 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:21 view.go:127: Input string:  
+2016/06/02 21:11:21 view.go:129: New fgcolor:  2
+2016/06/02 21:11:23 view.go:79: You pressed:  97
+2016/06/02 21:11:23 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:23 view.go:54: Len of input:  1
+2016/06/02 21:11:23 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:23 view.go:127: Input string:  a
+2016/06/02 21:11:23 view.go:129: New fgcolor:  3
+2016/06/02 21:11:23 view.go:79: You pressed:  97
+2016/06/02 21:11:23 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:23 view.go:54: Len of input:  2
+2016/06/02 21:11:23 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:23 view.go:127: Input string:  aa
+2016/06/02 21:11:23 view.go:129: New fgcolor:  4
+2016/06/02 21:11:24 view.go:79: You pressed:  97
+2016/06/02 21:11:24 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:24 view.go:54: Len of input:  3
+2016/06/02 21:11:24 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:24 view.go:127: Input string:  aaa
+2016/06/02 21:11:24 view.go:129: New fgcolor:  5
+2016/06/02 21:11:24 view.go:79: You pressed:  97
+2016/06/02 21:11:24 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:24 view.go:54: Len of input:  4
+2016/06/02 21:11:24 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:24 view.go:127: Input string:  aaaa
+2016/06/02 21:11:24 view.go:129: New fgcolor:  6
+2016/06/02 21:11:24 view.go:79: You pressed:  97
+2016/06/02 21:11:24 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:24 view.go:54: Len of input:  5
+2016/06/02 21:11:24 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:24 view.go:127: Input string:  aaaaa
+2016/06/02 21:11:24 view.go:129: New fgcolor:  7
+2016/06/02 21:11:25 view.go:79: You pressed:  97
+2016/06/02 21:11:25 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:25 view.go:54: Len of input:  6
+2016/06/02 21:11:25 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:25 view.go:127: Input string:  aaaaaa
+2016/06/02 21:11:25 view.go:129: New fgcolor:  8
+2016/06/02 21:11:25 view.go:79: You pressed:  97
+2016/06/02 21:11:25 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:25 view.go:54: Len of input:  7
+2016/06/02 21:11:25 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:25 view.go:127: Input string:  aaaaaaa
+2016/06/02 21:11:25 view.go:129: New fgcolor:  0
+2016/06/02 21:11:31 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:11:31 view.go:37: View started
+2016/06/02 21:11:31 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:31 view.go:127: Input string:  
+2016/06/02 21:11:31 view.go:129: New fgcolor:  1
+2016/06/02 21:11:34 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:34 view.go:127: Input string:  
+2016/06/02 21:11:34 view.go:129: New fgcolor:  2
+2016/06/02 21:11:35 view.go:79: You pressed:  97
+2016/06/02 21:11:35 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:35 view.go:54: Len of input:  1
+2016/06/02 21:11:35 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:35 view.go:127: Input string:  a
+2016/06/02 21:11:35 view.go:129: New fgcolor:  3
+2016/06/02 21:11:38 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:38 view.go:127: Input string:  a
+2016/06/02 21:11:38 view.go:129: New fgcolor:  4
+2016/06/02 21:11:39 view.go:79: You pressed:  97
+2016/06/02 21:11:39 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:11:39 view.go:54: Len of input:  2
+2016/06/02 21:11:39 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:39 view.go:127: Input string:  aa
+2016/06/02 21:11:39 view.go:129: New fgcolor:  5
+2016/06/02 21:11:42 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:11:42 view.go:127: Input string:  aa
+2016/06/02 21:11:42 view.go:129: New fgcolor:  6
+2016/06/02 21:13:15 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:13:15 view.go:37: View started
+2016/06/02 21:13:15 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:15 view.go:127: Input string:  
+2016/06/02 21:13:15 view.go:129: New fgcolor:  1
+2016/06/02 21:13:16 view.go:79: You pressed:  48
+2016/06/02 21:13:16 view.go:49: Encoded rune:  48 , size:  1
+2016/06/02 21:13:16 view.go:54: Len of input:  1
+2016/06/02 21:13:16 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:16 view.go:127: Input string:  0
+2016/06/02 21:13:16 view.go:129: New fgcolor:  2
+2016/06/02 21:13:17 view.go:79: You pressed:  49
+2016/06/02 21:13:17 view.go:49: Encoded rune:  49 , size:  1
+2016/06/02 21:13:17 view.go:54: Len of input:  2
+2016/06/02 21:13:17 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:17 view.go:127: Input string:  01
+2016/06/02 21:13:17 view.go:129: New fgcolor:  3
+2016/06/02 21:13:18 view.go:79: You pressed:  50
+2016/06/02 21:13:18 view.go:49: Encoded rune:  50 , size:  1
+2016/06/02 21:13:18 view.go:54: Len of input:  3
+2016/06/02 21:13:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:18 view.go:127: Input string:  012
+2016/06/02 21:13:18 view.go:129: New fgcolor:  4
+2016/06/02 21:13:18 view.go:79: You pressed:  51
+2016/06/02 21:13:18 view.go:49: Encoded rune:  51 , size:  1
+2016/06/02 21:13:18 view.go:54: Len of input:  4
+2016/06/02 21:13:18 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:18 view.go:127: Input string:  0123
+2016/06/02 21:13:18 view.go:129: New fgcolor:  5
+2016/06/02 21:13:21 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:21 view.go:127: Input string:  0123
+2016/06/02 21:13:21 view.go:129: New fgcolor:  6
+2016/06/02 21:13:24 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:24 view.go:127: Input string:  0123
+2016/06/02 21:13:24 view.go:129: New fgcolor:  7
+2016/06/02 21:13:24 view.go:79: You pressed:  52
+2016/06/02 21:13:24 view.go:49: Encoded rune:  52 , size:  1
+2016/06/02 21:13:24 view.go:54: Len of input:  5
+2016/06/02 21:13:24 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:24 view.go:127: Input string:  01234
+2016/06/02 21:13:24 view.go:129: New fgcolor:  8
+2016/06/02 21:13:44 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:13:44 view.go:37: View started
+2016/06/02 21:13:44 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:44 view.go:127: Input string:  
+2016/06/02 21:13:44 view.go:129: New fgcolor:  1
+2016/06/02 21:13:44 view.go:79: You pressed:  97
+2016/06/02 21:13:44 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:13:44 view.go:54: Len of input:  1
+2016/06/02 21:13:44 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:44 view.go:127: Input string:  a
+2016/06/02 21:13:44 view.go:129: New fgcolor:  2
+2016/06/02 21:13:45 view.go:79: You pressed:  98
+2016/06/02 21:13:45 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:13:45 view.go:54: Len of input:  2
+2016/06/02 21:13:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:45 view.go:127: Input string:  ab
+2016/06/02 21:13:45 view.go:129: New fgcolor:  3
+2016/06/02 21:13:45 view.go:79: You pressed:  99
+2016/06/02 21:13:45 view.go:49: Encoded rune:  99 , size:  1
+2016/06/02 21:13:45 view.go:54: Len of input:  3
+2016/06/02 21:13:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:45 view.go:127: Input string:  abc
+2016/06/02 21:13:45 view.go:129: New fgcolor:  4
+2016/06/02 21:13:45 view.go:79: You pressed:  100
+2016/06/02 21:13:45 view.go:49: Encoded rune:  100 , size:  1
+2016/06/02 21:13:45 view.go:54: Len of input:  4
+2016/06/02 21:13:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:45 view.go:127: Input string:  abcd
+2016/06/02 21:13:45 view.go:129: New fgcolor:  5
+2016/06/02 21:13:45 view.go:79: You pressed:  101
+2016/06/02 21:13:45 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:13:45 view.go:54: Len of input:  5
+2016/06/02 21:13:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:45 view.go:127: Input string:  abcde
+2016/06/02 21:13:45 view.go:129: New fgcolor:  6
+2016/06/02 21:13:45 view.go:79: You pressed:  102
+2016/06/02 21:13:45 view.go:49: Encoded rune:  102 , size:  1
+2016/06/02 21:13:45 view.go:54: Len of input:  6
+2016/06/02 21:13:45 view.go:119: Width:  134 , Height:  40
+2016/06/02 21:13:45 view.go:127: Input string:  abcdef
+2016/06/02 21:13:45 view.go:129: New fgcolor:  7
+2016/06/02 21:14:11 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:14:11 view.go:37: View started
+2016/06/02 21:14:11 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:11 view.go:127: Input string:  
+2016/06/02 21:14:11 view.go:129: New fgcolor:  1
+2016/06/02 21:14:12 view.go:79: You pressed:  0
+2016/06/02 21:14:12 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:12 view.go:127: Input string:  
+2016/06/02 21:14:12 view.go:129: New fgcolor:  2
+2016/06/02 21:14:13 view.go:79: You pressed:  103
+2016/06/02 21:14:13 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  1
+2016/06/02 21:14:13 view.go:79: You pressed:  111
+2016/06/02 21:14:13 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  2
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  go
+2016/06/02 21:14:13 view.go:129: New fgcolor:  3
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  go
+2016/06/02 21:14:13 view.go:129: New fgcolor:  4
+2016/06/02 21:14:13 view.go:79: You pressed:  108
+2016/06/02 21:14:13 view.go:49: Encoded rune:  108 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  3
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  gol
+2016/06/02 21:14:13 view.go:129: New fgcolor:  5
+2016/06/02 21:14:13 view.go:79: You pressed:  97
+2016/06/02 21:14:13 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  4
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  gola
+2016/06/02 21:14:13 view.go:129: New fgcolor:  6
+2016/06/02 21:14:13 view.go:79: You pressed:  110
+2016/06/02 21:14:13 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  5
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golan
+2016/06/02 21:14:13 view.go:129: New fgcolor:  7
+2016/06/02 21:14:13 view.go:79: You pressed:  103
+2016/06/02 21:14:13 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  6
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golang
+2016/06/02 21:14:13 view.go:129: New fgcolor:  8
+2016/06/02 21:14:13 view.go:79: You pressed:  0
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golang
+2016/06/02 21:14:13 view.go:129: New fgcolor:  0
+2016/06/02 21:14:13 view.go:79: You pressed:  114
+2016/06/02 21:14:13 view.go:49: Encoded rune:  114 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  7
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangr
+2016/06/02 21:14:13 view.go:129: New fgcolor:  1
+2016/06/02 21:14:13 view.go:79: You pressed:  117
+2016/06/02 21:14:13 view.go:49: Encoded rune:  117 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  8
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangru
+2016/06/02 21:14:13 view.go:129: New fgcolor:  2
+2016/06/02 21:14:13 view.go:79: You pressed:  110
+2016/06/02 21:14:13 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  9
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrun
+2016/06/02 21:14:13 view.go:129: New fgcolor:  3
+2016/06/02 21:14:13 view.go:79: You pressed:  101
+2016/06/02 21:14:13 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  10
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrune
+2016/06/02 21:14:13 view.go:129: New fgcolor:  4
+2016/06/02 21:14:13 view.go:79: You pressed:  0
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrune
+2016/06/02 21:14:13 view.go:129: New fgcolor:  5
+2016/06/02 21:14:13 view.go:79: You pressed:  116
+2016/06/02 21:14:13 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  11
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrunet
+2016/06/02 21:14:13 view.go:129: New fgcolor:  6
+2016/06/02 21:14:13 view.go:79: You pressed:  111
+2016/06/02 21:14:13 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  12
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangruneto
+2016/06/02 21:14:13 view.go:129: New fgcolor:  7
+2016/06/02 21:14:13 view.go:79: You pressed:  0
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangruneto
+2016/06/02 21:14:13 view.go:129: New fgcolor:  8
+2016/06/02 21:14:13 view.go:79: You pressed:  98
+2016/06/02 21:14:13 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  13
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrunetob
+2016/06/02 21:14:13 view.go:129: New fgcolor:  0
+2016/06/02 21:14:13 view.go:79: You pressed:  121
+2016/06/02 21:14:13 view.go:49: Encoded rune:  121 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  14
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrunetoby
+2016/06/02 21:14:13 view.go:129: New fgcolor:  1
+2016/06/02 21:14:13 view.go:79: You pressed:  116
+2016/06/02 21:14:13 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  15
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrunetobyt
+2016/06/02 21:14:13 view.go:129: New fgcolor:  2
+2016/06/02 21:14:13 view.go:79: You pressed:  101
+2016/06/02 21:14:13 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:13 view.go:54: Len of input:  16
+2016/06/02 21:14:13 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:13 view.go:127: Input string:  golangrunetobyte
+2016/06/02 21:14:13 view.go:129: New fgcolor:  3
+2016/06/02 21:14:15 view.go:79: You pressed:  0
+2016/06/02 21:14:15 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:15 view.go:127: Input string:  golangrunetobyte
+2016/06/02 21:14:15 view.go:129: New fgcolor:  4
+2016/06/02 21:14:15 view.go:76: DELETE DELETE DELETE
+2016/06/02 21:14:15 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:15 view.go:127: Input string:  golangrunetobyte
+2016/06/02 21:14:15 view.go:129: New fgcolor:  5
+2016/06/02 21:14:15 view.go:79: You pressed:  0
+2016/06/02 21:14:15 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:15 view.go:127: Input string:  golangrunetobyte
+2016/06/02 21:14:15 view.go:129: New fgcolor:  6
+2016/06/02 21:14:18 view.go:79: You pressed:  103
+2016/06/02 21:14:18 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  17
+2016/06/02 21:14:18 view.go:79: You pressed:  111
+2016/06/02 21:14:18 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  18
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytego
+2016/06/02 21:14:18 view.go:129: New fgcolor:  7
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytego
+2016/06/02 21:14:18 view.go:129: New fgcolor:  8
+2016/06/02 21:14:18 view.go:79: You pressed:  108
+2016/06/02 21:14:18 view.go:49: Encoded rune:  108 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  19
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegol
+2016/06/02 21:14:18 view.go:129: New fgcolor:  0
+2016/06/02 21:14:18 view.go:79: You pressed:  97
+2016/06/02 21:14:18 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  20
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegola
+2016/06/02 21:14:18 view.go:129: New fgcolor:  1
+2016/06/02 21:14:18 view.go:79: You pressed:  110
+2016/06/02 21:14:18 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  21
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolan
+2016/06/02 21:14:18 view.go:129: New fgcolor:  2
+2016/06/02 21:14:18 view.go:79: You pressed:  103
+2016/06/02 21:14:18 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  22
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolang
+2016/06/02 21:14:18 view.go:129: New fgcolor:  3
+2016/06/02 21:14:18 view.go:79: You pressed:  0
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolang
+2016/06/02 21:14:18 view.go:129: New fgcolor:  4
+2016/06/02 21:14:18 view.go:79: You pressed:  114
+2016/06/02 21:14:18 view.go:49: Encoded rune:  114 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  23
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangr
+2016/06/02 21:14:18 view.go:129: New fgcolor:  5
+2016/06/02 21:14:18 view.go:79: You pressed:  117
+2016/06/02 21:14:18 view.go:49: Encoded rune:  117 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  24
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangru
+2016/06/02 21:14:18 view.go:129: New fgcolor:  6
+2016/06/02 21:14:18 view.go:79: You pressed:  110
+2016/06/02 21:14:18 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  25
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrun
+2016/06/02 21:14:18 view.go:129: New fgcolor:  7
+2016/06/02 21:14:18 view.go:79: You pressed:  101
+2016/06/02 21:14:18 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  26
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrune
+2016/06/02 21:14:18 view.go:129: New fgcolor:  8
+2016/06/02 21:14:18 view.go:79: You pressed:  0
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrune
+2016/06/02 21:14:18 view.go:129: New fgcolor:  0
+2016/06/02 21:14:18 view.go:79: You pressed:  116
+2016/06/02 21:14:18 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  27
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrunet
+2016/06/02 21:14:18 view.go:129: New fgcolor:  1
+2016/06/02 21:14:18 view.go:79: You pressed:  111
+2016/06/02 21:14:18 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  28
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangruneto
+2016/06/02 21:14:18 view.go:129: New fgcolor:  2
+2016/06/02 21:14:18 view.go:79: You pressed:  0
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangruneto
+2016/06/02 21:14:18 view.go:129: New fgcolor:  3
+2016/06/02 21:14:18 view.go:79: You pressed:  98
+2016/06/02 21:14:18 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  29
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrunetob
+2016/06/02 21:14:18 view.go:129: New fgcolor:  4
+2016/06/02 21:14:18 view.go:79: You pressed:  121
+2016/06/02 21:14:18 view.go:49: Encoded rune:  121 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  30
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrunetoby
+2016/06/02 21:14:18 view.go:129: New fgcolor:  5
+2016/06/02 21:14:18 view.go:79: You pressed:  116
+2016/06/02 21:14:18 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  31
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrunetobyt
+2016/06/02 21:14:18 view.go:129: New fgcolor:  6
+2016/06/02 21:14:18 view.go:79: You pressed:  101
+2016/06/02 21:14:18 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:18 view.go:54: Len of input:  32
+2016/06/02 21:14:18 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:18 view.go:127: Input string:  golangrunetobytegolangrunetobyte
+2016/06/02 21:14:18 view.go:129: New fgcolor:  7
+2016/06/02 21:14:19 view.go:79: You pressed:  103
+2016/06/02 21:14:19 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  33
+2016/06/02 21:14:19 view.go:79: You pressed:  111
+2016/06/02 21:14:19 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  34
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytego
+2016/06/02 21:14:19 view.go:129: New fgcolor:  8
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytego
+2016/06/02 21:14:19 view.go:129: New fgcolor:  0
+2016/06/02 21:14:19 view.go:79: You pressed:  108
+2016/06/02 21:14:19 view.go:49: Encoded rune:  108 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  35
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegol
+2016/06/02 21:14:19 view.go:129: New fgcolor:  1
+2016/06/02 21:14:19 view.go:79: You pressed:  97
+2016/06/02 21:14:19 view.go:49: Encoded rune:  97 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  36
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegola
+2016/06/02 21:14:19 view.go:129: New fgcolor:  2
+2016/06/02 21:14:19 view.go:79: You pressed:  110
+2016/06/02 21:14:19 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  37
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolan
+2016/06/02 21:14:19 view.go:129: New fgcolor:  3
+2016/06/02 21:14:19 view.go:79: You pressed:  103
+2016/06/02 21:14:19 view.go:49: Encoded rune:  103 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  38
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolang
+2016/06/02 21:14:19 view.go:129: New fgcolor:  4
+2016/06/02 21:14:19 view.go:79: You pressed:  0
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolang
+2016/06/02 21:14:19 view.go:129: New fgcolor:  5
+2016/06/02 21:14:19 view.go:79: You pressed:  114
+2016/06/02 21:14:19 view.go:49: Encoded rune:  114 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  39
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangr
+2016/06/02 21:14:19 view.go:129: New fgcolor:  6
+2016/06/02 21:14:19 view.go:79: You pressed:  117
+2016/06/02 21:14:19 view.go:49: Encoded rune:  117 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  40
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangru
+2016/06/02 21:14:19 view.go:129: New fgcolor:  7
+2016/06/02 21:14:19 view.go:79: You pressed:  110
+2016/06/02 21:14:19 view.go:49: Encoded rune:  110 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  41
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrun
+2016/06/02 21:14:19 view.go:129: New fgcolor:  8
+2016/06/02 21:14:19 view.go:79: You pressed:  101
+2016/06/02 21:14:19 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  42
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrune
+2016/06/02 21:14:19 view.go:129: New fgcolor:  0
+2016/06/02 21:14:19 view.go:79: You pressed:  0
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrune
+2016/06/02 21:14:19 view.go:129: New fgcolor:  1
+2016/06/02 21:14:19 view.go:79: You pressed:  116
+2016/06/02 21:14:19 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  43
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunet
+2016/06/02 21:14:19 view.go:129: New fgcolor:  2
+2016/06/02 21:14:19 view.go:79: You pressed:  111
+2016/06/02 21:14:19 view.go:49: Encoded rune:  111 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  44
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangruneto
+2016/06/02 21:14:19 view.go:129: New fgcolor:  3
+2016/06/02 21:14:19 view.go:79: You pressed:  0
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangruneto
+2016/06/02 21:14:19 view.go:129: New fgcolor:  4
+2016/06/02 21:14:19 view.go:79: You pressed:  98
+2016/06/02 21:14:19 view.go:49: Encoded rune:  98 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  45
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetob
+2016/06/02 21:14:19 view.go:129: New fgcolor:  5
+2016/06/02 21:14:19 view.go:79: You pressed:  121
+2016/06/02 21:14:19 view.go:49: Encoded rune:  121 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  46
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetoby
+2016/06/02 21:14:19 view.go:129: New fgcolor:  6
+2016/06/02 21:14:19 view.go:79: You pressed:  116
+2016/06/02 21:14:19 view.go:49: Encoded rune:  116 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  47
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetobyt
+2016/06/02 21:14:19 view.go:129: New fgcolor:  7
+2016/06/02 21:14:19 view.go:79: You pressed:  101
+2016/06/02 21:14:19 view.go:49: Encoded rune:  101 , size:  1
+2016/06/02 21:14:19 view.go:54: Len of input:  48
+2016/06/02 21:14:19 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:19 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetobyte
+2016/06/02 21:14:19 view.go:129: New fgcolor:  8
+2016/06/02 21:14:20 view.go:79: You pressed:  0
+2016/06/02 21:14:20 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:20 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetobyte
+2016/06/02 21:14:20 view.go:129: New fgcolor:  0
+2016/06/02 21:14:21 view.go:79: You pressed:  0
+2016/06/02 21:14:21 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:21 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetobyte
+2016/06/02 21:14:21 view.go:129: New fgcolor:  1
+2016/06/02 21:14:24 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:14:24 view.go:127: Input string:  golangrunetobytegolangrunetobytegolangrunetobyte
+2016/06/02 21:14:24 view.go:129: New fgcolor:  2
+2016/06/02 21:15:32 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:15:32 view.go:37: View started
+2016/06/02 21:15:32 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:32 view.go:127: Input string:  
+2016/06/02 21:15:32 view.go:129: New fgcolor:  1
+2016/06/02 21:15:33 view.go:79: You pressed:  0
+2016/06/02 21:15:33 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:33 view.go:127: Input string:  
+2016/06/02 21:15:33 view.go:129: New fgcolor:  2
+2016/06/02 21:15:34 view.go:79: You pressed:  0
+2016/06/02 21:15:34 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:34 view.go:127: Input string:  
+2016/06/02 21:15:34 view.go:129: New fgcolor:  3
+2016/06/02 21:15:35 view.go:79: You pressed:  0
+2016/06/02 21:15:35 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:35 view.go:127: Input string:  
+2016/06/02 21:15:35 view.go:129: New fgcolor:  4
+2016/06/02 21:15:35 view.go:79: You pressed:  0
+2016/06/02 21:15:35 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:35 view.go:127: Input string:  
+2016/06/02 21:15:35 view.go:129: New fgcolor:  5
+2016/06/02 21:15:37 view.go:79: You pressed:  0
+2016/06/02 21:15:37 view.go:119: Width:  134 , Height:  35
+2016/06/02 21:15:37 view.go:127: Input string:  
+2016/06/02 21:15:37 view.go:129: New fgcolor:  6
+2016/06/02 21:17:47 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:17:47 view.go:28: View started
+2016/06/02 21:17:47 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:47 view.go:122: Input string:  
+2016/06/02 21:17:47 view.go:124: New fgcolor:  1
+2016/06/02 21:17:47 view.go:74: You pressed:  97
+2016/06/02 21:17:47 view.go:40: Encoded rune:  97 , size:  1
+2016/06/02 21:17:47 view.go:45: Len of input:  1
+2016/06/02 21:17:47 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:47 view.go:122: Input string:  a
+2016/06/02 21:17:47 view.go:124: New fgcolor:  2
+2016/06/02 21:17:48 view.go:74: You pressed:  98
+2016/06/02 21:17:48 view.go:40: Encoded rune:  98 , size:  1
+2016/06/02 21:17:48 view.go:45: Len of input:  2
+2016/06/02 21:17:48 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:48 view.go:122: Input string:  ab
+2016/06/02 21:17:48 view.go:124: New fgcolor:  3
+2016/06/02 21:17:48 view.go:74: You pressed:  99
+2016/06/02 21:17:48 view.go:40: Encoded rune:  99 , size:  1
+2016/06/02 21:17:48 view.go:45: Len of input:  3
+2016/06/02 21:17:48 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:48 view.go:122: Input string:  abc
+2016/06/02 21:17:48 view.go:124: New fgcolor:  4
+2016/06/02 21:17:48 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:48 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:48 view.go:122: Input string:  ab
+2016/06/02 21:17:48 view.go:124: New fgcolor:  5
+2016/06/02 21:17:50 view.go:74: You pressed:  100
+2016/06/02 21:17:50 view.go:40: Encoded rune:  100 , size:  1
+2016/06/02 21:17:50 view.go:45: Len of input:  3
+2016/06/02 21:17:50 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:50 view.go:122: Input string:  abd
+2016/06/02 21:17:50 view.go:124: New fgcolor:  6
+2016/06/02 21:17:50 view.go:74: You pressed:  101
+2016/06/02 21:17:50 view.go:40: Encoded rune:  101 , size:  1
+2016/06/02 21:17:50 view.go:45: Len of input:  4
+2016/06/02 21:17:50 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:50 view.go:122: Input string:  abde
+2016/06/02 21:17:50 view.go:124: New fgcolor:  7
+2016/06/02 21:17:50 view.go:74: You pressed:  102
+2016/06/02 21:17:50 view.go:40: Encoded rune:  102 , size:  1
+2016/06/02 21:17:50 view.go:45: Len of input:  5
+2016/06/02 21:17:50 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:50 view.go:122: Input string:  abdef
+2016/06/02 21:17:50 view.go:124: New fgcolor:  8
+2016/06/02 21:17:51 view.go:74: You pressed:  103
+2016/06/02 21:17:51 view.go:40: Encoded rune:  103 , size:  1
+2016/06/02 21:17:51 view.go:45: Len of input:  6
+2016/06/02 21:17:51 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:51 view.go:122: Input string:  abdefg
+2016/06/02 21:17:51 view.go:124: New fgcolor:  0
+2016/06/02 21:17:51 view.go:74: You pressed:  104
+2016/06/02 21:17:51 view.go:40: Encoded rune:  104 , size:  1
+2016/06/02 21:17:51 view.go:45: Len of input:  7
+2016/06/02 21:17:51 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:51 view.go:122: Input string:  abdefgh
+2016/06/02 21:17:51 view.go:124: New fgcolor:  1
+2016/06/02 21:17:51 view.go:74: You pressed:  105
+2016/06/02 21:17:51 view.go:40: Encoded rune:  105 , size:  1
+2016/06/02 21:17:51 view.go:45: Len of input:  8
+2016/06/02 21:17:51 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:51 view.go:122: Input string:  abdefghi
+2016/06/02 21:17:51 view.go:124: New fgcolor:  2
+2016/06/02 21:17:51 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:51 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:51 view.go:122: Input string:  abdefgh
+2016/06/02 21:17:51 view.go:124: New fgcolor:  3
+2016/06/02 21:17:52 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:52 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:52 view.go:122: Input string:  abdefg
+2016/06/02 21:17:52 view.go:124: New fgcolor:  4
+2016/06/02 21:17:52 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:52 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:52 view.go:122: Input string:  abdef
+2016/06/02 21:17:52 view.go:124: New fgcolor:  5
+2016/06/02 21:17:52 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:52 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:52 view.go:122: Input string:  abde
+2016/06/02 21:17:52 view.go:124: New fgcolor:  6
+2016/06/02 21:17:52 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:52 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:52 view.go:122: Input string:  abd
+2016/06/02 21:17:52 view.go:124: New fgcolor:  7
+2016/06/02 21:17:52 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:52 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:52 view.go:122: Input string:  ab
+2016/06/02 21:17:52 view.go:124: New fgcolor:  8
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  a
+2016/06/02 21:17:53 view.go:124: New fgcolor:  0
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  1
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  2
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  3
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  4
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  5
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  6
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  7
+2016/06/02 21:17:53 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:53 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:53 view.go:122: Input string:  
+2016/06/02 21:17:53 view.go:124: New fgcolor:  8
+2016/06/02 21:17:54 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:54 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:54 view.go:122: Input string:  
+2016/06/02 21:17:54 view.go:124: New fgcolor:  0
+2016/06/02 21:17:54 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:54 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:54 view.go:122: Input string:  
+2016/06/02 21:17:54 view.go:124: New fgcolor:  1
+2016/06/02 21:17:54 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:54 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:54 view.go:122: Input string:  
+2016/06/02 21:17:54 view.go:124: New fgcolor:  2
+2016/06/02 21:17:54 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:54 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:54 view.go:122: Input string:  
+2016/06/02 21:17:54 view.go:124: New fgcolor:  3
+2016/06/02 21:17:54 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:54 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:54 view.go:122: Input string:  
+2016/06/02 21:17:54 view.go:124: New fgcolor:  4
+2016/06/02 21:17:55 view.go:74: You pressed:  119
+2016/06/02 21:17:55 view.go:40: Encoded rune:  119 , size:  1
+2016/06/02 21:17:55 view.go:45: Len of input:  1
+2016/06/02 21:17:55 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:55 view.go:122: Input string:  w
+2016/06/02 21:17:55 view.go:124: New fgcolor:  5
+2016/06/02 21:17:55 view.go:74: You pressed:  111
+2016/06/02 21:17:55 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:55 view.go:45: Len of input:  2
+2016/06/02 21:17:55 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:55 view.go:122: Input string:  wo
+2016/06/02 21:17:55 view.go:124: New fgcolor:  6
+2016/06/02 21:17:55 view.go:74: You pressed:  111
+2016/06/02 21:17:55 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:55 view.go:45: Len of input:  3
+2016/06/02 21:17:55 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:55 view.go:122: Input string:  woo
+2016/06/02 21:17:55 view.go:124: New fgcolor:  7
+2016/06/02 21:17:56 view.go:74: You pressed:  111
+2016/06/02 21:17:56 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:56 view.go:45: Len of input:  4
+2016/06/02 21:17:56 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:56 view.go:122: Input string:  wooo
+2016/06/02 21:17:56 view.go:124: New fgcolor:  8
+2016/06/02 21:17:56 view.go:74: You pressed:  111
+2016/06/02 21:17:56 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:56 view.go:45: Len of input:  5
+2016/06/02 21:17:56 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:56 view.go:122: Input string:  woooo
+2016/06/02 21:17:56 view.go:124: New fgcolor:  0
+2016/06/02 21:17:56 view.go:74: You pressed:  111
+2016/06/02 21:17:56 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:56 view.go:45: Len of input:  6
+2016/06/02 21:17:56 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:56 view.go:122: Input string:  wooooo
+2016/06/02 21:17:56 view.go:124: New fgcolor:  1
+2016/06/02 21:17:56 view.go:74: You pressed:  111
+2016/06/02 21:17:56 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:56 view.go:45: Len of input:  7
+2016/06/02 21:17:56 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:56 view.go:122: Input string:  woooooo
+2016/06/02 21:17:56 view.go:124: New fgcolor:  2
+2016/06/02 21:17:57 view.go:74: You pressed:  102
+2016/06/02 21:17:57 view.go:40: Encoded rune:  102 , size:  1
+2016/06/02 21:17:57 view.go:45: Len of input:  8
+2016/06/02 21:17:57 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:57 view.go:122: Input string:  woooooof
+2016/06/02 21:17:57 view.go:124: New fgcolor:  3
+2016/06/02 21:17:57 view.go:74: You pressed:  111
+2016/06/02 21:17:57 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:57 view.go:45: Len of input:  9
+2016/06/02 21:17:57 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:57 view.go:122: Input string:  woooooofo
+2016/06/02 21:17:57 view.go:124: New fgcolor:  4
+2016/06/02 21:17:57 view.go:74: You pressed:  111
+2016/06/02 21:17:57 view.go:40: Encoded rune:  111 , size:  1
+2016/06/02 21:17:57 view.go:45: Len of input:  10
+2016/06/02 21:17:57 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:57 view.go:122: Input string:  woooooofoo
+2016/06/02 21:17:57 view.go:124: New fgcolor:  5
+2016/06/02 21:17:57 view.go:74: You pressed:  98
+2016/06/02 21:17:57 view.go:40: Encoded rune:  98 , size:  1
+2016/06/02 21:17:57 view.go:45: Len of input:  11
+2016/06/02 21:17:57 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:57 view.go:122: Input string:  woooooofoob
+2016/06/02 21:17:57 view.go:124: New fgcolor:  6
+2016/06/02 21:17:57 view.go:74: You pressed:  97
+2016/06/02 21:17:57 view.go:40: Encoded rune:  97 , size:  1
+2016/06/02 21:17:57 view.go:45: Len of input:  12
+2016/06/02 21:17:57 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:57 view.go:122: Input string:  woooooofooba
+2016/06/02 21:17:57 view.go:124: New fgcolor:  7
+2016/06/02 21:17:58 view.go:74: You pressed:  114
+2016/06/02 21:17:58 view.go:40: Encoded rune:  114 , size:  1
+2016/06/02 21:17:58 view.go:45: Len of input:  13
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooofoobar
+2016/06/02 21:17:58 view.go:124: New fgcolor:  8
+2016/06/02 21:17:58 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooofooba
+2016/06/02 21:17:58 view.go:124: New fgcolor:  0
+2016/06/02 21:17:58 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooofoob
+2016/06/02 21:17:58 view.go:124: New fgcolor:  1
+2016/06/02 21:17:58 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooofoo
+2016/06/02 21:17:58 view.go:124: New fgcolor:  2
+2016/06/02 21:17:58 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooofo
+2016/06/02 21:17:58 view.go:124: New fgcolor:  3
+2016/06/02 21:17:58 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:58 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:58 view.go:122: Input string:  woooooof
+2016/06/02 21:17:58 view.go:124: New fgcolor:  4
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  woooooo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  5
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  wooooo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  6
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  woooo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  7
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  wooo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  8
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  woo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  0
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  wo
+2016/06/02 21:17:59 view.go:124: New fgcolor:  1
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  w
+2016/06/02 21:17:59 view.go:124: New fgcolor:  2
+2016/06/02 21:17:59 view.go:67: DELETE DELETE DELETE
+2016/06/02 21:17:59 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:17:59 view.go:122: Input string:  
+2016/06/02 21:17:59 view.go:124: New fgcolor:  3
+2016/06/02 21:18:02 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:18:02 view.go:122: Input string:  
+2016/06/02 21:18:02 view.go:124: New fgcolor:  4
+2016/06/02 21:18:05 view.go:114: Width:  134 , Height:  35
+2016/06/02 21:18:05 view.go:122: Input string:  
+2016/06/02 21:18:05 view.go:124: New fgcolor:  5
+2016/06/02 21:19:19 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:19:19 view.go:27: View started
+2016/06/02 21:19:19 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:19 view.go:110: Input string:  
+2016/06/02 21:19:19 view.go:112: New fgcolor:  3
+2016/06/02 21:19:21 view.go:73: You pressed:  97
+2016/06/02 21:19:21 view.go:39: Encoded rune:  97 , size:  1
+2016/06/02 21:19:21 view.go:44: Len of input:  1
+2016/06/02 21:19:21 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:21 view.go:110: Input string:  a
+2016/06/02 21:19:21 view.go:112: New fgcolor:  3
+2016/06/02 21:19:21 view.go:73: You pressed:  98
+2016/06/02 21:19:21 view.go:39: Encoded rune:  98 , size:  1
+2016/06/02 21:19:21 view.go:44: Len of input:  2
+2016/06/02 21:19:21 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:21 view.go:110: Input string:  ab
+2016/06/02 21:19:21 view.go:112: New fgcolor:  3
+2016/06/02 21:19:21 view.go:73: You pressed:  99
+2016/06/02 21:19:21 view.go:39: Encoded rune:  99 , size:  1
+2016/06/02 21:19:21 view.go:44: Len of input:  3
+2016/06/02 21:19:21 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:21 view.go:110: Input string:  abc
+2016/06/02 21:19:21 view.go:112: New fgcolor:  3
+2016/06/02 21:19:21 view.go:73: You pressed:  100
+2016/06/02 21:19:21 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:19:21 view.go:44: Len of input:  4
+2016/06/02 21:19:21 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:21 view.go:110: Input string:  abcd
+2016/06/02 21:19:21 view.go:112: New fgcolor:  3
+2016/06/02 21:19:22 view.go:73: You pressed:  101
+2016/06/02 21:19:22 view.go:39: Encoded rune:  101 , size:  1
+2016/06/02 21:19:22 view.go:44: Len of input:  5
+2016/06/02 21:19:22 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:22 view.go:110: Input string:  abcde
+2016/06/02 21:19:22 view.go:112: New fgcolor:  3
+2016/06/02 21:19:22 view.go:73: You pressed:  102
+2016/06/02 21:19:22 view.go:39: Encoded rune:  102 , size:  1
+2016/06/02 21:19:22 view.go:44: Len of input:  6
+2016/06/02 21:19:22 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:22 view.go:110: Input string:  abcdef
+2016/06/02 21:19:22 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  abcde
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  abcd
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  abc
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  ab
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  a
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:23 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:23 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:23 view.go:110: Input string:  
+2016/06/02 21:19:23 view.go:112: New fgcolor:  3
+2016/06/02 21:19:25 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:25 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:25 view.go:110: Input string:  
+2016/06/02 21:19:25 view.go:112: New fgcolor:  3
+2016/06/02 21:19:25 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:25 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:25 view.go:110: Input string:  
+2016/06/02 21:19:25 view.go:112: New fgcolor:  3
+2016/06/02 21:19:26 view.go:73: You pressed:  100
+2016/06/02 21:19:26 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:19:26 view.go:44: Len of input:  1
+2016/06/02 21:19:26 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:26 view.go:110: Input string:  d
+2016/06/02 21:19:26 view.go:112: New fgcolor:  3
+2016/06/02 21:19:26 view.go:73: You pressed:  102
+2016/06/02 21:19:26 view.go:39: Encoded rune:  102 , size:  1
+2016/06/02 21:19:26 view.go:44: Len of input:  2
+2016/06/02 21:19:26 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:26 view.go:110: Input string:  df
+2016/06/02 21:19:26 view.go:112: New fgcolor:  3
+2016/06/02 21:19:26 view.go:73: You pressed:  100
+2016/06/02 21:19:26 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:19:26 view.go:44: Len of input:  3
+2016/06/02 21:19:26 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:26 view.go:110: Input string:  dfd
+2016/06/02 21:19:26 view.go:112: New fgcolor:  3
+2016/06/02 21:19:26 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:26 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:26 view.go:110: Input string:  df
+2016/06/02 21:19:26 view.go:112: New fgcolor:  3
+2016/06/02 21:19:27 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:27 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:27 view.go:110: Input string:  d
+2016/06/02 21:19:27 view.go:112: New fgcolor:  3
+2016/06/02 21:19:27 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:27 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:27 view.go:110: Input string:  
+2016/06/02 21:19:27 view.go:112: New fgcolor:  3
+2016/06/02 21:19:28 view.go:73: You pressed:  113
+2016/06/02 21:19:28 view.go:39: Encoded rune:  113 , size:  1
+2016/06/02 21:19:28 view.go:44: Len of input:  1
+2016/06/02 21:19:28 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:28 view.go:110: Input string:  q
+2016/06/02 21:19:28 view.go:112: New fgcolor:  3
+2016/06/02 21:19:28 view.go:73: You pressed:  101
+2016/06/02 21:19:28 view.go:39: Encoded rune:  101 , size:  1
+2016/06/02 21:19:28 view.go:44: Len of input:  2
+2016/06/02 21:19:28 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:28 view.go:110: Input string:  qe
+2016/06/02 21:19:28 view.go:112: New fgcolor:  3
+2016/06/02 21:19:28 view.go:73: You pressed:  119
+2016/06/02 21:19:28 view.go:39: Encoded rune:  119 , size:  1
+2016/06/02 21:19:28 view.go:44: Len of input:  3
+2016/06/02 21:19:28 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:28 view.go:110: Input string:  qew
+2016/06/02 21:19:28 view.go:112: New fgcolor:  3
+2016/06/02 21:19:28 view.go:73: You pressed:  114
+2016/06/02 21:19:28 view.go:39: Encoded rune:  114 , size:  1
+2016/06/02 21:19:28 view.go:44: Len of input:  4
+2016/06/02 21:19:28 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:28 view.go:110: Input string:  qewr
+2016/06/02 21:19:28 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  qew
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  qe
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  q
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:29 view.go:66: DELETE DELETE DELETE
+2016/06/02 21:19:29 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:29 view.go:110: Input string:  
+2016/06/02 21:19:29 view.go:112: New fgcolor:  3
+2016/06/02 21:19:34 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:19:34 view.go:27: View started
+2016/06/02 21:19:34 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:34 view.go:110: Input string:  
+2016/06/02 21:19:34 view.go:112: New fgcolor:  3
+2016/06/02 21:19:34 view.go:73: You pressed:  97
+2016/06/02 21:19:34 view.go:39: Encoded rune:  97 , size:  1
+2016/06/02 21:19:34 view.go:44: Len of input:  1
+2016/06/02 21:19:34 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:34 view.go:110: Input string:  a
+2016/06/02 21:19:34 view.go:112: New fgcolor:  3
+2016/06/02 21:19:34 view.go:73: You pressed:  98
+2016/06/02 21:19:34 view.go:39: Encoded rune:  98 , size:  1
+2016/06/02 21:19:34 view.go:44: Len of input:  2
+2016/06/02 21:19:34 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:34 view.go:110: Input string:  ab
+2016/06/02 21:19:34 view.go:112: New fgcolor:  3
+2016/06/02 21:19:34 view.go:73: You pressed:  99
+2016/06/02 21:19:34 view.go:39: Encoded rune:  99 , size:  1
+2016/06/02 21:19:34 view.go:44: Len of input:  3
+2016/06/02 21:19:34 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:34 view.go:110: Input string:  abc
+2016/06/02 21:19:34 view.go:112: New fgcolor:  3
+2016/06/02 21:19:34 view.go:73: You pressed:  100
+2016/06/02 21:19:34 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:19:34 view.go:44: Len of input:  4
+2016/06/02 21:19:34 view.go:105: Width:  134 , Height:  35
+2016/06/02 21:19:34 view.go:110: Input string:  abcd
+2016/06/02 21:19:34 view.go:112: New fgcolor:  3
+2016/06/02 21:20:29 main.go:72: URL: https://www.reddit.com/.rss
+2016/06/02 21:20:29 view.go:27: View started
+2016/06/02 21:20:29 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:29 view.go:110: Input string:  
+2016/06/02 21:20:29 view.go:112: New fgcolor:  3
+2016/06/02 21:20:29 view.go:73: You pressed:  97
+2016/06/02 21:20:29 view.go:39: Encoded rune:  97 , size:  1
+2016/06/02 21:20:29 view.go:44: Len of input:  1
+2016/06/02 21:20:29 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:29 view.go:110: Input string:  a
+2016/06/02 21:20:29 view.go:112: New fgcolor:  3
+2016/06/02 21:20:29 view.go:73: You pressed:  115
+2016/06/02 21:20:29 view.go:39: Encoded rune:  115 , size:  1
+2016/06/02 21:20:29 view.go:44: Len of input:  2
+2016/06/02 21:20:29 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:29 view.go:110: Input string:  as
+2016/06/02 21:20:29 view.go:112: New fgcolor:  3
+2016/06/02 21:20:30 view.go:73: You pressed:  100
+2016/06/02 21:20:30 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:20:30 view.go:44: Len of input:  3
+2016/06/02 21:20:30 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:30 view.go:110: Input string:  asd
+2016/06/02 21:20:30 view.go:112: New fgcolor:  3
+2016/06/02 21:20:30 view.go:73: You pressed:  102
+2016/06/02 21:20:30 view.go:39: Encoded rune:  102 , size:  1
+2016/06/02 21:20:30 view.go:44: Len of input:  4
+2016/06/02 21:20:30 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:30 view.go:110: Input string:  asdf
+2016/06/02 21:20:30 view.go:112: New fgcolor:  3
+2016/06/02 21:20:31 view.go:73: You pressed:  0
+2016/06/02 21:20:31 view.go:105: Width:  134 , Height:  36
+2016/06/02 21:20:31 view.go:110: Input string:  asdf
+2016/06/02 21:20:31 view.go:112: New fgcolor:  3
+2016/06/02 21:23:25 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:23:25 view.go:28: View started
+2016/06/02 21:23:25 view.go:108: Width:  134 , Height:  38
+2016/06/02 21:23:25 view.go:113: Input string:  
+2016/06/02 21:23:25 view.go:115: New fgcolor:  3
+2016/06/02 21:23:26 view.go:76: You pressed:  97
+2016/06/02 21:23:26 view.go:41: Encoded rune:  97 , size:  1
+2016/06/02 21:23:26 view.go:46: Len of input:  1
+2016/06/02 21:23:26 view.go:108: Width:  134 , Height:  38
+2016/06/02 21:23:26 view.go:113: Input string:  a
+2016/06/02 21:23:26 view.go:115: New fgcolor:  3
+2016/06/02 21:23:26 view.go:76: You pressed:  115
+2016/06/02 21:23:26 view.go:41: Encoded rune:  115 , size:  1
+2016/06/02 21:23:26 view.go:46: Len of input:  2
+2016/06/02 21:23:26 view.go:108: Width:  134 , Height:  38
+2016/06/02 21:23:26 view.go:113: Input string:  as
+2016/06/02 21:23:26 view.go:115: New fgcolor:  3
+2016/06/02 21:23:26 view.go:76: You pressed:  100
+2016/06/02 21:23:26 view.go:41: Encoded rune:  100 , size:  1
+2016/06/02 21:23:26 view.go:46: Len of input:  3
+2016/06/02 21:23:26 view.go:108: Width:  134 , Height:  38
+2016/06/02 21:23:26 view.go:113: Input string:  asd
+2016/06/02 21:23:26 view.go:115: New fgcolor:  3
+2016/06/02 21:23:26 view.go:76: You pressed:  102
+2016/06/02 21:23:26 view.go:41: Encoded rune:  102 , size:  1
+2016/06/02 21:23:26 view.go:46: Len of input:  4
+2016/06/02 21:23:26 view.go:108: Width:  134 , Height:  38
+2016/06/02 21:23:26 view.go:113: Input string:  asdf
+2016/06/02 21:23:26 view.go:115: New fgcolor:  3
+2016/06/02 21:26:17 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:26:17 view.go:27: View started
+2016/06/02 21:26:17 view.go:110: Width:  134 , Height:  18
+2016/06/02 21:26:17 view.go:115: Input string:  
+2016/06/02 21:26:17 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  19
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  20
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  21
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  22
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  24
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  25
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:18 view.go:110: Width:  134 , Height:  26
+2016/06/02 21:26:18 view.go:115: Input string:  
+2016/06/02 21:26:18 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  27
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  28
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  29
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  30
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  31
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  32
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:19 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:19 view.go:115: Input string:  
+2016/06/02 21:26:19 view.go:117: New fgcolor:  3
+2016/06/02 21:26:20 view.go:75: You pressed:  97
+2016/06/02 21:26:20 view.go:39: Encoded rune:  97 , size:  1
+2016/06/02 21:26:20 view.go:44: Len of input:  1
+2016/06/02 21:26:20 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:20 view.go:115: Input string:  a
+2016/06/02 21:26:20 view.go:117: New fgcolor:  3
+2016/06/02 21:26:20 view.go:75: You pressed:  115
+2016/06/02 21:26:20 view.go:39: Encoded rune:  115 , size:  1
+2016/06/02 21:26:20 view.go:44: Len of input:  2
+2016/06/02 21:26:20 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:20 view.go:115: Input string:  as
+2016/06/02 21:26:20 view.go:117: New fgcolor:  3
+2016/06/02 21:26:20 view.go:75: You pressed:  100
+2016/06/02 21:26:20 view.go:39: Encoded rune:  100 , size:  1
+2016/06/02 21:26:20 view.go:44: Len of input:  3
+2016/06/02 21:26:20 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:20 view.go:115: Input string:  asd
+2016/06/02 21:26:20 view.go:117: New fgcolor:  3
+2016/06/02 21:26:20 view.go:75: You pressed:  102
+2016/06/02 21:26:20 view.go:39: Encoded rune:  102 , size:  1
+2016/06/02 21:26:20 view.go:44: Len of input:  4
+2016/06/02 21:26:20 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:20 view.go:115: Input string:  asdf
+2016/06/02 21:26:20 view.go:117: New fgcolor:  3
+2016/06/02 21:26:21 view.go:75: You pressed:  0
+2016/06/02 21:26:21 view.go:110: Width:  134 , Height:  33
+2016/06/02 21:26:21 view.go:115: Input string:  asdf
+2016/06/02 21:26:21 view.go:117: New fgcolor:  3
+2016/06/02 21:29:20 main.go:72: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:29:20 view.go:28: View started
+2016/06/02 21:29:20 view.go:113: Width:  134 , Height:  43
+2016/06/02 21:29:20 view.go:118: Input string:  
+2016/06/02 21:29:20 view.go:120: New fgcolor:  3
+2016/06/02 21:29:22 view.go:103: TB CLOSED
+2016/06/02 21:31:14 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:31:14 view.go:28: View started
+2016/06/02 21:31:14 view.go:113: Width:  134 , Height:  43
+2016/06/02 21:31:14 view.go:118: Input string:  
+2016/06/02 21:31:14 view.go:120: New fgcolor:  3
+2016/06/02 21:31:15 view.go:103: TB CLOSED
+2016/06/02 21:31:24 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:31:24 view.go:28: View started
+2016/06/02 21:31:24 view.go:113: Width:  134 , Height:  21
+2016/06/02 21:31:24 view.go:118: Input string:  
+2016/06/02 21:31:24 view.go:120: New fgcolor:  3
+2016/06/02 21:31:25 view.go:103: TB CLOSED
+2016/06/02 21:31:43 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:31:43 view.go:28: View started
+2016/06/02 21:31:43 view.go:113: Width:  134 , Height:  21
+2016/06/02 21:31:43 view.go:118: Input string:  
+2016/06/02 21:31:43 view.go:120: New fgcolor:  3
+2016/06/02 21:31:45 view.go:103: TB CLOSED
+2016/06/02 21:32:03 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:32:03 view.go:28: View started
+2016/06/02 21:32:03 view.go:113: Width:  134 , Height:  43
+2016/06/02 21:32:03 view.go:118: Input string:  
+2016/06/02 21:32:03 view.go:120: New fgcolor:  3
+2016/06/02 21:32:04 view.go:103: TB CLOSED
+2016/06/02 21:40:48 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:40:48 view.go:31: View started
+2016/06/02 21:40:48 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:40:48 view.go:125: Input string:  
+2016/06/02 21:40:48 view.go:127: New fgcolor:  3
+2016/06/02 21:40:49 view.go:81: You pressed:  97
+2016/06/02 21:40:49 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:40:49 view.go:51: Len of input:  1
+2016/06/02 21:40:49 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:40:49 view.go:125: Input string:  a
+2016/06/02 21:40:49 view.go:127: New fgcolor:  3
+2016/06/02 21:40:49 view.go:81: You pressed:  115
+2016/06/02 21:40:49 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:40:49 view.go:51: Len of input:  2
+2016/06/02 21:40:49 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:40:49 view.go:125: Input string:  as
+2016/06/02 21:40:49 view.go:127: New fgcolor:  3
+2016/06/02 21:40:49 view.go:81: You pressed:  100
+2016/06/02 21:40:49 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:40:49 view.go:51: Len of input:  3
+2016/06/02 21:40:49 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:40:49 view.go:125: Input string:  asd
+2016/06/02 21:40:49 view.go:127: New fgcolor:  3
+2016/06/02 21:40:49 view.go:81: You pressed:  102
+2016/06/02 21:40:49 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:40:49 view.go:51: Len of input:  4
+2016/06/02 21:40:49 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:40:49 view.go:125: Input string:  asdf
+2016/06/02 21:40:49 view.go:127: New fgcolor:  3
+2016/06/02 21:41:01 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:41:01 view.go:31: View started
+2016/06/02 21:41:01 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:41:01 view.go:125: Input string:  
+2016/06/02 21:41:01 view.go:127: New fgcolor:  3
+2016/06/02 21:41:05 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:41:05 view.go:31: View started
+2016/06/02 21:41:05 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:41:05 view.go:125: Input string:  
+2016/06/02 21:41:05 view.go:127: New fgcolor:  3
+2016/06/02 21:41:57 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:41:57 view.go:31: View started
+2016/06/02 21:41:57 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:41:57 view.go:124: Input string:  
+2016/06/02 21:41:57 view.go:126: New fgcolor:  3
+2016/06/02 21:41:58 view.go:80: You pressed:  0
+2016/06/02 21:41:58 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:41:58 view.go:124: Input string:  
+2016/06/02 21:41:58 view.go:126: New fgcolor:  3
+2016/06/02 21:41:59 view.go:80: You pressed:  0
+2016/06/02 21:41:59 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:41:59 view.go:124: Input string:  
+2016/06/02 21:41:59 view.go:126: New fgcolor:  3
+2016/06/02 21:41:59 view.go:80: You pressed:  97
+2016/06/02 21:41:59 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:41:59 view.go:51: Len of input:  1
+2016/06/02 21:41:59 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:41:59 view.go:124: Input string:  a
+2016/06/02 21:41:59 view.go:126: New fgcolor:  3
+2016/06/02 21:41:59 view.go:80: You pressed:  98
+2016/06/02 21:41:59 view.go:46: Encoded rune:  98 , size:  1
+2016/06/02 21:41:59 view.go:51: Len of input:  2
+2016/06/02 21:41:59 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:41:59 view.go:124: Input string:  ab
+2016/06/02 21:41:59 view.go:126: New fgcolor:  3
+2016/06/02 21:42:00 view.go:80: You pressed:  99
+2016/06/02 21:42:00 view.go:46: Encoded rune:  99 , size:  1
+2016/06/02 21:42:00 view.go:51: Len of input:  3
+2016/06/02 21:42:00 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:00 view.go:124: Input string:  abc
+2016/06/02 21:42:00 view.go:126: New fgcolor:  3
+2016/06/02 21:42:00 view.go:80: You pressed:  0
+2016/06/02 21:42:00 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:00 view.go:124: Input string:  abc
+2016/06/02 21:42:00 view.go:126: New fgcolor:  3
+2016/06/02 21:42:01 view.go:80: You pressed:  100
+2016/06/02 21:42:01 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:01 view.go:51: Len of input:  4
+2016/06/02 21:42:01 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:01 view.go:124: Input string:  abcd
+2016/06/02 21:42:01 view.go:126: New fgcolor:  3
+2016/06/02 21:42:01 view.go:80: You pressed:  101
+2016/06/02 21:42:01 view.go:46: Encoded rune:  101 , size:  1
+2016/06/02 21:42:01 view.go:51: Len of input:  5
+2016/06/02 21:42:01 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:01 view.go:124: Input string:  abcde
+2016/06/02 21:42:01 view.go:126: New fgcolor:  3
+2016/06/02 21:42:01 view.go:80: You pressed:  102
+2016/06/02 21:42:01 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:01 view.go:51: Len of input:  6
+2016/06/02 21:42:01 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:01 view.go:124: Input string:  abcdef
+2016/06/02 21:42:01 view.go:126: New fgcolor:  3
+2016/06/02 21:42:01 view.go:80: You pressed:  0
+2016/06/02 21:42:01 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:01 view.go:124: Input string:  abcdef
+2016/06/02 21:42:01 view.go:126: New fgcolor:  3
+2016/06/02 21:42:01 view.go:80: You pressed:  0
+2016/06/02 21:42:01 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:01 view.go:124: Input string:  abcdef
+2016/06/02 21:42:01 view.go:126: New fgcolor:  3
+2016/06/02 21:42:02 view.go:80: You pressed:  0
+2016/06/02 21:42:02 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:02 view.go:124: Input string:  abcdef
+2016/06/02 21:42:02 view.go:126: New fgcolor:  3
+2016/06/02 21:42:02 view.go:80: You pressed:  0
+2016/06/02 21:42:02 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:02 view.go:124: Input string:  abcdef
+2016/06/02 21:42:02 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  0
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdef
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  0
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdef
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  0
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdef
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  97
+2016/06/02 21:42:03 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:03 view.go:51: Len of input:  7
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdefa
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  115
+2016/06/02 21:42:03 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:03 view.go:51: Len of input:  8
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdefas
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:03 view.go:80: You pressed:  100
+2016/06/02 21:42:03 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:03 view.go:51: Len of input:  9
+2016/06/02 21:42:03 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:03 view.go:124: Input string:  abcdefasd
+2016/06/02 21:42:03 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  102
+2016/06/02 21:42:04 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:04 view.go:51: Len of input:  10
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  0
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  0
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  0
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  0
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:04 view.go:80: You pressed:  0
+2016/06/02 21:42:04 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:04 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:04 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  97
+2016/06/02 21:42:05 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  11
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfa
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  115
+2016/06/02 21:42:05 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  12
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfas
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  100
+2016/06/02 21:42:05 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  13
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasd
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  102
+2016/06/02 21:42:05 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  14
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  97
+2016/06/02 21:42:05 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  15
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfa
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  115
+2016/06/02 21:42:05 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  16
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfas
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfas
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  100
+2016/06/02 21:42:05 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  17
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfasd
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  102
+2016/06/02 21:42:05 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:05 view.go:51: Len of input:  18
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:05 view.go:80: You pressed:  0
+2016/06/02 21:42:05 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:05 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:05 view.go:126: New fgcolor:  3
+2016/06/02 21:42:06 view.go:80: You pressed:  0
+2016/06/02 21:42:06 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:06 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:06 view.go:126: New fgcolor:  3
+2016/06/02 21:42:06 view.go:80: You pressed:  0
+2016/06/02 21:42:06 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:06 view.go:124: Input string:  abcdefasdfasdfasdf
+2016/06/02 21:42:06 view.go:126: New fgcolor:  3
+2016/06/02 21:42:07 view.go:80: You pressed:  47
+2016/06/02 21:42:07 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:07 view.go:51: Len of input:  19
+2016/06/02 21:42:07 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:07 view.go:124: Input string:  abcdefasdfasdfasdf/
+2016/06/02 21:42:07 view.go:126: New fgcolor:  3
+2016/06/02 21:42:07 view.go:80: You pressed:  47
+2016/06/02 21:42:07 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:07 view.go:51: Len of input:  20
+2016/06/02 21:42:07 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:07 view.go:124: Input string:  abcdefasdfasdfasdf//
+2016/06/02 21:42:07 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  104
+2016/06/02 21:42:08 view.go:46: Encoded rune:  104 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  21
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//h
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  116
+2016/06/02 21:42:08 view.go:46: Encoded rune:  116 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  22
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//ht
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  116
+2016/06/02 21:42:08 view.go:46: Encoded rune:  116 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  23
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//htt
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  112
+2016/06/02 21:42:08 view.go:46: Encoded rune:  112 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  24
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//http
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  58
+2016/06/02 21:42:08 view.go:46: Encoded rune:  58 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  25
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//http:
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:08 view.go:80: You pressed:  47
+2016/06/02 21:42:08 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:08 view.go:51: Len of input:  26
+2016/06/02 21:42:08 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:08 view.go:124: Input string:  abcdefasdfasdfasdf//http:/
+2016/06/02 21:42:08 view.go:126: New fgcolor:  3
+2016/06/02 21:42:09 view.go:80: You pressed:  47
+2016/06/02 21:42:09 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:09 view.go:51: Len of input:  27
+2016/06/02 21:42:09 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:09 view.go:124: Input string:  abcdefasdfasdfasdf//http://
+2016/06/02 21:42:09 view.go:126: New fgcolor:  3
+2016/06/02 21:42:09 view.go:80: You pressed:  119
+2016/06/02 21:42:09 view.go:46: Encoded rune:  119 , size:  1
+2016/06/02 21:42:09 view.go:51: Len of input:  28
+2016/06/02 21:42:09 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:09 view.go:124: Input string:  abcdefasdfasdfasdf//http://w
+2016/06/02 21:42:09 view.go:126: New fgcolor:  3
+2016/06/02 21:42:09 view.go:80: You pressed:  119
+2016/06/02 21:42:09 view.go:46: Encoded rune:  119 , size:  1
+2016/06/02 21:42:09 view.go:51: Len of input:  29
+2016/06/02 21:42:09 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:09 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww
+2016/06/02 21:42:09 view.go:126: New fgcolor:  3
+2016/06/02 21:42:09 view.go:80: You pressed:  46
+2016/06/02 21:42:09 view.go:46: Encoded rune:  46 , size:  1
+2016/06/02 21:42:09 view.go:51: Len of input:  30
+2016/06/02 21:42:09 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:09 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww.
+2016/06/02 21:42:09 view.go:126: New fgcolor:  3
+2016/06/02 21:42:10 view.go:80: You pressed:  47
+2016/06/02 21:42:10 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:10 view.go:51: Len of input:  31
+2016/06/02 21:42:10 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:10 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./
+2016/06/02 21:42:10 view.go:126: New fgcolor:  3
+2016/06/02 21:42:10 view.go:80: You pressed:  97
+2016/06/02 21:42:10 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:10 view.go:51: Len of input:  32
+2016/06/02 21:42:10 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:10 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./a
+2016/06/02 21:42:10 view.go:126: New fgcolor:  3
+2016/06/02 21:42:10 view.go:80: You pressed:  115
+2016/06/02 21:42:10 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:10 view.go:51: Len of input:  33
+2016/06/02 21:42:10 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:10 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./as
+2016/06/02 21:42:10 view.go:126: New fgcolor:  3
+2016/06/02 21:42:10 view.go:80: You pressed:  100
+2016/06/02 21:42:10 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:10 view.go:51: Len of input:  34
+2016/06/02 21:42:10 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:10 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd
+2016/06/02 21:42:10 view.go:126: New fgcolor:  3
+2016/06/02 21:42:10 view.go:80: You pressed:  47
+2016/06/02 21:42:10 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:10 view.go:51: Len of input:  35
+2016/06/02 21:42:10 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:10 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/
+2016/06/02 21:42:10 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  102
+2016/06/02 21:42:11 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  36
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/f
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  0
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/f
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  115
+2016/06/02 21:42:11 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  37
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fs
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  100
+2016/06/02 21:42:11 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  38
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsd
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  102
+2016/06/02 21:42:11 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  39
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdf
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  100
+2016/06/02 21:42:11 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  40
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfd
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  102
+2016/06/02 21:42:11 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:11 view.go:51: Len of input:  41
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdf
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:11 view.go:80: You pressed:  0
+2016/06/02 21:42:11 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:11 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdf
+2016/06/02 21:42:11 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  100
+2016/06/02 21:42:12 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  42
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfd
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  102
+2016/06/02 21:42:12 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  43
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  0
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  100
+2016/06/02 21:42:12 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  44
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfd
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  102
+2016/06/02 21:42:12 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  45
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  0
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  100
+2016/06/02 21:42:12 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  46
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfd
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  102
+2016/06/02 21:42:12 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:12 view.go:51: Len of input:  47
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:12 view.go:80: You pressed:  0
+2016/06/02 21:42:12 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:12 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf
+2016/06/02 21:42:12 view.go:126: New fgcolor:  3
+2016/06/02 21:42:13 view.go:80: You pressed:  0
+2016/06/02 21:42:13 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:13 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf
+2016/06/02 21:42:13 view.go:126: New fgcolor:  3
+2016/06/02 21:42:13 view.go:80: You pressed:  0
+2016/06/02 21:42:13 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:13 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf
+2016/06/02 21:42:13 view.go:126: New fgcolor:  3
+2016/06/02 21:42:15 view.go:80: You pressed:  0
+2016/06/02 21:42:15 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:15 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf
+2016/06/02 21:42:15 view.go:126: New fgcolor:  3
+2016/06/02 21:42:15 view.go:80: You pressed:  47
+2016/06/02 21:42:15 view.go:46: Encoded rune:  47 , size:  1
+2016/06/02 21:42:15 view.go:51: Len of input:  48
+2016/06/02 21:42:15 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:15 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf/
+2016/06/02 21:42:15 view.go:126: New fgcolor:  3
+2016/06/02 21:42:15 view.go:80: You pressed:  0
+2016/06/02 21:42:15 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:15 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf/
+2016/06/02 21:42:15 view.go:126: New fgcolor:  3
+2016/06/02 21:42:16 view.go:80: You pressed:  0
+2016/06/02 21:42:16 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:16 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf/
+2016/06/02 21:42:16 view.go:126: New fgcolor:  3
+2016/06/02 21:42:17 view.go:80: You pressed:  0
+2016/06/02 21:42:17 view.go:119: Width:  134 , Height:  43
+2016/06/02 21:42:17 view.go:124: Input string:  abcdefasdfasdfasdf//http://ww./asd/fsdfdfdfdfdf/
+2016/06/02 21:42:17 view.go:126: New fgcolor:  3
+2016/06/02 21:42:44 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:42:44 view.go:31: View started
+2016/06/02 21:42:44 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:44 view.go:122: Input string:  
+2016/06/02 21:42:44 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  0
+2016/06/02 21:42:45 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  1
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  97
+2016/06/02 21:42:45 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  2
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   a
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  115
+2016/06/02 21:42:45 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  3
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   as
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  100
+2016/06/02 21:42:45 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  4
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asd
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  102
+2016/06/02 21:42:45 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  5
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  0
+2016/06/02 21:42:45 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  6
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf 
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  97
+2016/06/02 21:42:45 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  7
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf a
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  115
+2016/06/02 21:42:45 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  8
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf as
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  100
+2016/06/02 21:42:45 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  9
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf asd
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  102
+2016/06/02 21:42:45 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  10
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf asdf
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:45 view.go:80: You pressed:  0
+2016/06/02 21:42:45 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:45 view.go:51: Len of input:  11
+2016/06/02 21:42:45 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:45 view.go:122: Input string:   asdf asdf 
+2016/06/02 21:42:45 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  100
+2016/06/02 21:42:46 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  12
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf d
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  102
+2016/06/02 21:42:46 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  13
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf df
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  100
+2016/06/02 21:42:46 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  14
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  0
+2016/06/02 21:42:46 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  15
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd 
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  102
+2016/06/02 21:42:46 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  16
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd f
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  97
+2016/06/02 21:42:46 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  17
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fa
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  115
+2016/06/02 21:42:46 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  18
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  0
+2016/06/02 21:42:46 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  19
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas 
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  100
+2016/06/02 21:42:46 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  20
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas d
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  102
+2016/06/02 21:42:46 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  21
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas df
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  107
+2016/06/02 21:42:46 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  22
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfk
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  100
+2016/06/02 21:42:46 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  23
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkd
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  102
+2016/06/02 21:42:46 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  24
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdf
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  106
+2016/06/02 21:42:46 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  25
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdfj
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  100
+2016/06/02 21:42:46 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  26
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdfjd
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  107
+2016/06/02 21:42:46 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  27
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  0
+2016/06/02 21:42:46 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  28
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk 
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:46 view.go:80: You pressed:  102
+2016/06/02 21:42:46 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:42:46 view.go:51: Len of input:  29
+2016/06/02 21:42:46 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:46 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk f
+2016/06/02 21:42:46 view.go:124: New fgcolor:  3
+2016/06/02 21:42:47 view.go:80: You pressed:  0
+2016/06/02 21:42:47 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:47 view.go:51: Len of input:  30
+2016/06/02 21:42:47 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:47 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk f 
+2016/06/02 21:42:47 view.go:124: New fgcolor:  3
+2016/06/02 21:42:47 view.go:80: You pressed:  0
+2016/06/02 21:42:47 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:47 view.go:51: Len of input:  31
+2016/06/02 21:42:47 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:47 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk f  
+2016/06/02 21:42:47 view.go:124: New fgcolor:  3
+2016/06/02 21:42:47 view.go:80: You pressed:  0
+2016/06/02 21:42:47 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:47 view.go:51: Len of input:  32
+2016/06/02 21:42:47 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:47 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk f   
+2016/06/02 21:42:47 view.go:124: New fgcolor:  3
+2016/06/02 21:42:47 view.go:80: You pressed:  0
+2016/06/02 21:42:47 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:42:47 view.go:51: Len of input:  33
+2016/06/02 21:42:47 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:47 view.go:122: Input string:   asdf asdf dfd fas dfkdfjdk f    
+2016/06/02 21:42:47 view.go:124: New fgcolor:  3
+2016/06/02 21:42:56 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:42:56 view.go:31: View started
+2016/06/02 21:42:56 view.go:117: Width:  134 , Height:  43
+2016/06/02 21:42:56 view.go:122: Input string:  
+2016/06/02 21:42:56 view.go:124: New fgcolor:  3
+2016/06/02 21:44:17 main.go:73: URL: http://lorem-rss.herokuapp.com/feed?unit=second&interval=2
+2016/06/02 21:44:17 view.go:31: View started
+2016/06/02 21:44:17 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:17 view.go:125: Input string:  
+2016/06/02 21:44:18 view.go:83: You pressed:  97
+2016/06/02 21:44:18 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  1
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  a
+2016/06/02 21:44:18 view.go:83: You pressed:  115
+2016/06/02 21:44:18 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  2
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  as
+2016/06/02 21:44:18 view.go:83: You pressed:  100
+2016/06/02 21:44:18 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  3
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asd
+2016/06/02 21:44:18 view.go:83: You pressed:  102
+2016/06/02 21:44:18 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  4
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdf
+2016/06/02 21:44:18 view.go:83: You pressed:  97
+2016/06/02 21:44:18 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  5
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfa
+2016/06/02 21:44:18 view.go:83: You pressed:  115
+2016/06/02 21:44:18 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  6
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfas
+2016/06/02 21:44:18 view.go:83: You pressed:  100
+2016/06/02 21:44:18 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  7
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasd
+2016/06/02 21:44:18 view.go:83: You pressed:  102
+2016/06/02 21:44:18 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  8
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf
+2016/06/02 21:44:18 view.go:83: You pressed:  0
+2016/06/02 21:44:18 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  9
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf 
+2016/06/02 21:44:18 view.go:83: You pressed:  97
+2016/06/02 21:44:18 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  10
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf a
+2016/06/02 21:44:18 view.go:83: You pressed:  115
+2016/06/02 21:44:18 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  11
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf as
+2016/06/02 21:44:18 view.go:83: You pressed:  100
+2016/06/02 21:44:18 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  12
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf asd
+2016/06/02 21:44:18 view.go:83: You pressed:  102
+2016/06/02 21:44:18 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  13
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf asdf
+2016/06/02 21:44:18 view.go:83: You pressed:  0
+2016/06/02 21:44:18 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  14
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf asdf 
+2016/06/02 21:44:18 view.go:83: You pressed:  97
+2016/06/02 21:44:18 view.go:46: Encoded rune:  97 , size:  1
+2016/06/02 21:44:18 view.go:51: Len of input:  15
+2016/06/02 21:44:18 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:18 view.go:125: Input string:  asdfasdf asdf a
+2016/06/02 21:44:19 view.go:83: You pressed:  115
+2016/06/02 21:44:19 view.go:46: Encoded rune:  115 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  16
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as
+2016/06/02 21:44:19 view.go:83: You pressed:  0
+2016/06/02 21:44:19 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  17
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as 
+2016/06/02 21:44:19 view.go:83: You pressed:  100
+2016/06/02 21:44:19 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  18
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as d
+2016/06/02 21:44:19 view.go:83: You pressed:  102
+2016/06/02 21:44:19 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  19
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as df
+2016/06/02 21:44:19 view.go:83: You pressed:  59
+2016/06/02 21:44:19 view.go:46: Encoded rune:  59 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  20
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as df;
+2016/06/02 21:44:19 view.go:83: You pressed:  108
+2016/06/02 21:44:19 view.go:46: Encoded rune:  108 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  21
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as df;l
+2016/06/02 21:44:19 view.go:83: You pressed:  107
+2016/06/02 21:44:19 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  22
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as df;lk
+2016/06/02 21:44:19 view.go:83: You pressed:  106
+2016/06/02 21:44:19 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:44:19 view.go:51: Len of input:  23
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  asdfasdf asdf as df;lkj
+2016/06/02 21:44:19 view.go:63: ENTER
+2016/06/02 21:44:19 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:19 view.go:125: Input string:  
+2016/06/02 21:44:20 view.go:83: You pressed:  100
+2016/06/02 21:44:20 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  1
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  d
+2016/06/02 21:44:20 view.go:83: You pressed:  102
+2016/06/02 21:44:20 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  2
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  df
+2016/06/02 21:44:20 view.go:83: You pressed:  107
+2016/06/02 21:44:20 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  3
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfk
+2016/06/02 21:44:20 view.go:83: You pressed:  106
+2016/06/02 21:44:20 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  4
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfkj
+2016/06/02 21:44:20 view.go:83: You pressed:  100
+2016/06/02 21:44:20 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  5
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfkjd
+2016/06/02 21:44:20 view.go:83: You pressed:  107
+2016/06/02 21:44:20 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  6
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfkjdk
+2016/06/02 21:44:20 view.go:83: You pressed:  102
+2016/06/02 21:44:20 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  7
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfkjdkf
+2016/06/02 21:44:20 view.go:83: You pressed:  106
+2016/06/02 21:44:20 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:44:20 view.go:51: Len of input:  8
+2016/06/02 21:44:20 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:20 view.go:125: Input string:  dfkjdkfj
+2016/06/02 21:44:21 view.go:83: You pressed:  107
+2016/06/02 21:44:21 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  9
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjk
+2016/06/02 21:44:21 view.go:83: You pressed:  106
+2016/06/02 21:44:21 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  10
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkj
+2016/06/02 21:44:21 view.go:83: You pressed:  102
+2016/06/02 21:44:21 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  11
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjf
+2016/06/02 21:44:21 view.go:83: You pressed:  100
+2016/06/02 21:44:21 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  12
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfd
+2016/06/02 21:44:21 view.go:83: You pressed:  107
+2016/06/02 21:44:21 view.go:46: Encoded rune:  107 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  13
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfdk
+2016/06/02 21:44:21 view.go:83: You pressed:  106
+2016/06/02 21:44:21 view.go:46: Encoded rune:  106 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  14
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfdkj
+2016/06/02 21:44:21 view.go:83: You pressed:  100
+2016/06/02 21:44:21 view.go:46: Encoded rune:  100 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  15
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfdkjd
+2016/06/02 21:44:21 view.go:83: You pressed:  102
+2016/06/02 21:44:21 view.go:46: Encoded rune:  102 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  16
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfdkjdf
+2016/06/02 21:44:21 view.go:83: You pressed:  0
+2016/06/02 21:44:21 view.go:46: Encoded rune:  0 , size:  1
+2016/06/02 21:44:21 view.go:51: Len of input:  17
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  dfkjdkfjkjfdkjdf 
+2016/06/02 21:44:21 view.go:63: ENTER
+2016/06/02 21:44:21 view.go:120: Width:  134 , Height:  43
+2016/06/02 21:44:21 view.go:125: Input string:  
