@@ -198,6 +198,7 @@ func getModeColor(iType InputType) tb.Attribute {
 }
 
 func (v *View) redrawAll() {
+	// TODO(smklein): Only clear parts of screen that need re-drawing...
 	check(tb.Clear(tb.ColorDefault, tb.ColorDefault))
 	w, h := tb.Size()
 
@@ -210,13 +211,18 @@ func (v *View) redrawAll() {
 	statusString := v.statusMsg
 	statusColor := getStatusColor(v.statusMsgType)
 	modeColor := getModeColor(v.inputMode)
+
+	// XXX Copying the entire item list is "easy", but potentially pretty slow.
+	itemListCopy := make([]RssEntry, len(v.itemList))
+	for i := range v.itemList {
+		itemListCopy[i] = *v.itemList[i]
+	}
 	v.viewLock.RUnlock()
 
 	log.Println("Input string: ", inputString)
 	log.Println("Status string: ", statusString)
 
-	numItems := len(v.itemList)
-	numItemsVisible := numItems
+	numItemsVisible := len(itemListCopy)
 	// XXX totally arbitrary
 	maxItemsVisible := h / 2
 	if numItemsVisible > maxItemsVisible {
@@ -225,22 +231,16 @@ func (v *View) redrawAll() {
 
 	log.Println("# items visible: ", numItemsVisible)
 
-	for x := 0; x <= w; x++ {
-		for y := 0; y <= h; y++ {
-			if numItems != len(v.itemList) {
-				// XXX This panic shouldn't exist
-				panic("Time to lock itemlist, bruh")
-			}
-
-			if h-2-numItems <= y && y < h-2 {
+	for y := 0; y <= h; y++ {
+		for x := 0; x <= w; x++ {
+			if h-2-len(itemListCopy) <= y && y < h-2 {
 				// RSS Items. Lowest index --> oldest.
-				index := y - (h - 2 - numItems)
+				index := y - (h - 2 - len(itemListCopy))
 				if index < numItemsVisible {
-					item := v.itemList[index]
-					if x < len(item.ItemTitle) {
-						log.Println("Index: ", index)
-						log.Println(item.ItemTitle[x:])
-						r, _ := utf8.DecodeRuneInString(item.ItemTitle[x:])
+					item := itemListCopy[index]
+					if utf8.RuneCountInString(item.ItemTitle) > 0 {
+						r, size := utf8.DecodeRuneInString(item.ItemTitle)
+						itemListCopy[index].ItemTitle = item.ItemTitle[size:]
 						tb.SetCell(x, y, r, fgColor, tb.ColorDefault)
 					}
 				}

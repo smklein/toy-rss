@@ -25,3 +25,6 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+/toy-rss/main
+/toy-rss/toy_rss_log_output.txt
