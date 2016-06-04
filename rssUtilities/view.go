@@ -30,6 +30,12 @@ const (
 	RssSelectionMode
 )
 
+var defaultFeedURLs = [...]string{
+	"http://feeds.arstechnica.com/arstechnica/index",
+	"https://news.ycombinator.com/rss",
+	//"https://www.reddit.com/.rss",
+}
+
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -38,14 +44,13 @@ func check(e error) {
 
 // View gives access to the user.
 type View struct {
-	maxLines      int
 	input         []byte
 	inputMode     InputType
 	statusMsg     string
 	statusMsgType StatusType
 
-	// XXX ACCESS HERE IS RACY FIXME PLS
-	itemList []*RssEntry
+	itemBufferedCap int
+	itemList        []*RssEntry
 
 	viewLock sync.RWMutex
 	deathWg  *sync.WaitGroup
@@ -59,12 +64,15 @@ type View struct {
 // Start launches the view.
 func (v *View) Start(newItemPipe chan *RssEntry, deathWg *sync.WaitGroup) {
 	log.Println("View started")
-	v.maxLines = 50
+	v.viewLock.Lock()
+	// TODO(smklein): This should be configurable
+	v.itemBufferedCap = 200
 	v.itemList = make([]*RssEntry, 0)
 	v.RedrawRequest = make(chan bool)
 	v.NewFeedRequest = make(chan string)
 	v.ExitRequest = make(chan bool)
 	v.deathWg = deathWg
+	v.viewLock.Unlock()
 
 	go v.listUpdater(newItemPipe)
 	go v.drawLoop()
@@ -74,10 +82,14 @@ func (v *View) Start(newItemPipe chan *RssEntry, deathWg *sync.WaitGroup) {
 func (v *View) listUpdater(newItemPipe chan *RssEntry) {
 	for {
 		item := <-newItemPipe
-		// TODO come up with better synchronization for this slice...
 		v.viewLock.Lock()
 		v.itemList = append(v.itemList, item)
+		if len(v.itemList) > v.itemBufferedCap {
+			// TODO(smklein): Display info to user that they're missing items...
+			v.itemList = v.itemList[1:]
+		}
 		v.viewLock.Unlock()
+		v.RedrawRequest <- true
 	}
 }
 
@@ -101,6 +113,13 @@ func (v *View) inputRune(r rune) {
 }
 
 func (v *View) eventLoop() {
+	// First, register the default feeds that we want to have enabled.
+	// TODO(smklein): This will... probably change form once we have a
+	// persistant storage story.
+	for i := range defaultFeedURLs {
+		v.NewFeedRequest <- defaultFeedURLs[i]
+	}
+
 	for {
 		switch ev := tb.PollEvent(); ev.Type {
 		case tb.EventKey:
@@ -213,29 +232,28 @@ func (v *View) redrawAll() {
 	modeColor := getModeColor(v.inputMode)
 
 	// XXX Copying the entire item list is "easy", but potentially pretty slow.
-	itemListCopy := make([]RssEntry, len(v.itemList))
-	for i := range v.itemList {
+	// XXX totally arbitrary visibility #
+	LINES_PER_INDEX := 2
+	maxItemsVisible := (h - 4) / LINES_PER_INDEX
+	numItemsVisible := maxItemsVisible
+	if len(v.itemList) < numItemsVisible {
+		numItemsVisible = len(v.itemList)
+	}
+
+	itemListCopy := make([]RssEntry, numItemsVisible)
+	for i := range itemListCopy {
 		itemListCopy[i] = *v.itemList[i]
 	}
 	v.viewLock.RUnlock()
 
-	log.Println("Input string: ", inputString)
-	log.Println("Status string: ", statusString)
-
-	numItemsVisible := len(itemListCopy)
-	// XXX totally arbitrary
-	maxItemsVisible := h / 2
-	if numItemsVisible > maxItemsVisible {
-		numItemsVisible = maxItemsVisible
-	}
-
-	log.Println("# items visible: ", numItemsVisible)
+	USER_INPUT_LINE := h - 2
+	STATUS_LINE := h - 1
 
 	for y := 0; y <= h; y++ {
 		for x := 0; x <= w; x++ {
-			if h-2-len(itemListCopy) <= y && y < h-2 {
+			if USER_INPUT_LINE-len(itemListCopy) <= y && y < USER_INPUT_LINE {
 				// RSS Items. Lowest index --> oldest.
-				index := y - (h - 2 - len(itemListCopy))
+				index := y - (USER_INPUT_LINE - len(itemListCopy))
 				if index < numItemsVisible {
 					item := itemListCopy[index]
 					if utf8.RuneCountInString(item.ItemTitle) > 0 {
@@ -244,7 +262,7 @@ func (v *View) redrawAll() {
 						tb.SetCell(x, y, r, fgColor, tb.ColorDefault)
 					}
 				}
-			} else if y == h-2 {
+			} else if y == USER_INPUT_LINE {
 				// User input
 				if x <= 2 {
 					tb.SetCell(x, y, '>', fgColor, tb.ColorDefault)
@@ -259,7 +277,7 @@ func (v *View) redrawAll() {
 						tb.SetCell(x, y, ' ', fgColor, tb.ColorDefault)
 					}
 				}
-			} else if y == h-1 {
+			} else if y == STATUS_LINE {
 				// Status
 				if x <= 2 {
 					tb.SetCell(x, y, '-', fgColor, tb.ColorDefault)

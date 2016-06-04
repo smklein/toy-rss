@@ -1,33 +1,12 @@
 package main
 
 import (
-	"flag"
-	"log" // TODO(smklein): Log vs fmt?
+	"log"
 	"os"
 	"sync"
 
 	util "github.com/smklein/toy-rss/rssUtilities"
 )
-
-var feedURLs = [...]string{
-	"http://feeds.arstechnica.com/arstechnica/index",
-	"https://news.ycombinator.com/rss",
-	//"https://www.reddit.com/.rss",
-}
-
-var flagURL string
-
-// Init is a special function, which is called before main.
-// TODO(smklein): Probably change the default args here. flagURL no longer
-// seems super useful.
-func init() {
-	const (
-		defaultURL = "https://www.reddit.com/.rss"
-		usage      = "URL to be accessed"
-	)
-	flag.StringVar(&flagURL, "URL", defaultURL, usage)
-	flag.StringVar(&flagURL, "u", defaultURL, usage+" (shorthand)")
-}
 
 func handleFeed(feed *util.Feed, itemPipe chan *util.RssEntry, newItemRequest chan *util.RssEntry) {
 	log.Println("HANDLE FEED: ", feed.GetTitle())
@@ -72,9 +51,6 @@ func main() {
 	logFile := initLog()
 	defer logFile.Close()
 
-	flag.Parse()
-	log.Println("URL: " + flagURL)
-
 	feedMap := make(map[string]util.FeedInterface)
 	// Serialize new items
 	newItemRequest := make(chan *util.RssEntry, 100)
@@ -95,11 +71,11 @@ func main() {
 			f, err := addFeed(newURL, newItemRequest)
 			if err != nil {
 				v.SetStatusMsg(err.Error(), util.StatusError)
-				v.RedrawRequest <- true
 			} else {
+				v.SetStatusMsg("Added Feed ["+f.GetTitle()+"]", util.StatusSuccess)
 				feedMap[newURL] = f
-				log.Println("SUCCESS, Feed started: ", f.GetTitle())
 			}
+			v.RedrawRequest <- true
 		case <-v.ExitRequest:
 			deathWg.Wait()
 			return
