@@ -67,9 +67,7 @@ func (v *View) reactToKeySelectionMode(k tb.Key, r rune) {
 		close(v.ExitRequest)
 		return
 	case tb.KeySpace, tb.KeyBackspace, tb.KeyBackspace2:
-		log.Println("Delete start")
 		v.keyActionDeleteItem()
-		log.Println("Delete end")
 	case tb.KeyEnter:
 		log.Println("ENTER")
 		// TODO ???
