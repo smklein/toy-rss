@@ -73,6 +73,7 @@ func main() {
 				v.SetStatusMsg(err.Error(), util.StatusError)
 			} else {
 				v.SetStatusMsg("Added Feed ["+f.GetTitle()+"]", util.StatusSuccess)
+				v.AddChannelInfo(f.GetTitle())
 				feedMap[newURL] = f
 			}
 			v.RedrawRequest <- true

@@ -8,26 +8,6 @@ import (
 	"github.com/SlyMarbo/rss"
 )
 
-// TODO these structs are fairly public, they should prolly move to the
-// interface file
-
-// RssEntry represents OUR version of an entry.
-// It's in a form that can be easily dumped to the view.
-type RssEntry struct {
-	ItemTitle string
-	URL       string
-	FeedTitle string
-}
-
-// Feed implements the FeedInterface
-type Feed struct {
-	itemPipe    chan *RssEntry
-	Title       string
-	URL         string
-	initialized bool
-	disabled    bool
-}
-
 func (f *Feed) getURL() string {
 	return f.URL
 }

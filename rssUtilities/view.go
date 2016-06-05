@@ -2,6 +2,7 @@ package rssUtilities
 
 import (
 	"log"
+	"os"
 	"sync"
 	"unicode/utf8"
 
@@ -10,9 +11,6 @@ import (
 
 // StatusType modifies the statusMsg color.
 type StatusType uint8
-
-// InputType determines how the user is interacting with the system.
-type InputType uint8
 
 const (
 	// StatusError indicates an error.
@@ -23,35 +21,39 @@ const (
 	StatusInfo
 )
 
-const (
-	// RssEntryMode means the user is inputting the URL of an RSS feed.
-	RssEntryMode InputType = iota
-	// RssSelectionMode means the user is picking an RSS entry.
-	RssSelectionMode
-)
-
 var defaultFeedURLs = [...]string{
 	"http://feeds.arstechnica.com/arstechnica/index",
 	"https://news.ycombinator.com/rss",
 	//"https://www.reddit.com/.rss",
 }
 
+// XXX This is the bad shut down. Use exitrequests.
 func check(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
+type channelInfo struct {
+	channelColor tb.Attribute
+}
+
 // View gives access to the user.
 type View struct {
-	input         []byte
-	inputMode     InputType
-	statusMsg     string
-	statusMsgType StatusType
+	// Rss Entry items
+	lastSeenNumItems int
+	itemBufferedCap  int
+	itemList         []*RssEntry
+	channelInfoMap   map[string]*channelInfo
 
-	itemBufferedCap int
-	itemList        []*RssEntry
+	// User input & Status message
+	input          []byte
+	inputMode      InputType
+	inputItemIndex int
+	statusMsg      string
+	statusMsgType  StatusType
 
+	// Synchronization tools
 	viewLock sync.RWMutex
 	deathWg  *sync.WaitGroup
 
@@ -68,10 +70,11 @@ func (v *View) Start(newItemPipe chan *RssEntry, deathWg *sync.WaitGroup) {
 	// TODO(smklein): This should be configurable
 	v.itemBufferedCap = 200
 	v.itemList = make([]*RssEntry, 0)
+	v.channelInfoMap = make(map[string]*channelInfo)
+	v.deathWg = deathWg
 	v.RedrawRequest = make(chan bool)
 	v.NewFeedRequest = make(chan string)
 	v.ExitRequest = make(chan bool)
-	v.deathWg = deathWg
 	v.viewLock.Unlock()
 
 	go v.listUpdater(newItemPipe)
@@ -79,13 +82,21 @@ func (v *View) Start(newItemPipe chan *RssEntry, deathWg *sync.WaitGroup) {
 	go v.eventLoop()
 }
 
+func (v *View) AddChannelInfo(title string) {
+	v.viewLock.Lock()
+	v.channelInfoMap[title] = &channelInfo{}
+	v.viewLock.Unlock()
+}
+
 func (v *View) listUpdater(newItemPipe chan *RssEntry) {
 	for {
 		item := <-newItemPipe
 		v.viewLock.Lock()
+		// New items are placed at the BACK of the itemList.
 		v.itemList = append(v.itemList, item)
 		if len(v.itemList) > v.itemBufferedCap {
 			// TODO(smklein): Display info to user that they're missing items...
+			// Old items are removed from the FRONT of the itemList.
 			v.itemList = v.itemList[1:]
 		}
 		v.viewLock.Unlock()
@@ -101,12 +112,20 @@ func (v *View) SetStatusMsg(msg string, sType StatusType) {
 	v.viewLock.Unlock()
 }
 
+func runeToAsciiChar(r rune) string {
+	if utf8.RuneLen(r) != 1 {
+		log.Println("Attempting to convert rune to ascii char: ", r)
+		os.Exit(-1)
+	}
+
+	var buf [utf8.UTFMax]byte
+	utf8.EncodeRune(buf[:], r)
+	return string(buf[0])
+}
+
 func (v *View) inputRune(r rune) {
 	var buf [utf8.UTFMax]byte
-	n := utf8.EncodeRune(buf[:], r)
-	if n != 1 {
-		panic("Unexpected rune size of 1")
-	}
+	utf8.EncodeRune(buf[:], r)
 	v.viewLock.Lock()
 	v.input = append(v.input, buf[0])
 	v.viewLock.Unlock()
@@ -123,44 +142,11 @@ func (v *View) eventLoop() {
 	for {
 		switch ev := tb.PollEvent(); ev.Type {
 		case tb.EventKey:
-			switch ev.Key {
-			case tb.KeyEsc, tb.KeyCtrlC:
-				close(v.ExitRequest)
-				return
-			case tb.KeyEnter:
-				log.Println("ENTER")
-				v.viewLock.Lock()
-				v.NewFeedRequest <- string(v.input)
-				v.input = make([]byte, 0)
-				v.viewLock.Unlock()
-			case tb.KeyTab:
-				log.Println("TAB KEY. Switch mode (input / navigate)")
-				v.viewLock.Lock()
-				switch v.inputMode {
-				case RssSelectionMode:
-					v.inputMode = RssEntryMode
-				case RssEntryMode:
-					v.inputMode = RssSelectionMode
-				}
-				v.viewLock.Unlock()
-			case tb.KeyArrowLeft:
-				log.Println("LEFT")
-			case tb.KeyArrowRight:
-				log.Println("RIGHT")
-			case tb.KeyArrowUp:
-				log.Println("UP")
-			case tb.KeyArrowDown:
-				log.Println("DOWN")
-			case tb.KeyBackspace, tb.KeyBackspace2:
-				v.viewLock.Lock()
-				if len(v.input) > 0 {
-					v.input = v.input[:len(v.input)-1]
-				}
-				v.viewLock.Unlock()
-			default:
-				// TODO(smklein): Restrict keys a little more, yeah?
-				log.Println("You pressed: ", ev.Ch)
-				v.inputRune(ev.Ch)
+			switch v.inputMode {
+			case RssSelectionMode:
+				v.reactToKeySelectionMode(ev.Key, ev.Ch)
+			case RssEntryMode:
+				v.reactToKeyEntryMode(ev.Key, ev.Ch)
 			}
 		case tb.EventError:
 			panic(ev.Err)
@@ -178,9 +164,6 @@ func (v *View) drawLoop() {
 		tb.Close()
 		v.deathWg.Done()
 	}()
-	// TODO(smklein): Better cursor management! Not hidden tho...
-	tb.SetCursor(0, 0)
-	//	tb.SetInputMode(tb.InputAlt)
 
 	for {
 		v.redrawAll()
@@ -205,15 +188,107 @@ func getStatusColor(sType StatusType) tb.Attribute {
 	return statusColor
 }
 
-func getModeColor(iType InputType) tb.Attribute {
-	statusColor := tb.ColorDefault
-	switch iType {
-	case RssEntryMode:
-		statusColor = tb.ColorGreen
-	case RssSelectionMode:
-		statusColor = tb.ColorBlue
+func redrawMetadata(width, startLine int, item *RssEntry) int {
+	for x := 0; x <= width; x++ {
+		// Metadata about item
+		if x < utf8.RuneCountInString(item.FeedTitle) {
+			// TODO(smklein): Try doing this casting when converting from
+			// SlyMarbo's RSS --> my format.
+			r := []rune(item.FeedTitle)[x]
+			tb.SetCell(x, startLine, r, fgColor, bgColor)
+		} else {
+			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
+
+		}
 	}
-	return statusColor
+	return 1
+}
+
+func redrawItemTitle(width, startLine int, item *RssEntry) int {
+	for x := 0; x <= width; x++ {
+		// Item itself
+		switch x < 2 {
+		case true:
+			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
+		case false:
+			if x-2 < utf8.RuneCountInString(item.ItemTitle) {
+				r := []rune(item.ItemTitle)[x-2]
+				tb.SetCell(x, startLine, r, fgColor, bgColor)
+			} else {
+				tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
+			}
+		}
+	}
+	return 1
+}
+
+func (v *View) redrawRssItem(width, startLine, itemIndex int, itemListCopy []RssEntry) int {
+	oldFgColor := fgColor
+	if v.inputMode == RssSelectionMode && v.inputItemIndex == itemIndex {
+		fgColor = tb.ColorBlue | tb.AttrUnderline
+	}
+	item := itemListCopy[itemIndex]
+	linesUsed := 0
+	switch item.State {
+	case defaultEntryState:
+		// Requires two lines, the minimum number of lines. Will always fit.
+		titleLines := redrawItemTitle(width, startLine, &item)
+		metadataLines := redrawMetadata(width, startLine-titleLines, &item)
+
+		linesUsed = titleLines + metadataLines
+	case expandedEntryState:
+		panic("Unimplemented expanded state")
+	default:
+		panic("Unhandled entry state")
+	}
+
+	fgColor = oldFgColor
+	return linesUsed
+}
+
+var fgColor tb.Attribute = tb.ColorGreen
+var blankFgColor tb.Attribute = tb.ColorGreen
+var bgColor tb.Attribute = tb.ColorDefault
+
+func (v *View) redrawStatus(width, line int, statusString string, statusColor tb.Attribute) {
+	statusStartCol := 4
+	for x := 0; x <= width; x++ {
+		if x <= 2 {
+			// '-' before input
+			tb.SetCell(x, line, '-', fgColor, bgColor)
+		} else if statusStartCol <= x && 0 < len(statusString) {
+			// Actual status
+			r, size := utf8.DecodeRuneInString(statusString)
+			statusString = statusString[size:]
+			tb.SetCell(x, line, r, statusColor, bgColor)
+		} else {
+			// Clear out the rest
+			tb.SetCell(x, line, ' ', blankFgColor, bgColor)
+		}
+	}
+}
+
+func (v *View) redrawUserInput(width, line int, inputString string) {
+	userInputStartCol := 4
+	inputStringStartLen := len(inputString)
+	for x := 0; x <= width; x++ {
+		if x <= 2 {
+			// '>' before input
+			tb.SetCell(x, line, '>', fgColor, bgColor)
+		} else if userInputStartCol <= x && 0 < len(inputString) {
+			// Actual user input
+			r, size := utf8.DecodeRuneInString(inputString)
+			inputString = inputString[size:]
+			tb.SetCell(x, line, r, fgColor, bgColor)
+		} else {
+			if x == userInputStartCol+inputStringStartLen {
+				// Cursor goes after user input
+				tb.SetCursor(x, line)
+			}
+			// Clear out the rest
+			tb.SetCell(x, line, ' ', blankFgColor, bgColor)
+		}
+	}
 }
 
 func (v *View) redrawAll() {
@@ -221,81 +296,49 @@ func (v *View) redrawAll() {
 	check(tb.Clear(tb.ColorDefault, tb.ColorDefault))
 	w, h := tb.Size()
 
-	log.Println("Width: ", w, ", Height: ", h)
-	fgColor := tb.ColorGreen
+	fgColor = tb.ColorGreen
 
 	// Lock and copy anything we want to display.
 	v.viewLock.RLock()
 	inputString := string(v.input)
 	statusString := v.statusMsg
 	statusColor := getStatusColor(v.statusMsgType)
-	modeColor := getModeColor(v.inputMode)
 
 	// XXX Copying the entire item list is "easy", but potentially pretty slow.
-	// XXX totally arbitrary visibility #
-	LINES_PER_INDEX := 2
-	maxItemsVisible := (h - 4) / LINES_PER_INDEX
-	numItemsVisible := maxItemsVisible
-	if len(v.itemList) < numItemsVisible {
-		numItemsVisible = len(v.itemList)
+	minLinesPerEntry := 2
+	linesUsableByEntries := (h - 4)
+	// The largest possible number of items in view.
+	numItemsInView := linesUsableByEntries / minLinesPerEntry
+	if len(v.itemList) < numItemsInView {
+		// Which may be even smaller if there are less items available.
+		numItemsInView = len(v.itemList)
 	}
 
-	itemListCopy := make([]RssEntry, numItemsVisible)
+	itemListCopy := make([]RssEntry, numItemsInView)
 	for i := range itemListCopy {
 		itemListCopy[i] = *v.itemList[i]
 	}
 	v.viewLock.RUnlock()
 
-	USER_INPUT_LINE := h - 2
-	STATUS_LINE := h - 1
+	rssEntryLine := h - 3 // Initialized to the starting line.
+	userInputLine := h - 2
+	statusLine := h - 1
 
-	for y := 0; y <= h; y++ {
-		for x := 0; x <= w; x++ {
-			if USER_INPUT_LINE-len(itemListCopy) <= y && y < USER_INPUT_LINE {
-				// RSS Items. Lowest index --> oldest.
-				index := y - (USER_INPUT_LINE - len(itemListCopy))
-				if index < numItemsVisible {
-					item := itemListCopy[index]
-					if utf8.RuneCountInString(item.ItemTitle) > 0 {
-						r, size := utf8.DecodeRuneInString(item.ItemTitle)
-						itemListCopy[index].ItemTitle = item.ItemTitle[size:]
-						tb.SetCell(x, y, r, fgColor, tb.ColorDefault)
-					}
-				}
-			} else if y == USER_INPUT_LINE {
-				// User input
-				if x <= 2 {
-					tb.SetCell(x, y, '>', fgColor, tb.ColorDefault)
-				} else if x == 3 {
-					tb.SetCell(x, y, ' ', fgColor, tb.ColorDefault)
-				} else {
-					if len(inputString) > 0 {
-						r, size := utf8.DecodeRuneInString(inputString)
-						tb.SetCell(x, y, r, fgColor, tb.ColorDefault)
-						inputString = inputString[size:]
-					} else {
-						tb.SetCell(x, y, ' ', fgColor, tb.ColorDefault)
-					}
-				}
-			} else if y == STATUS_LINE {
-				// Status
-				if x <= 2 {
-					tb.SetCell(x, y, '-', fgColor, tb.ColorDefault)
-				} else if x == 3 {
-					tb.SetCell(x, y, ' ', fgColor, tb.ColorDefault)
-				} else {
-					if len(statusString) > 0 {
-						r, size := utf8.DecodeRuneInString(statusString)
-						tb.SetCell(x, y, r, statusColor, tb.ColorDefault)
-						statusString = statusString[size:]
-					} else {
-						tb.SetCell(x, y, ' ', fgColor, tb.ColorDefault)
-					}
-				}
-			} else {
-				tb.SetCell(x, y, '@', modeColor, tb.ColorDefault)
-			}
+	// While another entry can fit...
+	itemIndex := 0
+	for rssEntryLine-minLinesPerEntry > 0 {
+		if itemIndex >= numItemsInView {
+			break
 		}
+		rssEntryLine -= v.redrawRssItem(w, rssEntryLine, itemIndex, itemListCopy)
+		itemIndex += 1
 	}
+
+	// XXX take caution, this is not locked
+	v.lastSeenNumItems = itemIndex
+
+	v.redrawUserInput(w, userInputLine, inputString)
+	v.redrawStatus(w, statusLine, statusString, statusColor)
+
 	tb.Flush()
 }
