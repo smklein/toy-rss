@@ -47,13 +47,18 @@ func (v *View) keyActionDownSelectionMode() {
 
 func (v *View) keyActionDeleteItem() {
 	v.viewLock.Lock()
-	defer v.viewLock.Unlock()
 	index := v.inputItemIndex
 	if index < 0 || len(v.itemList) <= index {
+		// SetStatusMsg also locks.
+		v.viewLock.Unlock()
 		v.SetStatusMsg("Attempting to delete out of range item", StatusError)
 		return
 	}
+	if index == len(v.itemList)-1 {
+		v.inputItemIndex -= 1
+	}
 	v.itemList = append(v.itemList[:index], v.itemList[index+1:]...)
+	v.viewLock.Unlock()
 }
 
 func (v *View) reactToKeySelectionMode(k tb.Key, r rune) {
@@ -62,7 +67,9 @@ func (v *View) reactToKeySelectionMode(k tb.Key, r rune) {
 		close(v.ExitRequest)
 		return
 	case tb.KeySpace, tb.KeyBackspace, tb.KeyBackspace2:
+		log.Println("Delete start")
 		v.keyActionDeleteItem()
+		log.Println("Delete end")
 	case tb.KeyEnter:
 		log.Println("ENTER")
 		// TODO ???

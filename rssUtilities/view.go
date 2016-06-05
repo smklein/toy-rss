@@ -334,6 +334,8 @@ func (v *View) redrawAll() {
 		itemIndex += 1
 	}
 
+	// TODO(smklein): Might be fun to have an "all items gone" image?
+
 	// XXX take caution, this is not locked
 	v.lastSeenNumItems = itemIndex
 
