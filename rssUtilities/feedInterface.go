@@ -3,9 +3,28 @@ package rssUtilities
 type RssEntryState uint8
 
 const (
-	defaultEntryState RssEntryState = iota
+	standardEntryState RssEntryState = iota
+	collapsedEntryState
 	expandedEntryState
 )
+
+func ExpandEntryState(state RssEntryState) RssEntryState {
+	switch state {
+	case collapsedEntryState:
+		return standardEntryState
+	default:
+		return expandedEntryState
+	}
+}
+
+func CollapseEntryState(state RssEntryState) RssEntryState {
+	switch state {
+	case expandedEntryState:
+		return standardEntryState
+	default:
+		return collapsedEntryState
+	}
+}
 
 // RssEntry represents OUR version of an entry.
 // It's in a form that can be easily dumped to the view.

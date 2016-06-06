@@ -123,11 +123,11 @@ func (im *InputManager) keyActionDeleteItem() {
 }
 
 func (im *InputManager) keyActionCollapseSelectionMode() {
-
+	im.view.CollapseItem(im.inputItemIndex)
 }
 
 func (im *InputManager) keyActionExpandSelectionMode() {
-
+	im.view.ExpandItem(im.inputItemIndex)
 }
 
 func (im *InputManager) keyActionUpdateColorSelectionMode() {
@@ -201,7 +201,8 @@ func (im *InputManager) reactToKeys() {
 				im.reactToKeyEntryMode(ev.Key, ev.Ch)
 			}
 		case tb.EventError:
-			panic(ev.Err)
+			log.Println("Received erroneous event while reacing to keys:")
+			log.Println(ev.Err.Error())
 		}
 
 		// Pls redraw the screen after user input. User latency 'n' all.

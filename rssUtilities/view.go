@@ -35,7 +35,6 @@ var defaultFeedURLs = [...]string{
 	//"https://www.reddit.com/.rss",
 }
 
-// XXX This is the bad shut down. Use exitrequest.
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -57,13 +56,14 @@ type View struct {
 	status StatusMsgStruct
 
 	// Synchronization tools
+	// TODO this needs to become more fine-grained before it spirals out of control
 	viewLock sync.RWMutex
 	deathWg  *sync.WaitGroup
 
 	// Mechanism to interact with input (presumeably keyboard)
 	inputManager *InputManager
 
-	// TODO(smklein): Make these public through methods, not directly.
+	// When this is closed, GTFO.
 	exitRequest chan bool
 
 	// INCOMING
@@ -91,8 +91,9 @@ func (v *View) Start(newItemPipe chan *RssEntry, newFeedRequest chan string, dea
 	v.redrawRequest = make(chan bool)
 	v.deleteItemRequest = make(chan int)
 	v.changeColorRequest = make(chan int)
-	v.inputManager.Start(newFeedRequest, v)
 	v.viewLock.Unlock()
+
+	v.inputManager.Start(newFeedRequest, v)
 
 	go v.listUpdater(newItemPipe)
 	go v.drawLoop()
@@ -123,11 +124,24 @@ func (v *View) ChangeColor(i int) {
 func (v *View) Redraw() {
 	v.redrawRequest <- true
 }
-
 func (v *View) AddChannelInfo(title string) {
 	v.viewLock.Lock()
 	v.channelInfoMap[title] = &channelInfo{}
 	v.channelInfoMap[title].channelColor = fgColor
+	v.viewLock.Unlock()
+}
+func (v *View) CollapseItem(index int) {
+	v.viewLock.Lock()
+	if 0 <= index && index < len(v.itemList) {
+		v.itemList[index].State = CollapseEntryState(v.itemList[index].State)
+	}
+	v.viewLock.Unlock()
+}
+func (v *View) ExpandItem(index int) {
+	v.viewLock.Lock()
+	if 0 <= index && index < len(v.itemList) {
+		v.itemList[index].State = ExpandEntryState(v.itemList[index].State)
+	}
 	v.viewLock.Unlock()
 }
 
@@ -148,6 +162,7 @@ func (v *View) listUpdater(newItemPipe chan *RssEntry) {
 }
 
 // SetStatusMsg sets the status message.
+// TODO can't this become internal?
 func (v *View) SetStatusMsg(status StatusMsgStruct) {
 	v.viewLock.Lock()
 	v.status = status
@@ -227,6 +242,39 @@ func getStatusColor(sType StatusType) tb.Attribute {
 	return statusColor
 }
 
+func redrawMetadataAndItemDense(width, startLine int, metadataFgColor, itemFgColor tb.Attribute, item *RssEntry) int {
+	// Abbreviate titles if necessary.
+	itemTitleLen := utf8.RuneCountInString(item.ItemTitle)
+	channelTitleLen := utf8.RuneCountInString(item.FeedTitle)
+	itemTitleStart := 17
+	maxChannelTitleLen := 15
+	dotDotDotLen := 0
+	if channelTitleLen > maxChannelTitleLen {
+		dotDotDotLen = maxChannelTitleLen
+		channelTitleLen = maxChannelTitleLen - 3
+	}
+
+	for x := 0; x <= width; x++ {
+		// Metadata about item
+		if x < channelTitleLen {
+			// TODO(smklein): Try doing this casting when converting from
+			// SlyMarbo's RSS --> my format.
+			r := []rune(item.FeedTitle)[x]
+			tb.SetCell(x, startLine, r, metadataFgColor, bgColor)
+		} else if x < dotDotDotLen {
+			// Does not happen if dotDotDotLen is zero.
+			tb.SetCell(x, startLine, '.', metadataFgColor, bgColor)
+		} else if x >= itemTitleStart && x-itemTitleStart < itemTitleLen {
+			r := []rune(item.ItemTitle)[x-itemTitleStart]
+			tb.SetCell(x, startLine, r, itemFgColor, bgColor)
+		} else {
+			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
+
+		}
+	}
+	return 1
+}
+
 func redrawMetadata(width, startLine int, fgColor tb.Attribute, item *RssEntry) int {
 	for x := 0; x <= width; x++ {
 		// Metadata about item
@@ -275,15 +323,19 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 	}
 
 	linesUsed := 0
+
 	switch item.State {
-	case defaultEntryState:
+	case standardEntryState:
 		// Requires two lines, the minimum number of lines. Will always fit.
 		titleLines := redrawItemTitle(width, startLine, itemFgColor, &item)
 		metadataLines := redrawMetadata(width, startLine-titleLines, metadataFgColor, &item)
 
 		linesUsed = titleLines + metadataLines
 	case expandedEntryState:
+		// TODO probably return err if it doesn't fit? So we can stop drawing? Or something?
 		panic("Unimplemented expanded state")
+	case collapsedEntryState:
+		linesUsed = redrawMetadataAndItemDense(width, startLine, metadataFgColor, itemFgColor, &item)
 	default:
 		panic("Unhandled entry state")
 	}
@@ -338,19 +390,17 @@ func (v *View) redrawUserInput(width, line int, inputString string) {
 
 func (v *View) redrawAll() {
 	// TODO(smklein): Only clear parts of screen that need re-drawing...
-	check(tb.Clear(tb.ColorDefault, tb.ColorDefault))
+	tb.Clear(tb.ColorDefault, tb.ColorDefault)
 	w, h := tb.Size()
 
 	fgColor = tb.ColorGreen
 
 	// Lock and copy anything we want to display.
 	v.viewLock.RLock()
-	inputString := v.inputManager.GetInputString()
 	statusString := v.status.Message
 	statusColor := getStatusColor(v.status.Type)
 
-	// XXX Copying the entire item list is "easy", but potentially pretty slow.
-	minLinesPerEntry := 2
+	minLinesPerEntry := 1
 	linesUsableByEntries := (h - 4)
 	// The largest possible number of items in view.
 	numItemsInView := linesUsableByEntries / minLinesPerEntry
@@ -359,6 +409,7 @@ func (v *View) redrawAll() {
 		numItemsInView = len(v.itemList)
 	}
 
+	// XXX Copying the entire item list is "easy", but potentially pretty slow.
 	itemListCopy := make([]RssEntry, numItemsInView)
 	for i := range itemListCopy {
 		itemListCopy[i] = *v.itemList[i]
@@ -371,6 +422,7 @@ func (v *View) redrawAll() {
 
 	// Let's cache these things so we don't pester the inputManager multiple
 	// times while redrawing.
+	inputString := v.inputManager.GetInputString()
 	inputMode := v.inputManager.GetSelectionMode()
 	inputItemIndex := v.inputManager.GetItemIndex()
 
