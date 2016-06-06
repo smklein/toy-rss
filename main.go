@@ -54,6 +54,7 @@ func main() {
 	feedMap := make(map[string]util.FeedInterface)
 	// Serialize new items
 	newItemRequest := make(chan *util.RssEntry, 100)
+	newFeedRequest := make(chan string)
 
 	// DeathCountWg can be used by main.
 	// Add one if you need to run something before you die.
@@ -63,21 +64,20 @@ func main() {
 	deathWg.Add(1)
 
 	v := &util.View{}
-	v.Start(newItemRequest, &deathWg)
-
+	v.Start(newItemRequest, newFeedRequest, &deathWg)
 	for {
 		select {
-		case newURL := <-v.NewFeedRequest:
+		case newURL := <-newFeedRequest:
 			f, err := addFeed(newURL, newItemRequest)
 			if err != nil {
-				v.SetStatusMsg(err.Error(), util.StatusError)
+				v.SetStatusMsg(util.StatusMsgStruct{err.Error(), util.StatusError})
 			} else {
-				v.SetStatusMsg("Added Feed ["+f.GetTitle()+"]", util.StatusSuccess)
+				v.SetStatusMsg(util.StatusMsgStruct{"Added Feed [" + f.GetTitle() + "]", util.StatusSuccess})
 				v.AddChannelInfo(f.GetTitle())
 				feedMap[newURL] = f
 			}
-			v.RedrawRequest <- true
-		case <-v.ExitRequest:
+			v.Redraw()
+		case <-v.GetChanExitRequest():
 			deathWg.Wait()
 			return
 		}
