@@ -161,12 +161,8 @@ func (v *View) listUpdater(newItemPipe chan *RssEntry) {
 	}
 }
 
-// SetStatusMsg sets the status message.
-// TODO can't this become internal?
-func (v *View) SetStatusMsg(status StatusMsgStruct) {
-	v.viewLock.Lock()
+func (v *View) setStatusMsg(status StatusMsgStruct) {
 	v.status = status
-	v.viewLock.Unlock()
 }
 
 func (v *View) checkItemIndexValid(index int) error {
@@ -178,22 +174,19 @@ func (v *View) checkItemIndexValid(index int) error {
 
 func (v *View) tryToDeleteItem(index int) {
 	v.viewLock.Lock()
+	defer v.viewLock.Unlock()
 	if err := v.checkItemIndexValid(index); err != nil {
-		// SetStatusMsg also locks.
-		v.viewLock.Unlock()
-		v.SetStatusMsg(StatusMsgStruct{err.Error(), StatusError})
+		v.setStatusMsg(StatusMsgStruct{err.Error(), StatusError})
 		return
 	}
 	v.itemList = append(v.itemList[:index], v.itemList[index+1:]...)
-	v.viewLock.Unlock()
 }
 
 func (v *View) tryToChangeItemColor(index int) {
 	v.viewLock.Lock()
+	defer v.viewLock.Unlock()
 	if err := v.checkItemIndexValid(index); err != nil {
-		// SetStatusMsg also locks.
-		v.viewLock.Unlock()
-		v.SetStatusMsg(StatusMsgStruct{err.Error(), StatusError})
+		v.setStatusMsg(StatusMsgStruct{err.Error(), StatusError})
 		return
 	}
 	feedTitle := v.itemList[index].FeedTitle
@@ -202,7 +195,6 @@ func (v *View) tryToChangeItemColor(index int) {
 		color := chInfo.channelColor
 		chInfo.channelColor = (color + 1) % tb.ColorWhite
 	}
-	v.viewLock.Unlock()
 }
 
 func (v *View) drawLoop() {
@@ -218,7 +210,7 @@ func (v *View) drawLoop() {
 		select {
 		case <-v.redrawRequest:
 		case status := <-v.setStatusRequest:
-			v.SetStatusMsg(status)
+			v.setStatusMsg(status)
 		case index := <-v.deleteItemRequest:
 			v.tryToDeleteItem(index)
 		case index := <-v.changeColorRequest:

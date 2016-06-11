@@ -70,9 +70,9 @@ func main() {
 		case newURL := <-newFeedRequest:
 			f, err := addFeed(newURL, newItemRequest)
 			if err != nil {
-				v.SetStatusMsg(util.StatusMsgStruct{err.Error(), util.StatusError})
+				v.SetStatus(util.StatusMsgStruct{err.Error(), util.StatusError})
 			} else {
-				v.SetStatusMsg(util.StatusMsgStruct{"Added Feed [" + f.GetTitle() + "]", util.StatusSuccess})
+				v.SetStatus(util.StatusMsgStruct{"Added Feed [" + f.GetTitle() + "]", util.StatusSuccess})
 				v.AddChannelInfo(f.GetTitle())
 				feedMap[newURL] = f
 			}
