@@ -9,10 +9,6 @@ import (
 	"github.com/smklein/toy-rss/agingmap"
 )
 
-func (f *Feed) getURL() string {
-	return f.URL
-}
-
 // GetTitle does what you would expect.
 func (f *Feed) GetTitle() string {
 	return f.Title
@@ -65,7 +61,7 @@ func (f *Feed) doFeed(initPipe chan error) {
 		}
 
 		// TODO(smklein): Make this more conservative (rssFeed.Refresh)
-		<-time.After(time.Duration(6 * time.Second))
+		<-time.After(time.Duration(20 * time.Second))
 	}
 }
 
