@@ -1,4 +1,4 @@
-package rssUtilities
+package view
 
 // TODO move this to a new package...
 

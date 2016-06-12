@@ -1,4 +1,4 @@
-package rssUtilities
+package agingmap
 
 import "testing"
 

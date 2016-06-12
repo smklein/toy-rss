@@ -1,4 +1,4 @@
-package rssUtilities
+package agingmap
 
 // AgingMapInterface is a Map which also has a capped size.
 // As more elements are added, old elements can be removed.

@@ -5,10 +5,11 @@ import (
 	"os"
 	"sync"
 
-	util "github.com/smklein/toy-rss/rssUtilities"
+	"github.com/smklein/toy-rss/feed"
+	"github.com/smklein/toy-rss/view"
 )
 
-func handleFeed(feed *util.Feed, itemPipe chan *util.RssEntry, newItemRequest chan *util.RssEntry) {
+func handleFeed(feed *feed.Feed, itemPipe chan *feed.RssEntry, newItemRequest chan *feed.RssEntry) {
 	log.Println("HANDLE FEED: ", feed.GetTitle())
 	numReceived := 0
 	for {
@@ -23,9 +24,9 @@ func handleFeed(feed *util.Feed, itemPipe chan *util.RssEntry, newItemRequest ch
 	}
 }
 
-func addFeed(URL string, newItemRequest chan *util.RssEntry) (util.FeedInterface, error) {
+func addFeed(URL string, newItemRequest chan *feed.RssEntry) (feed.FeedInterface, error) {
 	// TODO store the feed somewhere, so we can disable it...
-	feed := &util.Feed{}
+	feed := &feed.Feed{}
 	itemPipe, err := feed.Start(URL)
 	if err != nil {
 		return nil, err
@@ -51,9 +52,9 @@ func main() {
 	logFile := initLog()
 	defer logFile.Close()
 
-	feedMap := make(map[string]util.FeedInterface)
+	feedMap := make(map[string]feed.FeedInterface)
 	// Serialize new items
-	newItemRequest := make(chan *util.RssEntry, 100)
+	newItemRequest := make(chan *feed.RssEntry, 100)
 	newFeedRequest := make(chan string)
 
 	// DeathCountWg can be used by main.
@@ -63,16 +64,16 @@ func main() {
 	// 1) tb to close in view.
 	deathWg.Add(1)
 
-	v := &util.View{}
+	v := &view.View{}
 	v.Start(newItemRequest, newFeedRequest, &deathWg)
 	for {
 		select {
 		case newURL := <-newFeedRequest:
 			f, err := addFeed(newURL, newItemRequest)
 			if err != nil {
-				v.SetStatus(util.StatusMsgStruct{err.Error(), util.StatusError})
+				v.SetStatus(view.StatusMsgStruct{err.Error(), view.StatusError})
 			} else {
-				v.SetStatus(util.StatusMsgStruct{"Added Feed [" + f.GetTitle() + "]", util.StatusSuccess})
+				v.SetStatus(view.StatusMsgStruct{"Added Feed [" + f.GetTitle() + "]", view.StatusSuccess})
 				v.AddChannelInfo(f.GetTitle())
 				feedMap[newURL] = f
 			}

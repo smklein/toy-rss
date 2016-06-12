@@ -1,35 +1,38 @@
-package rssUtilities
+package feed
 
 import "time"
 
+// RssEntryState represents the viewing status of the entry.
 type RssEntryState uint8
 
 const (
-	collapsedEntryState RssEntryState = iota
-	standardEntryState
-	expandedEntryState
-	browserEntryState /* Temporary state; gets lowered immediately */
+	CollapsedEntryState RssEntryState = iota
+	StandardEntryState
+	ExpandedEntryState
+	BrowserEntryState /* Temporary state; should get lowered immediately */
 )
 
+// ExpandEntryState returns the next largest entry state.
 func ExpandEntryState(state RssEntryState) RssEntryState {
 	switch state {
-	case collapsedEntryState:
-		return standardEntryState
-	case standardEntryState:
-		return expandedEntryState
+	case CollapsedEntryState:
+		return StandardEntryState
+	case StandardEntryState:
+		return ExpandedEntryState
 	default:
-		return browserEntryState
+		return BrowserEntryState
 	}
 }
 
+// CollapseEntryState returns the next smallest entry state.
 func CollapseEntryState(state RssEntryState) RssEntryState {
 	switch state {
-	case browserEntryState:
-		return expandedEntryState
-	case expandedEntryState:
-		return standardEntryState
+	case BrowserEntryState:
+		return ExpandedEntryState
+	case ExpandedEntryState:
+		return StandardEntryState
 	default:
-		return collapsedEntryState
+		return CollapsedEntryState
 	}
 }
 
@@ -45,7 +48,7 @@ type RssEntry struct {
 	State       RssEntryState
 }
 
-// Feed implements the FeedInterface
+// Feed implements the FeedInterface.
 type Feed struct {
 	itemPipe    chan *RssEntry
 	Title       string

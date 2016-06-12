@@ -1,4 +1,4 @@
-package rssUtilities
+package view
 
 import (
 	"errors"
@@ -9,6 +9,7 @@ import (
 	"unicode/utf8"
 
 	tb "github.com/nsf/termbox-go"
+	"github.com/smklein/toy-rss/feed"
 )
 
 // StatusType modifies the statusMsg color.
@@ -51,7 +52,7 @@ type channelInfo struct {
 type View struct {
 	// Rss Entry items
 	itemBufferedCap int
-	itemList        []*RssEntry
+	itemList        []*feed.RssEntry
 	channelInfoMap  map[string]*channelInfo /* Title --> Info */
 
 	// Status Message
@@ -76,12 +77,12 @@ type View struct {
 }
 
 // Start launches the view. Undefined to call multiple times.
-func (v *View) Start(newItemPipe chan *RssEntry, newFeedRequest chan string, deathWg *sync.WaitGroup) {
+func (v *View) Start(newItemPipe chan *feed.RssEntry, newFeedRequest chan string, deathWg *sync.WaitGroup) {
 	log.Println("View Start called")
 	v.viewLock.Lock()
 	// TODO(smklein): This should be configurable
 	v.itemBufferedCap = 200
-	v.itemList = make([]*RssEntry, 0)
+	v.itemList = make([]*feed.RssEntry, 0)
 	v.channelInfoMap = make(map[string]*channelInfo)
 
 	v.deathWg = deathWg
@@ -135,7 +136,7 @@ func (v *View) AddChannelInfo(title string) {
 func (v *View) CollapseItem(index int) {
 	v.viewLock.Lock()
 	if 0 <= index && index < len(v.itemList) {
-		v.itemList[index].State = CollapseEntryState(v.itemList[index].State)
+		v.itemList[index].State = feed.CollapseEntryState(v.itemList[index].State)
 	}
 	v.viewLock.Unlock()
 }
@@ -143,10 +144,10 @@ func (v *View) ExpandItem(index int) {
 	var openInBrowser = false
 	v.viewLock.Lock()
 	if 0 <= index && index < len(v.itemList) {
-		v.itemList[index].State = ExpandEntryState(v.itemList[index].State)
+		v.itemList[index].State = feed.ExpandEntryState(v.itemList[index].State)
 	}
-	if v.itemList[index].State == browserEntryState {
-		v.itemList[index].State = CollapseEntryState(v.itemList[index].State)
+	if v.itemList[index].State == feed.BrowserEntryState {
+		v.itemList[index].State = feed.CollapseEntryState(v.itemList[index].State)
 		openInBrowser = true
 	}
 	v.viewLock.Unlock()
@@ -164,7 +165,7 @@ func (v *View) ExpandItem(index int) {
 	}
 }
 
-func (v *View) listUpdater(newItemPipe chan *RssEntry) {
+func (v *View) listUpdater(newItemPipe chan *feed.RssEntry) {
 	for {
 		item := <-newItemPipe
 		v.viewLock.Lock()
@@ -291,7 +292,7 @@ func redrawLine(width, startLine int, elements []lineElement) {
 	}
 }
 
-func (v *View) redrawCollapsedState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *View) redrawCollapsedState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title] [ItemTitle]
 	redrawLine(width, startLine, []lineElement{
 		{
@@ -313,7 +314,7 @@ func (v *View) redrawCollapsedState(width, startLine int, item RssEntry, itemFgC
 	return 1
 }
 
-func (v *View) redrawStandardState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *View) redrawStandardState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title]
 	//   [ItemTitle]
 	redrawLine(width, startLine-1, []lineElement{
@@ -338,7 +339,7 @@ func (v *View) redrawStandardState(width, startLine int, item RssEntry, itemFgCo
 	return 2
 }
 
-func (v *View) redrawExpandedState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *View) redrawExpandedState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title]
 	//   [ItemTitle]
 	//   [ItemContent]
@@ -373,7 +374,7 @@ func (v *View) redrawExpandedState(width, startLine int, item RssEntry, itemFgCo
 	return 3
 }
 
-func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []RssEntry) int {
+func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []feed.RssEntry) int {
 	item := itemListCopy[itemIndex]
 
 	itemFgColor := fgColor
@@ -392,20 +393,20 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 	state := item.State
 	for linesUsed == 0 {
 		switch state {
-		case collapsedEntryState:
+		case feed.CollapsedEntryState:
 			linesUsed = v.redrawCollapsedState(
 				width, startLine, item, itemFgColor, metadataFgColor)
-		case standardEntryState:
+		case feed.StandardEntryState:
 			if startLine <= 2 {
-				state = CollapseEntryState(state)
+				state = feed.CollapseEntryState(state)
 				continue
 			}
 
 			linesUsed = v.redrawStandardState(
 				width, startLine, item, itemFgColor, metadataFgColor)
-		case expandedEntryState:
+		case feed.ExpandedEntryState:
 			if startLine <= 3 {
-				state = CollapseEntryState(state)
+				state = feed.CollapseEntryState(state)
 				continue
 			}
 
@@ -485,7 +486,7 @@ func (v *View) redrawAll() {
 	}
 
 	// XXX Copying the entire item list is "easy", but potentially pretty slow.
-	itemListCopy := make([]RssEntry, numItemsInView)
+	itemListCopy := make([]feed.RssEntry, numItemsInView)
 	for i := range itemListCopy {
 		itemListCopy[i] = *v.itemList[i]
 	}

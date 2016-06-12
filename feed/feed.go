@@ -1,4 +1,4 @@
-package rssUtilities
+package feed
 
 import (
 	"errors"
@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/SlyMarbo/rss"
+	"github.com/smklein/toy-rss/agingmap"
 )
 
 func (f *Feed) getURL() string {
@@ -25,7 +26,7 @@ func (f *Feed) doFeed(initPipe chan error) {
 	rss.CacheParsedItemIDs(false)
 
 	// Avoid duplicates, up to a limit, but let expirations occur.
-	duplicatesMap := AgingMap{}
+	duplicatesMap := agingmap.AgingMap{}
 	duplicatesMap.Init(100)
 
 	for {
