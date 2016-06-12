@@ -3,6 +3,7 @@ package rssUtilities
 import (
 	"errors"
 	"log"
+	"os/exec"
 	"sync"
 	"time"
 	"unicode/utf8"
@@ -139,11 +140,28 @@ func (v *View) CollapseItem(index int) {
 	v.viewLock.Unlock()
 }
 func (v *View) ExpandItem(index int) {
+	var openInBrowser = false
 	v.viewLock.Lock()
 	if 0 <= index && index < len(v.itemList) {
 		v.itemList[index].State = ExpandEntryState(v.itemList[index].State)
 	}
+	if v.itemList[index].State == browserEntryState {
+		v.itemList[index].State = CollapseEntryState(v.itemList[index].State)
+		openInBrowser = true
+	}
 	v.viewLock.Unlock()
+
+	if openInBrowser {
+		cmd := exec.Command("google-chrome", v.itemList[index].URL)
+		err := cmd.Start()
+		if err != nil {
+			log.Fatal("Start error: ", err)
+		}
+		err = cmd.Wait()
+		if err != nil {
+			log.Fatal("Wait error: ", err)
+		}
+	}
 }
 
 func (v *View) listUpdater(newItemPipe chan *RssEntry) {
@@ -273,6 +291,88 @@ func redrawLine(width, startLine int, elements []lineElement) {
 	}
 }
 
+func (v *View) redrawCollapsedState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+	// [Time] [Feed Title] [ItemTitle]
+	redrawLine(width, startLine, []lineElement{
+		{
+			contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
+			maxLen:   20,
+			color:    fgColor,
+		},
+		{
+			contents: []rune(item.FeedTitle),
+			maxLen:   20,
+			color:    metadataFgColor,
+		},
+		{
+			contents: []rune(item.ItemTitle),
+			maxLen:   60,
+			color:    itemFgColor,
+		},
+	})
+	return 1
+}
+
+func (v *View) redrawStandardState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+	// [Time] [Feed Title]
+	//   [ItemTitle]
+	redrawLine(width, startLine-1, []lineElement{
+		{
+			contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
+			maxLen:   20,
+			color:    fgColor,
+		},
+		{
+			contents: []rune(item.FeedTitle),
+			maxLen:   80,
+			color:    metadataFgColor,
+		},
+	})
+	redrawLine(width, startLine, []lineElement{
+		{
+			contents: append([]rune("  "), []rune(item.ItemTitle)...),
+			maxLen:   120,
+			color:    itemFgColor,
+		},
+	})
+	return 2
+}
+
+func (v *View) redrawExpandedState(width, startLine int, item RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+	// [Time] [Feed Title]
+	//   [ItemTitle]
+	//   [ItemContent]
+	redrawLine(width, startLine-2, []lineElement{
+		{
+			contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
+			maxLen:   20,
+			color:    fgColor,
+		},
+		{
+			contents: []rune(item.FeedTitle),
+			maxLen:   80,
+			color:    metadataFgColor,
+		},
+	})
+	redrawLine(width, startLine-1, []lineElement{
+		{
+			contents: append([]rune("  "), []rune(item.ItemTitle)...),
+			maxLen:   120,
+			color:    itemFgColor,
+		},
+	})
+
+	redrawLine(width, startLine, []lineElement{
+		{
+			contents: append([]rune("  "), []rune(item.ItemContent)...),
+			maxLen:   120,
+			color:    itemFgColor,
+		},
+	})
+
+	return 3
+}
+
 func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []RssEntry) int {
 	item := itemListCopy[itemIndex]
 
@@ -289,56 +389,31 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 	linesUsed := 0
 
 	// TODO add mechanism to "downgrade" size if it wouldn't fit on the top of the screen.
+	state := item.State
+	for linesUsed == 0 {
+		switch state {
+		case collapsedEntryState:
+			linesUsed = v.redrawCollapsedState(
+				width, startLine, item, itemFgColor, metadataFgColor)
+		case standardEntryState:
+			if startLine <= 2 {
+				state = CollapseEntryState(state)
+				continue
+			}
 
-	switch item.State {
-	case collapsedEntryState:
-		// [Time] [Feed Title] [ItemTitle]
-		redrawLine(width, startLine, []lineElement{
-			{
-				contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
-				maxLen:   20,
-				color:    fgColor,
-			},
-			{
-				contents: []rune(item.FeedTitle),
-				maxLen:   20,
-				color:    metadataFgColor,
-			},
-			{
-				contents: []rune(item.ItemTitle),
-				maxLen:   60,
-				color:    itemFgColor,
-			},
-		})
-		linesUsed = 1
-	case standardEntryState:
-		// [Time] [Feed Title]
-		//   [ItemTitle]
-		redrawLine(width, startLine-1, []lineElement{
-			{
-				contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
-				maxLen:   20,
-				color:    fgColor,
-			},
-			{
-				contents: []rune(item.FeedTitle),
-				maxLen:   80,
-				color:    metadataFgColor,
-			},
-		})
-		redrawLine(width, startLine, []lineElement{
-			{
-				contents: append([]rune("  "), []rune(item.ItemTitle)...),
-				maxLen:   120,
-				color:    itemFgColor,
-			},
-		})
-		linesUsed = 2
-	case expandedEntryState:
-		// TODO probably return err if it doesn't fit? So we can stop drawing? Or something?
-		panic("Unimplemented expanded state")
-	default:
-		panic("Unhandled entry state")
+			linesUsed = v.redrawStandardState(
+				width, startLine, item, itemFgColor, metadataFgColor)
+		case expandedEntryState:
+			if startLine <= 3 {
+				state = CollapseEntryState(state)
+				continue
+			}
+
+			linesUsed = v.redrawExpandedState(
+				width, startLine, item, itemFgColor, metadataFgColor)
+		default:
+			panic("Unhandled entry state")
+		}
 	}
 
 	return linesUsed
@@ -401,10 +476,9 @@ func (v *View) redrawAll() {
 	statusString := v.status.Message
 	statusColor := getStatusColor(v.status.Type)
 
-	minLinesPerEntry := 1
 	linesUsableByEntries := (h - 4)
 	// The largest possible number of items in view.
-	numItemsInView := linesUsableByEntries / minLinesPerEntry
+	numItemsInView := linesUsableByEntries
 	if len(v.itemList) < numItemsInView {
 		// Which may be even smaller if there are less items available.
 		numItemsInView = len(v.itemList)
@@ -429,7 +503,7 @@ func (v *View) redrawAll() {
 
 	// While another entry can fit...
 	itemIndex := 0
-	for rssEntryLine-minLinesPerEntry > 0 {
+	for rssEntryLine > 1 {
 		if itemIndex >= numItemsInView {
 			break
 		}

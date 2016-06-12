@@ -5,22 +5,27 @@ import "time"
 type RssEntryState uint8
 
 const (
-	standardEntryState RssEntryState = iota
-	collapsedEntryState
+	collapsedEntryState RssEntryState = iota
+	standardEntryState
 	expandedEntryState
+	browserEntryState /* Temporary state; gets lowered immediately */
 )
 
 func ExpandEntryState(state RssEntryState) RssEntryState {
 	switch state {
 	case collapsedEntryState:
 		return standardEntryState
-	default:
+	case standardEntryState:
 		return expandedEntryState
+	default:
+		return browserEntryState
 	}
 }
 
 func CollapseEntryState(state RssEntryState) RssEntryState {
 	switch state {
+	case browserEntryState:
+		return expandedEntryState
 	case expandedEntryState:
 		return standardEntryState
 	default:
