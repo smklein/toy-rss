@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 	"sync"
+	"time"
 	"unicode/utf8"
 
 	tb "github.com/nsf/termbox-go"
@@ -234,71 +235,42 @@ func getStatusColor(sType StatusType) tb.Attribute {
 	return statusColor
 }
 
-func redrawMetadataAndItemDense(width, startLine int, metadataFgColor, itemFgColor tb.Attribute, item *RssEntry) int {
-	// Abbreviate titles if necessary.
-	itemTitleLen := utf8.RuneCountInString(item.ItemTitle)
-	channelTitleLen := utf8.RuneCountInString(item.FeedTitle)
-	itemTitleStart := 17
-	maxChannelTitleLen := 15
-	dotDotDotLen := 0
-	if channelTitleLen > maxChannelTitleLen {
-		dotDotDotLen = maxChannelTitleLen
-		channelTitleLen = maxChannelTitleLen - 3
+func formatToLen(r []rune, l int) []rune {
+	if len(r) > l {
+		return append(r[:l-3], []rune("...")...)
+	} else {
+		return r
 	}
-
-	for x := 0; x <= width; x++ {
-		// Metadata about item
-		if x < channelTitleLen {
-			// TODO(smklein): Try doing this casting when converting from
-			// SlyMarbo's RSS --> my format.
-			r := []rune(item.FeedTitle)[x]
-			tb.SetCell(x, startLine, r, metadataFgColor, bgColor)
-		} else if x < dotDotDotLen {
-			// Does not happen if dotDotDotLen is zero.
-			tb.SetCell(x, startLine, '.', metadataFgColor, bgColor)
-		} else if x >= itemTitleStart && x-itemTitleStart < itemTitleLen {
-			r := []rune(item.ItemTitle)[x-itemTitleStart]
-			tb.SetCell(x, startLine, r, itemFgColor, bgColor)
-		} else {
-			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
-
-		}
-	}
-	return 1
 }
 
-func redrawMetadata(width, startLine int, fgColor tb.Attribute, item *RssEntry) int {
-	for x := 0; x <= width; x++ {
-		// Metadata about item
-		if x < utf8.RuneCountInString(item.FeedTitle) {
-			// TODO(smklein): Try doing this casting when converting from
-			// SlyMarbo's RSS --> my format.
-			r := []rune(item.FeedTitle)[x]
-			tb.SetCell(x, startLine, r, fgColor, bgColor)
-		} else {
-			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
-
-		}
-	}
-	return 1
+type lineElement struct {
+	contents []rune
+	maxLen   int
+	color    tb.Attribute
 }
 
-func redrawItemTitle(width, startLine int, fgColor tb.Attribute, item *RssEntry) int {
+func redrawLine(width, startLine int, elements []lineElement) {
+	ei := 0
+
+	start := 0
+	element := formatToLen(elements[ei].contents, elements[ei].maxLen)
+	length := len(element)
 	for x := 0; x <= width; x++ {
-		// Item itself
-		switch x < 2 {
-		case true:
+		if start <= x && x < start+length {
+			// Print out current element
+			r := element[x-start]
+			tb.SetCell(x, startLine, r, elements[ei].color, bgColor)
+		} else if /* There is another element */ ei+1 < len(elements) &&
+			/* We are padded enough */ start+length < x {
+			ei = ei + 1
+			start = x + 1
+			element = formatToLen(elements[ei].contents, elements[ei].maxLen)
+			length = len(element)
 			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
-		case false:
-			if x-2 < utf8.RuneCountInString(item.ItemTitle) {
-				r := []rune(item.ItemTitle)[x-2]
-				tb.SetCell(x, startLine, r, fgColor, bgColor)
-			} else {
-				tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
-			}
+		} else {
+			tb.SetCell(x, startLine, ' ', blankFgColor, bgColor)
 		}
 	}
-	return 1
 }
 
 func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []RssEntry) int {
@@ -316,18 +288,55 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 
 	linesUsed := 0
 
-	switch item.State {
-	case standardEntryState:
-		// Requires two lines, the minimum number of lines. Will always fit.
-		titleLines := redrawItemTitle(width, startLine, itemFgColor, &item)
-		metadataLines := redrawMetadata(width, startLine-titleLines, metadataFgColor, &item)
+	// TODO add mechanism to "downgrade" size if it wouldn't fit on the top of the screen.
 
-		linesUsed = titleLines + metadataLines
+	switch item.State {
+	case collapsedEntryState:
+		// [Time] [Feed Title] [ItemTitle]
+		redrawLine(width, startLine, []lineElement{
+			{
+				contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
+				maxLen:   20,
+				color:    fgColor,
+			},
+			{
+				contents: []rune(item.FeedTitle),
+				maxLen:   20,
+				color:    metadataFgColor,
+			},
+			{
+				contents: []rune(item.ItemTitle),
+				maxLen:   60,
+				color:    itemFgColor,
+			},
+		})
+		linesUsed = 1
+	case standardEntryState:
+		// [Time] [Feed Title]
+		//   [ItemTitle]
+		redrawLine(width, startLine-1, []lineElement{
+			{
+				contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
+				maxLen:   20,
+				color:    fgColor,
+			},
+			{
+				contents: []rune(item.FeedTitle),
+				maxLen:   80,
+				color:    metadataFgColor,
+			},
+		})
+		redrawLine(width, startLine, []lineElement{
+			{
+				contents: append([]rune("  "), []rune(item.ItemTitle)...),
+				maxLen:   120,
+				color:    itemFgColor,
+			},
+		})
+		linesUsed = 2
 	case expandedEntryState:
 		// TODO probably return err if it doesn't fit? So we can stop drawing? Or something?
 		panic("Unimplemented expanded state")
-	case collapsedEntryState:
-		linesUsed = redrawMetadataAndItemDense(width, startLine, metadataFgColor, itemFgColor, &item)
 	default:
 		panic("Unhandled entry state")
 	}
@@ -424,7 +433,8 @@ func (v *View) redrawAll() {
 		if itemIndex >= numItemsInView {
 			break
 		}
-		rssEntryLine -= v.redrawRssItem(w, rssEntryLine, itemIndex, inputItemIndex, inputMode, itemListCopy)
+		rssEntryLine -= v.redrawRssItem(w, rssEntryLine, itemIndex, inputItemIndex,
+			inputMode, itemListCopy)
 		itemIndex += 1
 	}
 

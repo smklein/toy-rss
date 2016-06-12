@@ -1,5 +1,7 @@
 package rssUtilities
 
+import "time"
+
 type RssEntryState uint8
 
 const (
@@ -29,10 +31,13 @@ func CollapseEntryState(state RssEntryState) RssEntryState {
 // RssEntry represents OUR version of an entry.
 // It's in a form that can be easily dumped to the view.
 type RssEntry struct {
-	ItemTitle string
-	URL       string
-	FeedTitle string
-	State     RssEntryState
+	FeedTitle   string
+	ItemTitle   string
+	ItemSummary string
+	ItemContent string
+	URL         string
+	ItemDate    time.Time
+	State       RssEntryState
 }
 
 // Feed implements the FeedInterface

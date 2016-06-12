@@ -55,7 +55,10 @@ func (f *Feed) doFeed(initPipe chan error) {
 				newItem := &RssEntry{}
 				newItem.FeedTitle = f.Title
 				newItem.ItemTitle = item.Title
+				newItem.ItemSummary = item.Summary
+				newItem.ItemContent = item.Content
 				newItem.URL = item.Link
+				newItem.ItemDate = item.Date
 				f.itemPipe <- newItem
 			}
 		}
