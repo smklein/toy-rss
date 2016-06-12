@@ -7,6 +7,24 @@ view items, and manage incoming content.
 
 This is mostly an excuse for me to re-learn go.
 
+## How do I...
+
+### ... download it?
+
+$ go get github.com/smklein/toy-rss
+
+### ... build it?
+
+$ go build
+
+### ... run it?
+
+$ ./toy-rss
+
+### ... test it?
+
+TODO
+
 ## Core Components
 
 ### view
