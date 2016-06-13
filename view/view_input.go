@@ -38,7 +38,7 @@ type InputManager struct {
 	sharedChanNewFeedRequest chan string /* Whatever the user has inputted */
 
 	// View which created us.
-	view *View
+	view ViewInterface
 
 	// Incoming requests (made TO the InputManager)
 	chanSetLastSeenNumItems chan int
@@ -50,7 +50,7 @@ type InputManager struct {
 	exitRequest chan bool
 }
 
-func (im *InputManager) Start(sharedChanNewFeedRequest chan string, v *View) {
+func (im *InputManager) Start(sharedChanNewFeedRequest chan string, v ViewInterface) {
 	log.Println("InputManager Start")
 	im.sharedChanNewFeedRequest = sharedChanNewFeedRequest
 

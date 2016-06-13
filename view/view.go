@@ -1,7 +1,6 @@
 package view
 
 import (
-	"errors"
 	"log"
 	"os/exec"
 	"sync"
@@ -9,25 +8,8 @@ import (
 	"unicode/utf8"
 
 	tb "github.com/nsf/termbox-go"
-	"github.com/smklein/toy-rss/feed"
+	"github.com/smklein/toy-rss/storage"
 )
-
-// StatusType modifies the statusMsg color.
-type StatusType uint8
-
-const (
-	// StatusError indicates an error.
-	StatusError StatusType = iota
-	// StatusSuccess indicates a success.
-	StatusSuccess
-	// StatusInfo indicates info.
-	StatusInfo
-)
-
-type StatusMsgStruct struct {
-	Message string
-	Type    StatusType
-}
 
 // TODO(smklein): Use default colors
 var defaultFeedURLs = [...]string{
@@ -44,22 +26,15 @@ func check(e error) {
 	}
 }
 
-type channelInfo struct {
-	channelColor tb.Attribute
-}
-
 // View gives access to the user.
-type View struct {
+type view struct {
 	// Rss Entry items
-	itemBufferedCap int
-	itemList        []*feed.RssEntry
-	channelInfoMap  map[string]*channelInfo /* Title --> Info */
+	storage *storage.ViewStorage
 
 	// Status Message
 	status StatusMsgStruct
 
 	// Synchronization tools
-	// TODO this needs to become more fine-grained before it spirals out of control
 	viewLock sync.RWMutex
 	deathWg  *sync.WaitGroup
 
@@ -77,13 +52,11 @@ type View struct {
 }
 
 // Start launches the view. Undefined to call multiple times.
-func (v *View) Start(newItemPipe chan *feed.RssEntry, newFeedRequest chan string, deathWg *sync.WaitGroup) {
+func (v *view) Start(newItemPipe chan *storage.RssEntry, newFeedRequest chan string, deathWg *sync.WaitGroup) {
 	log.Println("View Start called")
 	v.viewLock.Lock()
-	// TODO(smklein): This should be configurable
-	v.itemBufferedCap = 200
-	v.itemList = make([]*feed.RssEntry, 0)
-	v.channelInfoMap = make(map[string]*channelInfo)
+	// TODO(smklein): This size should be configurable.
+	v.storage = storage.MakeViewStorage("VIEW_STORAGE", 200)
 
 	v.deathWg = deathWg
 
@@ -112,48 +85,35 @@ func (v *View) Start(newItemPipe chan *feed.RssEntry, newFeedRequest chan string
 	log.Println("View Start Complete")
 }
 
-func (v *View) GetChanExitRequest() chan bool {
+func (v *view) GetChanExitRequest() chan bool {
 	return v.exitRequest
 }
-func (v *View) DeleteItem(i int) {
+func (v *view) DeleteItem(i int) {
 	v.deleteItemRequest <- i
 }
-func (v *View) SetStatus(status StatusMsgStruct) {
+func (v *view) SetStatus(status StatusMsgStruct) {
 	v.setStatusRequest <- status
 }
-func (v *View) ChangeColor(i int) {
+func (v *view) ChangeColor(i int) {
 	v.changeColorRequest <- i
 }
-func (v *View) Redraw() {
+func (v *view) Redraw() {
 	v.redrawRequest <- true
 }
-func (v *View) AddChannelInfo(title string) {
-	v.viewLock.Lock()
-	v.channelInfoMap[title] = &channelInfo{}
-	v.channelInfoMap[title].channelColor = fgColor
-	v.viewLock.Unlock()
+func (v *view) AddChannelInfo(title string) {
+	info := &storage.ChannelInfo{
+		ChannelColor: fgColor,
+	}
+	v.storage.SetChannelInfo(title, info)
 }
-func (v *View) CollapseItem(index int) {
-	v.viewLock.Lock()
-	if 0 <= index && index < len(v.itemList) {
-		v.itemList[index].State = feed.CollapseEntryState(v.itemList[index].State)
-	}
-	v.viewLock.Unlock()
+func (v *view) CollapseItem(index int) {
+	v.storage.ChangeItemState(index, false /* Expanding? */)
 }
-func (v *View) ExpandItem(index int) {
-	var openInBrowser = false
-	v.viewLock.Lock()
-	if 0 <= index && index < len(v.itemList) {
-		v.itemList[index].State = feed.ExpandEntryState(v.itemList[index].State)
-	}
-	if v.itemList[index].State == feed.BrowserEntryState {
-		v.itemList[index].State = feed.CollapseEntryState(v.itemList[index].State)
-		openInBrowser = true
-	}
-	v.viewLock.Unlock()
+func (v *view) ExpandItem(index int) {
+	newState, url := v.storage.ChangeItemState(index, true /* Expanding? */)
 
-	if openInBrowser {
-		cmd := exec.Command("google-chrome", v.itemList[index].URL)
+	if newState == storage.BrowserEntryState {
+		cmd := exec.Command("google-chrome", url)
 		err := cmd.Start()
 		if err != nil {
 			log.Fatal("Start error: ", err)
@@ -165,59 +125,35 @@ func (v *View) ExpandItem(index int) {
 	}
 }
 
-func (v *View) listUpdater(newItemPipe chan *feed.RssEntry) {
+func (v *view) listUpdater(newItemPipe chan *storage.RssEntry) {
 	for {
 		item := <-newItemPipe
-		v.viewLock.Lock()
-		// New items are placed at the BACK of the itemList.
-		v.itemList = append(v.itemList, item)
-		if len(v.itemList) > v.itemBufferedCap {
-			// TODO(smklein): Display info to user that they're missing items...
-			// Old items are removed from the FRONT of the itemList.
-			v.itemList = v.itemList[1:]
-		}
-		v.viewLock.Unlock()
+		v.storage.AddItem(item)
 		v.redrawRequest <- true
 	}
 }
 
-func (v *View) setStatusMsg(status StatusMsgStruct) {
+func (v *view) setStatusMsg(status StatusMsgStruct) {
+	v.viewLock.Lock()
 	v.status = status
+	v.viewLock.Unlock()
 }
 
-func (v *View) checkItemIndexValid(index int) error {
-	if index < 0 || len(v.itemList) <= index {
-		return errors.New("Attempting to access out of range item")
-	}
-	return nil
-}
-
-func (v *View) tryToDeleteItem(index int) {
-	v.viewLock.Lock()
-	defer v.viewLock.Unlock()
-	if err := v.checkItemIndexValid(index); err != nil {
+func (v *view) tryToDeleteItem(index int) {
+	if err := v.storage.DeleteItem(index); err != nil {
 		v.setStatusMsg(StatusMsgStruct{err.Error(), StatusError})
 		return
 	}
-	v.itemList = append(v.itemList[:index], v.itemList[index+1:]...)
 }
 
-func (v *View) tryToChangeItemColor(index int) {
-	v.viewLock.Lock()
-	defer v.viewLock.Unlock()
-	if err := v.checkItemIndexValid(index); err != nil {
+func (v *view) tryToChangeItemColor(index int) {
+	if err := v.storage.ChangeColor(index); err != nil {
 		v.setStatusMsg(StatusMsgStruct{err.Error(), StatusError})
 		return
 	}
-	feedTitle := v.itemList[index].FeedTitle
-	log.Println("Updating color selection mode")
-	if chInfo, ok := v.channelInfoMap[feedTitle]; ok {
-		color := chInfo.channelColor
-		chInfo.channelColor = (color + 1) % tb.ColorWhite
-	}
 }
 
-func (v *View) drawLoop() {
+func (v *view) drawLoop() {
 	// Initialize termbox-go
 	check(tb.Init())
 	defer func() {
@@ -292,7 +228,7 @@ func redrawLine(width, startLine int, elements []lineElement) {
 	}
 }
 
-func (v *View) redrawCollapsedState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *view) redrawCollapsedState(width, startLine int, item storage.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title] [ItemTitle]
 	redrawLine(width, startLine, []lineElement{
 		{
@@ -314,7 +250,7 @@ func (v *View) redrawCollapsedState(width, startLine int, item feed.RssEntry, it
 	return 1
 }
 
-func (v *View) redrawStandardState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *view) redrawStandardState(width, startLine int, item storage.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title]
 	//   [ItemTitle]
 	redrawLine(width, startLine-1, []lineElement{
@@ -339,7 +275,7 @@ func (v *View) redrawStandardState(width, startLine int, item feed.RssEntry, ite
 	return 2
 }
 
-func (v *View) redrawExpandedState(width, startLine int, item feed.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
+func (v *view) redrawExpandedState(width, startLine int, item storage.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title]
 	//   [ItemTitle]
 	//   [ItemContent]
@@ -374,7 +310,7 @@ func (v *View) redrawExpandedState(width, startLine int, item feed.RssEntry, ite
 	return 3
 }
 
-func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []feed.RssEntry) int {
+func (v *view) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, inputMode InputType, itemListCopy []storage.RssEntry) int {
 	item := itemListCopy[itemIndex]
 
 	itemFgColor := fgColor
@@ -383,8 +319,8 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 	if inputMode == RssSelectionMode && inputItemIndex == itemIndex {
 		itemFgColor = tb.ColorBlue | tb.AttrUnderline
 	}
-	if chInfo, ok := v.channelInfoMap[item.FeedTitle]; ok {
-		metadataFgColor = chInfo.channelColor
+	if chInfo := v.storage.GetChannelInfo(item.FeedTitle); chInfo != nil {
+		metadataFgColor = chInfo.ChannelColor
 	}
 
 	linesUsed := 0
@@ -393,20 +329,20 @@ func (v *View) redrawRssItem(width, startLine, itemIndex, inputItemIndex int, in
 	state := item.State
 	for linesUsed == 0 {
 		switch state {
-		case feed.CollapsedEntryState:
+		case storage.CollapsedEntryState:
 			linesUsed = v.redrawCollapsedState(
 				width, startLine, item, itemFgColor, metadataFgColor)
-		case feed.StandardEntryState:
+		case storage.StandardEntryState:
 			if startLine <= 2 {
-				state = feed.CollapseEntryState(state)
+				state = storage.CollapseEntryState(state)
 				continue
 			}
 
 			linesUsed = v.redrawStandardState(
 				width, startLine, item, itemFgColor, metadataFgColor)
-		case feed.ExpandedEntryState:
+		case storage.ExpandedEntryState:
 			if startLine <= 3 {
-				state = feed.CollapseEntryState(state)
+				state = storage.CollapseEntryState(state)
 				continue
 			}
 
@@ -424,7 +360,7 @@ var fgColor tb.Attribute = tb.ColorGreen
 var blankFgColor tb.Attribute = tb.ColorGreen
 var bgColor tb.Attribute = tb.ColorDefault
 
-func (v *View) redrawStatus(width, line int, statusString string, statusColor tb.Attribute) {
+func (v *view) redrawStatus(width, line int, statusString string, statusColor tb.Attribute) {
 	statusStartCol := 4
 	for x := 0; x <= width; x++ {
 		if x <= 2 {
@@ -442,7 +378,7 @@ func (v *View) redrawStatus(width, line int, statusString string, statusColor tb
 	}
 }
 
-func (v *View) redrawUserInput(width, line int, inputString string) {
+func (v *view) redrawUserInput(width, line int, inputString string) {
 	userInputStartCol := 4
 	inputStringStartLen := len(inputString)
 	for x := 0; x <= width; x++ {
@@ -465,7 +401,7 @@ func (v *View) redrawUserInput(width, line int, inputString string) {
 	}
 }
 
-func (v *View) redrawAll() {
+func (v *view) redrawAll() {
 	// TODO(smklein): Only clear parts of screen that need re-drawing...
 	tb.Clear(tb.ColorDefault, tb.ColorDefault)
 	w, h := tb.Size()
@@ -476,21 +412,12 @@ func (v *View) redrawAll() {
 	v.viewLock.RLock()
 	statusString := v.status.Message
 	statusColor := getStatusColor(v.status.Type)
+	v.viewLock.RUnlock()
 
 	linesUsableByEntries := (h - 4)
 	// The largest possible number of items in view.
-	numItemsInView := linesUsableByEntries
-	if len(v.itemList) < numItemsInView {
-		// Which may be even smaller if there are less items available.
-		numItemsInView = len(v.itemList)
-	}
-
-	// XXX Copying the entire item list is "easy", but potentially pretty slow.
-	itemListCopy := make([]feed.RssEntry, numItemsInView)
-	for i := range itemListCopy {
-		itemListCopy[i] = *v.itemList[i]
-	}
-	v.viewLock.RUnlock()
+	itemListCopy := v.storage.GetCopyOfSomeItems(linesUsableByEntries)
+	numItemsInView := len(itemListCopy)
 
 	rssEntryLine := h - 3 // Initialized to the starting line.
 	userInputLine := h - 2

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/SlyMarbo/rss"
-	"github.com/smklein/toy-rss/agingmap"
+	"github.com/smklein/toy-rss/storage"
 )
 
 // GetTitle does what you would expect.
@@ -22,8 +22,7 @@ func (f *Feed) doFeed(initPipe chan error) {
 	rss.CacheParsedItemIDs(false)
 
 	// Avoid duplicates, up to a limit, but let expirations occur.
-	duplicatesMap := agingmap.AgingMap{}
-	duplicatesMap.Init(100)
+	feedStorage := storage.MakeFeedStorage("", 100)
 
 	for {
 		if f.disabled {
@@ -41,15 +40,16 @@ func (f *Feed) doFeed(initPipe chan error) {
 		f.Title = rssFeed.Title
 
 		if !f.initialized {
+			// TODO(smklein): Re-initialize feedStorage using storage
 			initPipe <- nil
 			f.initialized = true
 		}
 		for _, item := range rssFeed.Items {
-			if duplicatesMap.Get(item.ID) == "" {
-				duplicatesMap.Add(item.ID, item.ID)
+			if feedStorage.Get(item.ID) == "" {
+				feedStorage.Add(item.ID, item.ID)
 				// Only place items in the itemPipe if they are not visible in
-				// the duplicatesMap.
-				newItem := &RssEntry{}
+				// the feedStorage.
+				newItem := &storage.RssEntry{}
 				newItem.FeedTitle = f.Title
 				newItem.ItemTitle = item.Title
 				newItem.ItemSummary = item.Summary
@@ -69,10 +69,10 @@ func (f *Feed) doFeed(initPipe chan error) {
 // interval. Although no formal guarantees are made regarding duplicates,
 // generally, it can be assumed that duplicates will not be sent on the pipe
 // for a while.
-func (f *Feed) Start(URL string) (chan *RssEntry, error) {
+func (f *Feed) Start(URL string) (chan *storage.RssEntry, error) {
 	log.Println("Start: ", URL)
 	f.URL = URL
-	f.itemPipe = make(chan *RssEntry, 20)
+	f.itemPipe = make(chan *storage.RssEntry, 20)
 
 	initPipe := make(chan error)
 	go f.doFeed(initPipe)

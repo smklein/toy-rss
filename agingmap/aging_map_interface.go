@@ -8,7 +8,7 @@ type AgingMapInterface interface {
 
 	// Adding the same key multiple times "refreshes" the age and updates the
 	// value.
-	Add(key string, value string)
+	Add(key, value string)
 	Get(key string) string
 	Remove(key string) string
 }
