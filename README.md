@@ -11,7 +11,7 @@ This is mostly an excuse for me to re-learn go.
 
 ### ... download it?
 
-`$ export GOPATH=\`pwd\``
+`$ export GOPATH=\`pwd\` `
 
 `$ go get github.com/smklein/toy-rss`
 
