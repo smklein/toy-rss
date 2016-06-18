@@ -6,20 +6,29 @@ import (
 	"sync"
 )
 
-type keyValuePair struct {
-	key   string
-	value string
-}
-
 const threadSafe = false
 
 // AgingMap implements the AgingMap interface.
-// This is my first go at an implementation.
+// This is my first attempt at an implementation.
 type AgingMap struct {
 	internalMap  map[string]*list.Element
 	internalList list.List
 	maxElements  int
 	rwLock       sync.RWMutex
+}
+
+func (am *AgingMap) Serialize() []KeyValuePair {
+	pairs := make([]KeyValuePair, 0, am.maxElements)
+
+	am.rwLock.RLock()
+	defer am.rwLock.RUnlock()
+	e := am.internalList.Front()
+	for e != nil {
+		pairs = append(pairs, e.Value.(KeyValuePair))
+		e = e.Next()
+	}
+
+	return pairs
 }
 
 // Init initializes the map with a maximum size.
@@ -48,11 +57,11 @@ func (am *AgingMap) Add(key string, value string) {
 
 	if len(am.internalMap) >= am.maxElements {
 		// Make room for the new element.
-		kvp := am.internalList.Remove(am.internalList.Back()).(keyValuePair)
-		delete(am.internalMap, kvp.key)
+		kvp := am.internalList.Remove(am.internalList.Back()).(KeyValuePair)
+		delete(am.internalMap, kvp.Key)
 	}
 
-	am.internalMap[key] = am.internalList.PushFront(keyValuePair{key, value})
+	am.internalMap[key] = am.internalList.PushFront(KeyValuePair{key, value})
 }
 
 // Get retrieves the value for the key in the map (or returns "" if it doesn't
@@ -67,8 +76,8 @@ func (am *AgingMap) Get(key string) string {
 		return ""
 	}
 
-	kvp := element.Value.(keyValuePair)
-	return kvp.value
+	kvp := element.Value.(KeyValuePair)
+	return kvp.Value
 }
 
 // Remove deletes the key/value pair from the map, and returns the value.
@@ -82,8 +91,8 @@ func (am *AgingMap) Remove(key string) string {
 		return ""
 	}
 
-	kvp := element.Value.(keyValuePair)
+	kvp := element.Value.(KeyValuePair)
 	delete(am.internalMap, key)
 	am.internalList.Remove(element)
-	return kvp.value
+	return kvp.Value
 }

@@ -1,5 +1,10 @@
 package agingmap
 
+type KeyValuePair struct {
+	Key   string
+	Value string
+}
+
 // AgingMapInterface is a Map which also has a capped size.
 // As more elements are added, old elements can be removed.
 type AgingMapInterface interface {
@@ -11,4 +16,5 @@ type AgingMapInterface interface {
 	Add(key, value string)
 	Get(key string) string
 	Remove(key string) string
+	Serialize() []KeyValuePair
 }

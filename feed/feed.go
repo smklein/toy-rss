@@ -22,7 +22,7 @@ func (f *Feed) doFeed(initPipe chan error) {
 	rss.CacheParsedItemIDs(false)
 
 	// Avoid duplicates, up to a limit, but let expirations occur.
-	feedStorage := storage.MakeFeedStorage("", 100)
+	var feedStorage *storage.FeedStorage
 
 	for {
 		if f.disabled {
@@ -40,13 +40,13 @@ func (f *Feed) doFeed(initPipe chan error) {
 		f.Title = rssFeed.Title
 
 		if !f.initialized {
-			// TODO(smklein): Re-initialize feedStorage using storage
 			initPipe <- nil
 			f.initialized = true
+			feedStorage = storage.MakeFeedStorage(f.Title, 100)
 		}
 		for _, item := range rssFeed.Items {
 			if feedStorage.Get(item.ID) == "" {
-				feedStorage.Add(item.ID, item.ID)
+				feedStorage.Add(item.ID, item.Title)
 				// Only place items in the itemPipe if they are not visible in
 				// the feedStorage.
 				newItem := &storage.RssEntry{}
