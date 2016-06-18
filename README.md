@@ -11,9 +11,10 @@ This is mostly an excuse for me to re-learn go.
 
 ### ... download it?
 
-#### cd to your desired directory, then...
 $ export GOPATH=`pwd`
+
 $ go get github.com/smklein/toy-rss
+
 $ cd $GOPATH/src/github.com/smklein/toy-rss
 
 ### ... build it?
@@ -23,6 +24,7 @@ $ go build
 ### ... run it?
 
 $ mkdir data
+
 $ ./toy-rss
 
 ### ... test it?
