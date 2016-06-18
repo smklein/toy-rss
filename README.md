@@ -12,7 +12,9 @@ This is mostly an excuse for me to re-learn go.
 ### ... download it?
 
 `$ export GOPATH=\`pwd\``
+
 `$ go get github.com/smklein/toy-rss`
+
 `$ cd $GOPATH/src/github.com/smklein/toy-rss`
 
 ### ... build it?
@@ -22,6 +24,7 @@ This is mostly an excuse for me to re-learn go.
 ### ... run it?
 
 `$ mkdir data`
+
 `$ ./toy-rss`
 
 ### ... test it?
