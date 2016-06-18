@@ -19,11 +19,12 @@ $ go build
 
 ### ... run it?
 
+$ mkdir data
 $ ./toy-rss
 
 ### ... test it?
 
-TODO
+$ go test ./...
 
 ## Core Components
 
