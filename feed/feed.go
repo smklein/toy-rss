@@ -42,7 +42,7 @@ func (f *Feed) doFeed(initPipe chan error) {
 		if !f.initialized {
 			initPipe <- nil
 			f.initialized = true
-			feedStorage = storage.MakeFeedStorage(f.Title, 100)
+			feedStorage = storage.MakeFeedStorage(f.Title, 1000)
 		}
 		for _, item := range rssFeed.Items {
 			if feedStorage.Get(item.ID) == "" {

@@ -18,6 +18,7 @@ var defaultFeedURLs = [...]string{
 	"https://news.ycombinator.com/rss",
 	"https://lwn.net/headlines/rss",
 	"http://feeds.feedburner.com/linuxjournalcom?format=xml",
+	"http://preshing.com/feed",
 	//"https://www.reddit.com/.rss",
 }
 
