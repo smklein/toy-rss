@@ -66,6 +66,8 @@ func main() {
 
 	v := view.GetView()
 	v.Start(newItemRequest, newFeedRequest, &deathWg)
+	// TODO(smklein): I find this loop kinda weird. What IS and ISN'T main in
+	// charge of handling?
 	for {
 		select {
 		case newURL := <-newFeedRequest:

@@ -104,7 +104,9 @@ func (v *view) AddChannelInfo(title string) {
 	info := &storage.ChannelInfo{
 		ChannelColor: fgColor,
 	}
-	v.storage.SetChannelInfo(title, info)
+	if v.storage.GetChannelInfo(title) == nil {
+		v.storage.SetChannelInfo(title, info)
+	}
 }
 func (v *view) CollapseItem(index int) {
 	v.storage.ChangeItemState(index, false /* Expanding? */)
