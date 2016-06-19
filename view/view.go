@@ -2,6 +2,7 @@ package view
 
 import (
 	"log"
+	"os"
 	"os/exec"
 	"sync"
 	"time"
@@ -41,6 +42,9 @@ type view struct {
 	// Mechanism to interact with input (presumeably keyboard)
 	inputManager *InputManager
 
+	// Blocks redraw loop, closes termbox, opens browser.
+	openArticleRequest chan string
+
 	// When this is closed, GTFO.
 	exitRequest chan bool
 
@@ -61,6 +65,7 @@ func (v *view) Start(newItemPipe chan *storage.RssEntry, newFeedRequest chan str
 	v.deathWg = deathWg
 
 	v.inputManager = new(InputManager)
+	v.openArticleRequest = make(chan string)
 	v.exitRequest = make(chan bool)
 
 	v.setStatusRequest = make(chan StatusMsgStruct)
@@ -114,16 +119,24 @@ func (v *view) CollapseItem(index int) {
 func (v *view) ExpandItem(index int) {
 	newState, url := v.storage.ChangeItemState(index, true /* Expanding? */)
 
+	// TODO(smklein): Should probably customize this command...
+	// tmux split-window -h "w3m -dump test_server/test_files/birds.html | less"
 	if newState == storage.BrowserEntryState {
-		cmd := exec.Command("google-chrome", url)
-		err := cmd.Start()
-		if err != nil {
-			log.Fatal("Start error: ", err)
-		}
-		err = cmd.Wait()
-		if err != nil {
-			log.Fatal("Wait error: ", err)
-		}
+		//cmd := exec.Command("w3m -dump", url)
+		log.Println("Would have shown: ", url)
+		v.openArticleRequest <- url
+
+		/*
+			cmd := exec.Command("tmux", "split-window", "-h", "\"w3m -dump test_server/test_files/birds.html | less\"")
+			err := cmd.Start()
+			if err != nil {
+				log.Fatal("Start error: ", err)
+			}
+			err = cmd.Wait()
+			if err != nil {
+				log.Fatal("Wait error: ", err)
+			}
+		*/
 	}
 }
 
@@ -158,10 +171,6 @@ func (v *view) tryToChangeItemColor(index int) {
 func (v *view) drawLoop() {
 	// Initialize termbox-go
 	check(tb.Init())
-	defer func() {
-		tb.Close()
-		v.deathWg.Done()
-	}()
 
 	for {
 		v.redrawAll()
@@ -173,7 +182,22 @@ func (v *view) drawLoop() {
 			v.tryToDeleteItem(index)
 		case index := <-v.changeColorRequest:
 			v.tryToChangeItemColor(index)
+		case url := <-v.openArticleRequest:
+			tb.Close()
+
+			cmd := exec.Command("w3m", url)
+			cmd.Stdin = os.Stdin
+			cmd.Stdout = os.Stdout
+			cmd.Stderr = os.Stderr
+			err := cmd.Run()
+			if err != nil {
+				log.Fatal("W3M error: ", err)
+			}
+
+			tb.Init()
 		case <-v.exitRequest:
+			tb.Close()
+			v.deathWg.Done()
 			return
 		}
 	}
@@ -280,7 +304,7 @@ func (v *view) redrawStandardState(width, startLine int, item storage.RssEntry, 
 func (v *view) redrawExpandedState(width, startLine int, item storage.RssEntry, itemFgColor, metadataFgColor tb.Attribute) int {
 	// [Time] [Feed Title]
 	//   [ItemTitle]
-	//   [ItemContent]
+	//   [URL]
 	redrawLine(width, startLine-2, []lineElement{
 		{
 			contents: []rune(item.ItemDate.Format(time.UnixDate))[:20],
@@ -303,7 +327,7 @@ func (v *view) redrawExpandedState(width, startLine int, item storage.RssEntry, 
 
 	redrawLine(width, startLine, []lineElement{
 		{
-			contents: append([]rune("  "), []rune(item.ItemContent)...),
+			contents: append([]rune("  "), []rune(item.URL)...),
 			maxLen:   120,
 			color:    itemFgColor,
 		},
@@ -416,8 +440,11 @@ func (v *view) redrawAll() {
 	statusColor := getStatusColor(v.status.Type)
 	v.viewLock.RUnlock()
 
-	linesUsableByEntries := (h - 4)
 	// The largest possible number of items in view.
+	linesUsableByEntries := (h - 4)
+	if linesUsableByEntries < 0 {
+		linesUsableByEntries = 0
+	}
 	itemListCopy := v.storage.GetCopyOfSomeItems(linesUsableByEntries)
 	numItemsInView := len(itemListCopy)
 

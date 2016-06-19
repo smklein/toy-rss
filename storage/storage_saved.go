@@ -49,6 +49,10 @@ func (s *ViewStorage) LoadFromStorage() (loaded bool) {
 		if err != nil {
 			panic(err.Error())
 		}
+		for i := range s.saved.ItemList {
+			// Reset all items to their collapsed state.
+			s.saved.ItemList[i].State = CollapsedEntryState
+		}
 		return true
 	} else {
 		return false

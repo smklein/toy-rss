@@ -93,7 +93,7 @@ func (im *InputManager) GetInputString() string {
 func (im *InputManager) enterRssSelectionMode() {
 	im.inputMode = RssSelectionMode
 	im.inputItemIndex = 0
-	im.view.SetStatus(StatusMsgStruct{"[↑/↓/j/k]:Move [→/l]:Expand [←/h]:Collapse [SPACE]:Delete [ENTER]:Color [TAB]:URL entry", StatusInfo})
+	im.view.SetStatus(StatusMsgStruct{"[↑/↓/j/k]:Move [→/l/ENTER]:Expand [←/h/q]:Collapse [BACKSPACE]:Delete [SPACE]:Color [TAB]:URL entry", StatusInfo})
 }
 
 func (im *InputManager) enterRssEntryMode() {
@@ -171,20 +171,16 @@ func (im *InputManager) respondToView() {
 	for {
 		select {
 		case numItemsVisible := <-im.chanSetLastSeenNumItems:
-			log.Println("IM sees Request for last seen num items: ", numItemsVisible)
 			// TODO THIS IS UNLOCKED. IF SHOULD DEF BE LOCKED.
 			im.inputNumItemsVisible = numItemsVisible
 			if im.inputItemIndex >= numItemsVisible {
 				im.inputItemIndex = numItemsVisible - 1
 			}
 		case <-im.chanGetSelectionMode:
-			log.Println("IM sees Request for selection mode: ", im.inputMode)
 			im.chanGetSelectionMode <- im.inputMode
 		case <-im.chanGetItemIndex:
-			log.Println("IM sees Request for get item index: ", im.inputItemIndex)
 			im.chanGetItemIndex <- im.inputItemIndex
 		case <-im.chanGetInputString:
-			log.Println("IM sees Request for inputstring", im.inputTextAsString())
 			im.chanGetInputString <- im.inputTextAsString()
 		}
 	}
@@ -215,15 +211,17 @@ func (im *InputManager) reactToKeySelectionMode(k tb.Key, r rune) {
 	case tb.KeyEsc, tb.KeyCtrlC:
 		close(im.exitRequest)
 		return
-	case tb.KeySpace, tb.KeyBackspace, tb.KeyBackspace2:
+	case tb.KeyBackspace, tb.KeyBackspace2:
 		im.keyActionDeleteItem()
-	case tb.KeyEnter:
+	case tb.KeySpace:
 		im.keyActionUpdateColorSelectionMode()
 	case tb.KeyTab:
 		im.enterRssEntryMode()
 	case tb.KeyArrowLeft:
 		im.keyActionCollapseSelectionMode()
 	case tb.KeyArrowRight:
+		im.keyActionExpandSelectionMode()
+	case tb.KeyEnter:
 		im.keyActionExpandSelectionMode()
 	case tb.KeyArrowUp:
 		im.keyActionUpSelectionMode()
@@ -237,6 +235,8 @@ func (im *InputManager) reactToKeySelectionMode(k tb.Key, r rune) {
 		case "j":
 			im.keyActionDownSelectionMode()
 		case "h":
+			im.keyActionCollapseSelectionMode()
+		case "q":
 			im.keyActionCollapseSelectionMode()
 		case "l":
 			im.keyActionExpandSelectionMode()

@@ -9,6 +9,12 @@ This is mostly an excuse for me to re-learn go.
 
 ## How do I...
 
+### ... download pre-reqs?
+
+```
+$ sudo apt-get install w3m
+```
+
 ### ... download it?
 
 ```
